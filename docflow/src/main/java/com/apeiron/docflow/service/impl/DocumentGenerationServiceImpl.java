@@ -64,9 +64,9 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
     private String filledFileName;
     
     
-    //private static final String FILLED_FILE_NAME_PREFIX="D:\\Rami\\"; ///var/www/html/"; 
+    private static final String FILLED_FILE_NAME_PREFIX="D:\\Rami\\"; ///var/www/html/"; 
 
-    private static final String FILLED_FILE_NAME_PREFIX="D:/Rami/paperlabs-master/webapp/target/classes/static/folder/";
+    //private static final String FILLED_FILE_NAME_PREFIX="D:/Rami/paperlabs-master/webapp/target/classes/static/folder/";//"D:\\test_folder\\";//"folder"
     public DocumentGenerationServiceImpl(FileManipulationService fileManipulationService, FileValidationService fileValidationService, InputProcessingService inputProccesingService) {
         this.fileManipulationService = fileManipulationService;
         this.fileValidationService = fileValidationService;
@@ -165,8 +165,7 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
             bookmarksReferences = getBookmarksReferencesPerInputByInputValue(inputWithBookmarks, stepperDataWithBookmarkDataEntry.getValue().getValue());
             groupInputBookmarksByBookmarkType(bookmarksReferences, stepperDataWithBookmarkDataEntry.getValue().getValue());
         }
-        //filledFileName = new SimpleDateFormat("'docx_filled_'yyyyMMddHHmmss'.docx'").format(new Date());
-        filledFileName = new SimpleDateFormat("'docx_filled_'yyyyMMddHHmm'.docx'").format(new Date());
+        filledFileName = new SimpleDateFormat("'docx_filled_'yyyyMMddHHmmss'.docx'").format(new Date());
         getBookmarkIdListFoundInDocXFile();
         fileValidationService.checkDocXFileCustomBookmarksListIntegrity(bookmarkIdListFoundInDocXFile, allCustomBookmarks);
         insertAtBookmark();
@@ -218,18 +217,9 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
     private void groupInputBookmarksByBookmarkType(String[] bookmarksReferences, String stepperDataInputValue) {
         Bookmark bookmark;
         String bookmarkValue;
-        
-        
-        //System.out.println("***************************** "+bookmarksReferences);
-		//List<String> list = new ArrayList<>(Arrays.asList(bookmarksReferences));
-		//while (list.remove(null)) { 
-		//} 
-		
+
         for (String bookmarksReference : bookmarksReferences) {
-       // 	System.out.println("//////////////////////// "+bookmarksReference);
             bookmark = this.allCustomBookmarks.get(bookmarksReference);
-        //    System.out.println("+++++++++++++++++++++++++++++++ "+bookmark.getType());
-            
             switch (bookmark.getType()) {
                 case BOOKMARK_TYPE_DEFAULT:
                     bookmarkValue = bookmark.getValue();

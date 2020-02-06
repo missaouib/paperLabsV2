@@ -26,7 +26,7 @@ export class ActivateComponent implements OnInit {
       this.activateService.get(params['key'], params['orderId']).subscribe(
         () => {
           this.error = null;
-          this.success = 'CDI';
+          this.success = 'OK';
           if (params['orderId'] !== null && params['orderId'] !== undefined) {
             this.router.navigate([`/account/profile/orders/${params['orderId']}/view`, { afterActivation: true }]);
           }

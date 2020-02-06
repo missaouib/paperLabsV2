@@ -18,13 +18,13 @@
                     <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
                         <span class="item">
     
-                                SARL
+                                Corporate
                             </span>
                     </a>
                     <ul class="dropdown-menu entreprise-drop" ngbDropdownMenu aria-labelledby="entity-menu">
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>Constitution</span>
+                                <span>Constitution Sociétés</span>
 
                             </a>
                             <ul>
@@ -46,7 +46,7 @@
 
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>Comptes annuels</span>
+                                <span>PV d’approbation de comptes</span>
                             </a>
                             <ul>
                                 <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
@@ -55,7 +55,7 @@
 
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>Capital</span>
+                                <span>PV de nomination du gérant</span>
                             </a>
                             <ul>
                                 <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
@@ -63,7 +63,9 @@
                         </li>
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>Modification Statutaires</span>
+                                <span>
+                                    PV de révocation du gérant
+                                </span>
                             </a>
                             <ul>
                                 <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
@@ -71,12 +73,44 @@
                         </li>
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span> Fonctionnement</span>
+                                <span> 
+                                    Statuts SARL-SUARL
+
+
+                                </span>
                             </a>
                             <ul>
                                 <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
                             </ul>
                         </li>
+
+                        <li class="level0-item-1">
+                            <a class="dropdown-item">
+                                <span> 
+                                    Procès verbal :nomination de gérant
+
+
+                                </span>
+                            </a>
+                            <ul>
+                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                            </ul>
+                        </li>
+
+    
+                        <li class="level0-item-1">
+                            <a class="dropdown-item">
+                                <span> 
+                                    Formulaire Sociétés commerciales
+
+
+                                </span>
+                            </a>
+                            <ul>
+                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
 
 

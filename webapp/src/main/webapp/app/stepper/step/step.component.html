@@ -32,15 +32,6 @@
         <!-- <a  *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success " 
         [href]="fileUrl"  download="cdi_docx_model.docx">Télécharger   </a>-->
 
-        <!-- <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success" [href]="['user/legal-document-description/', legalDocument.id] " download="document.docx">Télécharger   </a> -->
-
-        <!--  <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success ">Télécharger   </a>
-        <a *ngIf="isConfirmGenerationStep && isAuthenticated()" [href]="fileUrl" [download]="fileUrl">download   </a>
- -->
-
-
-        <!--  <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success " [href]="fileUrl" [download]="fileUrl">Télécharger   </a> -->
-
-        <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="download()" class="btn btn-success ">download   </a>
+        <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success " [href]="['user/legal-document-description/', legalDocument.id] " download="document.docx">Télécharger   </a>
     </div>
 </div>

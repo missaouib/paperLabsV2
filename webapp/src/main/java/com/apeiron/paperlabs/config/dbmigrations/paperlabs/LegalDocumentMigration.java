@@ -586,5 +586,57 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
+    
+    
+    
+    @ChangeSet(order = "11", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "11-addFormulairestatusLegalDocument")
+    public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
+        LegalDocument legalDocument;
+
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+        Map<String, String> companyAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        Map<String, String> employerAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        List<Map<String, String>> companiesAutoFillInputIdsByFieldName = new LinkedList<>();
+        List<Map<String, String>> employersAutoFillInputIdsByFieldName = new LinkedList<>();
+        
+        companiesAutoFillInputIdsByFieldName.add(companyAutoFillInputIdsByFieldName);
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dad0d7dd1a76c479c02affa914");
+        legalDocument.setShortName("FORMULIRE STATUS");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("FORMULIRE STATUS");
+        legalDocument.setKeywords(" FORMULIRE STATUS");
+        legalDocument.setDescription("FORMULIRE STATUS");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("formulaire_statuts_docx_model.docx");
+        legalDocument.setStepperConfigFilePath("formulaire_statuts_docx_model_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("formulaire_statuts_docx_model_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setEmployersAutoFillInputIdsByFieldName(employersAutoFillInputIdsByFieldName);
+        legalDocument.setCompaniesAutoFillInputIdsByFieldName(companiesAutoFillInputIdsByFieldName);
+        legalDocument.setCreatedDate(Instant.now());
+        descriptionSection = new DescriptionSection();
+        
+       
+      
+        descriptionSection.setTitle("FORMULIRE STATUS:");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre FORMULIRE STATUS en toute simplicité.\n" +
+            "Statuts générés en 10mn.");
+        descriptionSections.add(descriptionSection);
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(49.99f);
+
+        legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+
+        mongoTemplate.save(legalDocument);
+    }
      
 }

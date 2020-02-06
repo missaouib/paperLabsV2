@@ -1,0 +1,1566 @@
+{
+	"steps": [
+		{
+			"id": "step_statuts_societe",
+			"title": "Statut Societe",
+			"description": "",
+			"blocs": [
+				"bloc_status"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_nature_employeur",
+			"title": "ENTRE LES SOUSSIGNEES :",
+			"description": "",
+			"blocs": [
+				"bloc_nature_employeur"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_soussigne",
+			"title": "Soussignee",
+			"description": "Soussignee",
+			"blocs": [
+				"bloc_physique",
+				"bloc_moral"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_titre1",
+			"title": "Titre 1",
+			"description": "",
+			"blocs": [
+				"bloc_titre1"
+			],
+			"visibility": true
+		},
+		{
+			"id": "step_titre2",
+			"title": "Titre 1",
+			"description": "",
+			"blocs": [
+				"bloc_apports",
+				"bloc_apports",
+				"bloc_capital_social",
+				"bloc_reglement"
+			],
+			"visibility": true
+		}
+	],
+	"blocs": [
+		{
+			"id": "bloc_status",
+			"title": "Statuts société",
+			"description": "",
+			"inputs": [
+				"input_dénomination_sociale_status",
+				"input_capital_social_status",
+				"input_adresse_siege_social_status"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_nature_employeur",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_nature_employeur_morale",
+				"input_nature_employeur_physique"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_physique",
+			"title": "Soussignee 1",
+			"description": "",
+			"inputs": [
+				"input_prenom_associe1",
+				"input_nom_associe1",
+				"input_nationalite_associe1",
+				"input_datenaissance_associe1",
+				"input_villenaissance_associe1",
+				"input_pieceidentité_associe1",
+				"input_cin_associe1",
+				"input_passport_associe1",
+				"input_lieu_delivrance",
+				"input_date_delivrance_cin",
+				"input_date_delivrance_passport",
+				"input_adresse_associe1"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_moral",
+			"title": "Moral",
+			"description": "",
+			"inputs": [
+				"input_dénomination_sociale",
+				"input_nationalité",
+				"input_société",
+				"input_capital_social",
+				"input_adresse_siege_social",
+				"input_immatriculation",
+				"input_identifiant_unique",
+				"input_prénom_représentant",
+				"input_nom_représentant",
+				"input_cin_représentant",
+				"input_num_cin_représentant",
+				"input_num_passport_représentant",
+				"input_qualite_représentant"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_titre1",
+			"title": "",
+			"description": "",
+			"inputs": [
+				"input_forme",
+				"input_objet",
+				"input_denomination",
+				"input_siege_social"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_apports",
+			"title": "Apport",
+			"description": "",
+			"inputs": [
+				"input_prenom_nom",
+				"input_denomination",
+				"input_montant_lettre",
+				"input_montant_chiffre",
+				"input_total_lettre",
+				"input_total_chiffre"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_capital_social",
+			"title": "Capital Social",
+			"description": "",
+			"inputs": [
+				"input_total_lettre",
+				"input_total_chiffre",
+				"input_nombre_part_social_lettre",
+				"input_nombre_part_social_chiffre",
+				"input_prenom_nom",
+				"input_denomination",
+				"input_prenom_nom",
+				"input_denomination",
+				"input_nombre_part_social_chiffre",
+				"input_numerotation_social",
+				"input_part_sociales_chiffres"
+			],
+			"visibility": true
+		},
+		{
+			"id": "bloc_reglement",
+			"title": "REGLEMENT DES DIFFERENDS",
+			"description": "",
+			"inputs": ["input_lieu_signature"],
+			"visibility": true
+		}
+		
+	],
+	"inputs": [
+		{
+			"id": "input_dénomination_sociale_status",
+			"type": "text",
+			"description": "",
+			"name": "input_dénomination_sociale_status",
+			"label": "Dénomination sociale: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Dénomination_de_la_societé"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_capital_social_status",
+			"type": "text",
+			"description": "",
+			"name": "input_capital_social_status",
+			"label": "Capital social ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"capital_social"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_adresse_siege_social_status",
+			"type": "text",
+			"description": "",
+			"name": "input_adresse_siege_social_status",
+			"label": "Adresse du siège social",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adresse_siege_social"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_associe1",
+			"type": "text",
+			"description": "",
+			"name": "input_prenom_associe1",
+			"label": "Prénom:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_associe1",
+			"type": "text",
+			"description": "",
+			"name": "input_nom_associe1",
+			"label": "Nom :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nationalite_associe1",
+			"type": "text",
+			"description": "",
+			"name": "input_nationalite_associe1",
+			"label": "Nationalite :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nationalite_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_datenaissance_associe1",
+			"type": "date",
+			"description": "",
+			"name": "Date de naissance :",
+			"label": "Date de naissance:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"datenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_villenaissance_associe1",
+			"type": "text",
+			"description": "",
+			"name": "Ville de naissance ",
+			"label": "Ville de naissance :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"villenaissance_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_pieceidentité_associe1",
+			"type": "text",
+			"description": "",
+			"name": "Pièce d'identité associe1:",
+			"label": "Pièce d'identité :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"pieceidentité_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_cin_associe1",
+			"type": "text",
+			"description": "",
+			"name": "CIN associe1:",
+			"label": "CIN :",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"cin_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_passport_associe1",
+			"type": "text",
+			"description": "",
+			"name": "Passport",
+			"label": "Numéro du passport",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"num_passport"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_lieu_delivrance",
+			"type": "text",
+			"description": "",
+			"name": "Lieu de la délivrance",
+			"label": "Lieu de la délivrance",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"lieudelivrance"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_date_delivrance_cin",
+			"type": "date",
+			"description": "",
+			"name": "La date de délivrance de la CIN",
+			"label": "La date de délivrance de la CIN:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_cin"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_date_delivrance_passport",
+			"type": "date",
+			"description": "",
+			"name": "La date de délivrance du passport",
+			"label": "La date de délivrance du passport:",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_passport"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_adresse_associe1",
+			"type": "text",
+			"description": "",
+			"name": "Adresse",
+			"label": "Adresse",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"adress_associe1"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_dénomination_sociale",
+			"type": "text",
+			"description": "",
+			"name": "input_dénomination_sociale",
+			"label": "Dénomination sociale: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Dénomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nationalité",
+			"type": "text",
+			"description": "",
+			"name": "Nationalite: ",
+			"label": "Nationalite: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Nationalite"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_société",
+			"type": "text",
+			"description": "",
+			"name": "Societe: ",
+			"label": "Societe: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Societe"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_capital_social",
+			"type": "text",
+			"description": "",
+			"name": "Capital Social: ",
+			"label": "Capital Social: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"capital_social"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_adresse_siege_social",
+			"type": "text",
+			"description": "",
+			"name": "Adresse siege Social: ",
+			"label": "Adresse siege Social: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Adresse_siege_Social"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_immatriculation",
+			"type": "text",
+			"description": "",
+			"name": "immatriculation: ",
+			"label": "immatriculation: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"immatriculation"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_identifiant_unique",
+			"type": "text",
+			"description": "",
+			"name": "identifiant_unique: ",
+			"label": "identifiant unique: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"identifiant_unique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prénom_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Prénom du représentant: ",
+			"label": "Prénom du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nom_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Nom du représentant: ",
+			"label": "Nom du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"nom_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_cin_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Pièce d’identité du représentant: ",
+			"label": "Pièce d’identité du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"cin_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_num_cin_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Numéro de carte d'identité national du représentant: ",
+			"label": "Numéro de carte d'identité national du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"num_cin_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_num_passport_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Numéro de passport  du représentant: ",
+			"label": "Numéro de passport du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"num_passport_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_qualite_représentant",
+			"type": "text",
+			"description": "",
+			"name": "Qualité  du représentant: ",
+			"label": "Qualité du représentant: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"qualite_representant"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nature_employeur_morale",
+			"type": "radio",
+			"description": "",
+			"name": "nature_employeur",
+			"label": "Personne physique tunisienne",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne morale",
+			"bookmarkIdPerValue": {
+				"Personne morale": [
+					"Infos_employeur_physique"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nature_employeur_physique",
+			"type": "radio",
+			"description": "",
+			"name": "nature_employeur",
+			"label": "Personne morale établie en Tunisie",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "Personne physique",
+			"bookmarkIdPerValue": {
+				"Personne physique": [
+					"Infos_employeur_moral"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_forme",
+			"type": "text",
+			"description": "",
+			"name": "Forme: ",
+			"label": "Forme: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Forme"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_forme",
+			"type": "text",
+			"description": "",
+			"name": "Forme: ",
+			"label": "Forme: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"Forme"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_objet",
+			"type": "text",
+			"description": "",
+			"name": "Objet: ",
+			"label": "Objet: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"objet"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination",
+			"type": "text",
+			"description": "",
+			"name": "Dénomination: ",
+			"label": "Dénomination: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_siege_social",
+			"type": "text",
+			"description": "",
+			"name": "Siege Social: ",
+			"label": "Siege Social: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"siege_social"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_nom",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_Nom",
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_montant_lettre",
+			"type": "text",
+			"description": "",
+			"name": "Le montant de l’apport en numéraire en lettres : ",
+			"label": "Le montant de l’apport en numéraire en lettres: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"montant_lettre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_montant_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Le montant de l’apport en numéraire en chiffres : ",
+			"label": "Le montant de l’apport en numéraire en chiffres: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"montant_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_total_lettre",
+			"type": "text",
+			"description": "",
+			"name": "Total des apports en numéraires en Dinars : ",
+			"label": "Total des apports en numéraires en Dinars: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"total_lettres"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_total_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Total des apports en numéraires en Dinars : ",
+			"label": "Total des apports en numéraires en Dinars: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"total_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_total_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Total des apports en numéraires en Dinars : ",
+			"label": "Total des apports en numéraires en Dinars: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"total_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_total_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Total des apports en numéraires en Dinars : ",
+			"label": "Total des apports en numéraires en Dinars: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"total_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nombre_part_social_lettre",
+			"type": "text",
+			"description": "",
+			"name": "Le nombre des parts sociales détenue par l’associé : ",
+			"label": "Le nombre des parts sociales détenue par l’associé (lettres): ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"part_social_lettre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nombre_part_social_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Le nombre des parts sociales détenue par l’associé : ",
+			"label": "Le nombre des parts sociales détenue par l’associé (chiffres): ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"part_social_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_nom",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_Nom",
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_nom",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_Nom",
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_denomination",
+			"type": "text",
+			"description": "",
+			"name": "Prénom et Nom : ",
+			"label": "Prénom et Nom: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"denomination_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_nombre_part_social_chiffre",
+			"type": "text",
+			"description": "",
+			"name": "Le nombre des parts sociales détenue par l’associé : ",
+			"label": "Le nombre des parts sociales détenue par l’associé (chiffres): ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"part_social_chiffre"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_numerotation_social",
+			"type": "text",
+			"description": "",
+			"name": "Numérotation des parts sociale : ",
+			"label": "Numérotation des parts sociale ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"numerotation_sociale"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_part_sociales_chiffres",
+			"type": "text",
+			"description": "",
+			"name": "Total des parts sociales en chiffres : ",
+			"label": "Total des parts sociales en chiffres : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"total_part_social"
+				]
+			},
+			"visibility": true
+		},
+			{
+			"id": "input_lieu_signature",
+			"type": "text",
+			"description": "",
+			"name": "Lieu de la signature des statuts : ",
+			"label": "Lieu de la signature des statuts : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"lieu_signature"
+				]
+			},
+			"visibility": true
+		}
+	],
+	
+	
+	
+	
+	"bookmarks": [
+		{
+			"bookmarkId": "Dénomination_de_la_societé",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "capital_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adresse_siege_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nationalite_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "datenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "villenaissance_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "pieceidentité_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "cin_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "num_passport",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "lieudelivrance",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "date_cin",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "date_passport",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adress_associe1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_physique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Infos_employeur_moral",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Dénomination_sociale",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Nationalite",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "Societe",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "capital_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "adresse_siege_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "immatriculation",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "identifiant_unique",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "nom_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "cin_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "num_cin_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "num_passport_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "qualite_representant",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "forme",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "objet",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "denomination",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "siege_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_Nom",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "montant_lettre",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "montant_chiffre",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "total_chiffre",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "total_lettres",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "part_social_lettre",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "part_social_chiffre",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "numerotation_sociale",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "total_part_social",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "lieu_signature",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		}
+	]
+}

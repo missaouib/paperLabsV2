@@ -33,15 +33,13 @@ public class InitialSetupMigration {
         Authority userAuthority = new Authority();
         userAuthority.setName(AuthoritiesConstants.USER);
         
-
-        
         User adminUser = new User();
         adminUser.setId("user-0");
-        adminUser.setLogin("paperlabs20@gmail.com");
+        adminUser.setLogin("rhimiirami@gmail.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
-        adminUser.setFirstName("F");
-        adminUser.setLastName("A");
-        adminUser.setEmail("paperlabs20@gmail.com");
+        adminUser.setFirstName("Rami");
+        adminUser.setLastName("Rhimi");
+        adminUser.setEmail("rhimiirami@gmail.com");
         adminUser.setActivated(true);
         adminUser.setLangKey("fr");
         adminUser.setCreatedBy(adminUser.getLogin());
@@ -51,7 +49,7 @@ public class InitialSetupMigration {
         mongoTemplate.save(adminUser);
         
         adminUser = new User();
-        adminUser.setId("user-1");
+        adminUser.setId("user-0");
         adminUser.setLogin("rhimiirami@gmail.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Rami");
@@ -66,7 +64,7 @@ public class InitialSetupMigration {
         mongoTemplate.save(adminUser);
 
         adminUser = new User();
-        adminUser.setId("user-2");
+        adminUser.setId("user-1");
         adminUser.setLogin("wael.sakhri@apeiron-tech.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Wael");
@@ -81,7 +79,7 @@ public class InitialSetupMigration {
         mongoTemplate.save(adminUser);
 
         
-        adminUser.setId("user-3");
+        adminUser.setId("user-2");
         adminUser.setLogin("ghandour787@gmail.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Abdelkrim");
@@ -95,7 +93,7 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
 
-        adminUser.setId("user-4");
+        adminUser.setId("user-3");
         adminUser.setLogin("belhassen.zinelabidine@apeiron-tech.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Mohamed Belhassen");
@@ -109,7 +107,7 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
 
-        adminUser.setId("user-5");
+        adminUser.setId("user-4");
         adminUser.setLogin("fahmi.boumaiza@apeiron-tech.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Fahmi");
@@ -123,7 +121,7 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
 
-        adminUser.setId("user-6");
+        adminUser.setId("user-5");
         adminUser.setLogin("abdallah.ghandour@apeiron-tech.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Abdallah");
@@ -137,7 +135,7 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
 
-        adminUser.setId("user-7");
+        adminUser.setId("user-6");
         adminUser.setLogin("hamza.abdessalem@apeiron-tech.com");
         adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
         adminUser.setFirstName("Hamza");
@@ -150,5 +148,23 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(adminAuthority);
         adminUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(adminUser);
+        
+        
+        adminUser = new User();
+        adminUser.setId("user-7");
+        adminUser.setLogin("bahriwalid19@gmail.com");
+        adminUser.setPassword("$2a$10$1xi7b7xBie/DCiFF9u2Bme0c1e.f6jJM9i76kA0e1C4Ues0dGea2u");
+        adminUser.setFirstName("Walid");
+        adminUser.setLastName("Bahri");
+        adminUser.setEmail("bahriwalid19@gmail.com");
+        adminUser.setActivated(true);
+        adminUser.setLangKey("fr");
+        adminUser.setCreatedBy(adminUser.getLogin());
+        adminUser.setCreatedDate(Instant.now());
+        adminUser.getAuthorities().add(adminAuthority);
+        adminUser.getAuthorities().add(userAuthority);
+        mongoTemplate.save(adminUser);
     }
+    
+
 }

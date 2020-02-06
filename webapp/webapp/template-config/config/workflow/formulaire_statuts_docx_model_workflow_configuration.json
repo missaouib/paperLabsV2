@@ -1,0 +1,33 @@
+{
+  "workflow": [ 
+  {
+      "inputId": "input_nature_employeur_morale",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            {
+              "elementId": "bloc_physique",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	 {
+      "inputId": "input_nature_employeur_physique",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            {
+              "elementId": "bloc_moral",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+  
+  
+  ]}
