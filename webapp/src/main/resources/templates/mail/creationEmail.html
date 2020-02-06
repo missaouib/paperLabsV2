@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.activation.title}">PaperLabs creation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.activation.greeting(${user.getFirstName()+ ' '+ user.getLastName()})}">
+            Cher
+        </p>
+        <p th:text="#{email.creation.text1}">
+            Votre compte PaperLabs a été créé, veuillez cliquer sur l'URL ci-dessous pour y accéder:
+        </p>
+        <p>
+            <a th:with="url=(@{|${baseUrl}/account/reset/finish?key=${user.resetKey}|})" th:href="${url}"
+            th:text="${url}">Lien de connexion</a>
+        </p>
+        <p>
+            <span th:text="#{email.activation.text2}">Cordialement, </span>
+            <br/>
+            <em th:text="#{email.signature}">Équipe PaperLabs.</em>
+        </p>
+    </body>
+</html>

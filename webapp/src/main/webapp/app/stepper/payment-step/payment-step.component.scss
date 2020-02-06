@@ -1,0 +1,147 @@
+$indigo: #1400c3;
+
+.card {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 35px;
+}
+
+.payment-option-img {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px gray;
+}
+
+.payment-option {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.payment-option + img {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.payment-option:checked + img {
+  opacity: 1;
+}
+
+.link {
+  font-size: 0.9rem;
+}
+
+.link a:hover {
+  text-decoration: none;
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+::ng-deep .mat-slide-toggle-content {
+  font-size: 0.85rem;
+  white-space: normal !important;
+}
+
+#expirationDate {
+  background-color: white;
+}
+
+::ng-deep .bs-datepicker-container {
+  padding: 15px;
+  box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
+  background-color: white;
+}
+
+::ng-deep .bs-datepicker-head {
+  background-color: $indigo;
+  text-align: center;
+}
+
+::ng-deep .bs-calendar-container {
+  border-radius: 5px;
+}
+
+::ng-deep .previous,
+::ng-deep .next {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+::ng-deep .bs-datepicker-head.current {
+  border-radius: 15px;
+  max-width: 155px;
+  padding: 0 13px;
+}
+
+::ng-deep .bs-datepicker-head button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  line-height: 30px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+  font-weight: bolder;
+}
+
+::ng-deep .bs-datepicker-body {
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+  min-height: 232px;
+  min-width: 278px;
+  border: 1px solid #e9edf0;
+}
+
+::ng-deep .bs-datepicker-body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+::ng-deep .bs-datepicker-body table tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+::ng-deep .bs-datepicker-body table td {
+  color: #54708b;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+::ng-deep .bs-datepicker-body table.months td span {
+  padding: 6px;
+  border-radius: 15px;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+::ng-deep .bs-datepicker-body table td span {
+  display: block;
+  margin: 0 auto;
+  font-size: 13px;
+  border-radius: 50%;
+  position: relative;
+  /* z-index: 1; */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+::ng-deep .bs-datepicker-body table.months {
+  line-height: 250%;
+}
+
+::ng-deep .bs-datepicker-container {
+  z-index: 2;
+}

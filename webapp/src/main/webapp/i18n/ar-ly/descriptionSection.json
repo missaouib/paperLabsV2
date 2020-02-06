@@ -1,0 +1,24 @@
+{
+  "paperlabsApp": {
+    "descriptionSection": {
+      "home": {
+        "title": "Description Sections",
+        "createLabel": "Create a new Description Section",
+        "createOrEditLabel": "Create or edit a Description Section",
+        "search": "Search for Description Section",
+        "notFound": "No Description Sections found"
+      },
+      "created": "A new Description Section is created with identifier {{ param }}",
+      "updated": "A Description Section is updated with identifier {{ param }}",
+      "deleted": "A Description Section is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Description Section {{ id }}?"
+      },
+      "detail": {
+        "title": "Description Section"
+      },
+      "title": "Title",
+      "content": "Content"
+    }
+  }
+}

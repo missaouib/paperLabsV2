@@ -1,0 +1,80 @@
+$indigo: #1400c3;
+
+@media screen and (max-width: 1921px) {
+  .stepper {
+    padding-left: 5%;
+    // padding-right: 25%;
+    padding-right: 2%;
+  }
+}
+.marge {
+  margin: 15px;
+}
+@media screen and (max-width: 1400px) {
+  .stepper {
+    padding-left: 5%;
+    padding-right: 2%;
+    // padding-right: 25%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .stepper {
+    padding-left: 5%;
+    padding-right: 2%;
+    // padding-right: 25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .stepper {
+    padding-left: 5%;
+    padding-right: 2%;
+    // padding-right: 35%;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .stepper {
+    padding-left: 5%;
+    padding-right: 2%;
+    // padding-right: 45%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .stepper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+  display: none !important;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+  display: none !important;
+}
+
+::ng-deep .progress-bar {
+  background-color: $indigo !important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 24px;
+  overflow: unset;
+}
+
+.stepper {
+  z-index: 1;
+}
+
+.stepper-custom-margin {
+  margin-left: 15% !important;
+}

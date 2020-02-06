@@ -1,0 +1,23 @@
+{
+  "paperlabsApp": {
+    "dowloadHistory": {
+      "home": {
+        "title": "DowloadHistories",
+        "createLabel": "Créer un nouveau Dowload History",
+        "createOrEditLabel": "Créer ou éditer un Dowload History",
+        "search": "Recherche pour Dowload History",
+        "notFound": "Aucun Dowload History trouvé"
+      },
+      "created": "Un nouveau Dowload History a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Dowload History avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Dowload History avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Dowload History {{ id }} ?"
+      },
+      "detail": {
+        "title": "Dowload History"
+      },
+      "date": "Date"
+    }
+  }
+}

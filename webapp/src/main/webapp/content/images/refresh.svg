@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="#1400c3" width="100pt" height="100pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#1400c3" stroke-linecap="square" stroke-miterlimit="10" stroke-width="16">
+  <path transform="scale(.78125)" d="m64 100c-9.55 0-18.705-3.795-25.455-10.545s-10.545-15.905-10.545-25.455v-9"/>
+  <path transform="scale(.78125)" d="m64 28c9.55 0 18.705 3.795 25.455 10.545s10.545 15.905 10.545 25.455v9"/>
+  <path transform="scale(.78125)" d="m44 64l-16-16-16 16"/>
+  <path transform="scale(.78125)" d="m84 64l16 16 16-16"/>
+ </g>
+</svg>

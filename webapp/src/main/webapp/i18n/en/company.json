@@ -1,0 +1,28 @@
+{
+  "paperlabsApp": {
+    "company": {
+      "home": {
+        "title": "Companies",
+        "createLabel": "Create a new Company",
+        "createOrEditLabel": "Create or edit a Company",
+        "search": "Search for Company",
+        "notFound": "No Companies found"
+      },
+      "created": "A new Company is created with identifier {{ param }}",
+      "updated": "A Company is updated with identifier {{ param }}",
+      "deleted": "A Company is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company {{ id }}?"
+      },
+      "detail": {
+        "title": "Company"
+      },
+      "companyName": "Company Name",
+      "companyCapital": "Company Capital",
+      "companyUniqueIdentification": "Company Unique Identification",
+      "companyRepresentativeFullName": "Company Representative Full Name",
+      "companyFullAddress": "Company Full Address",
+      "companyType": "Company Type"
+    }
+  }
+}

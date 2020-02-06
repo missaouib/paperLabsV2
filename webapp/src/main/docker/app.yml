@@ -1,0 +1,29 @@
+version: '2'
+services:
+  paperlabs-app:
+    image: paperlabs
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_MONGODB_URI=mongodb://paperlabs-mongodb:27017
+      - SPRING_DATA_MONGODB_DATABASE=paperlabs
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_DATA_JEST_URI=http://paperlabs-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://paperlabs-elasticsearch:9200
+    ports:
+      - 80:80
+    volumes:
+      - ../../../template-config:/webapp/webapp/template-config
+      - ../../../generated-pdf:/webapp/webapp/generated-pdf
+      - ../resources/generated-docx:/webapp/src/main/resources/generated-docx
+      - ../resources/generated-invoice:/webapp/src/main/resources/generated-invoice
+      - ../resources/jasper:/webapp/src/main/resources/jasper
+  paperlabs-mongodb:
+    extends:
+      file: mongodb.yml
+      service: paperlabs-mongodb
+  paperlabs-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: paperlabs-elasticsearch

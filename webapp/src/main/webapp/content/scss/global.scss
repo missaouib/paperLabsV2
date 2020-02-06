@@ -1,0 +1,315 @@
+@import 'bootstrap-variables';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+/* ==============================================================
+Custom global variables
+===============================================================*/
+$pap-color: #1400c3;
+$color-btn-primary: #1400c3;
+/* ==============================================================
+Bootstrap tweaks
+===============================================================*/
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans-Regular.ttf') format('opentype');
+}
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+  background-color: #00009e;
+}
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
+  background-color: #054aea;
+}
+.jh-card {
+  overflow-x: hidden;
+  padding-top: 20vh;
+}
+.btn-primary {
+  background-color: $color-btn-primary;
+  color: white;
+}
+.btn-outline-primary,
+.btn-outline-primary:hover {
+  border-color: $color-btn-primary;
+  color: $color-btn-primary;
+}
+.btn-outline-primary:hover {
+  background-color: $color-btn-primary;
+  color: white;
+}
+.titel-commande {
+  color: $pap-color;
+}
+.create-new-bg {
+  background: #009688;
+}
+.create-new-bg:hover {
+  background: #007e7e;
+}
+.text-long {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+#child-id {
+  display: none;
+}
+#FN-ld:hover #child-id {
+  display: block;
+}
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-family: OpenSans;
+
+  font-weight: 300;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #584fff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #352f9a;
+}
+/* Increase contrast of links to get 100% on Lighthouse Accessability Audit. Override this color if you want to change the link color, or use a Bootswatch theme */
+a,
+a:hover {
+  color: #533f03;
+  font-weight: bold;
+}
+
+a:hover {
+  /* make sure browsers use the pointer cursor for anchors, even with no href */
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  color: $dropdown-link-hover-color;
+}
+body {
+  background: white !important;
+  line-height: 2.5 !important;
+}
+/* ==========================================================================
+Browser Upgrade Prompt
+========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+Generic styles
+========================================================================== */
+
+/* Error highlight on input fields */
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid green;
+}
+
+/*.ng-invalid:not(form) {
+  border-left: 5px solid red;
+}*/
+
+/* other generic styles */
+
+.jh-card {
+  border: none;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #554bfb;
+}
+.dropdown-item:hover {
+  background-color: #554bfb;
+  color: white !important;
+}
+
+.error {
+  color: white;
+  background-color: red;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.break {
+  white-space: normal;
+  word-break: break-all;
+}
+
+.readonly {
+  background-color: #eee;
+  opacity: 1;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.hand,
+[jhisortby] {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+Custom alerts for notification
+========================================================================== */
+.alerts {
+  .alert {
+    text-overflow: ellipsis;
+    pre {
+      background: none;
+      border: none;
+      font: inherit;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+    }
+    .popover pre {
+      font-size: 10px;
+    }
+  }
+  .jhi-toast {
+    position: fixed;
+    width: 100%;
+    &.left {
+      left: 5px;
+    }
+    &.right {
+      right: 5px;
+    }
+    &.top {
+      top: 55px;
+    }
+    &.bottom {
+      bottom: 55px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .alerts .jhi-toast {
+    width: 50%;
+  }
+}
+
+/* ==========================================================================
+entity detail page css
+========================================================================== */
+.row.jh-entity-details > {
+  dd {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row.jh-entity-details > {
+    dt {
+      margin-bottom: 15px;
+    }
+    dd {
+      border-bottom: 1px solid #eee;
+      padding-left: 180px;
+      margin-left: 0;
+    }
+  }
+
+  .jh-card {
+    overflow-x: hidden;
+    padding-top: 20vh;
+  }
+}
+
+::ng-deep .page-item {
+  background-color: red !important;
+}
+
+::ng-deep .page-item.active .page-link {
+  background-color: red !important;
+}
+ngb-pagination li {
+  &:nth-child(3) a {
+    background-color: transparent !important;
+    color: #3e8acc !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .jh-card {
+    overflow-x: hidden;
+    padding-top: 20vh;
+  }
+}
+
+/* ==========================================================================
+ui bootstrap tweaks
+========================================================================== */
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+
+.thread-dump-modal-lock {
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* jhipster-needle-scss-add-main JHipster will add new css style */
+body {
+  font-family: 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.pap-color {
+  color: $pap-color;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+/* Stats Cards */
+.stat-icon {
+  font-size: 48px;
+}
+
+.color-red {
+  color: #f44336;
+}
+
+.color-orange {
+  color: #ff9800;
+}
+
+.color-green {
+  color: #009688;
+}
+
+.lh-1 {
+  line-height: 1.5 !important;
+}

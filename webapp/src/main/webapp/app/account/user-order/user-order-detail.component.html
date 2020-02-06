@@ -1,0 +1,27 @@
+<div class="row mb-5 justify-content-center">
+    <div class="col-md-10" *ngIf="order">
+        <div class="card">
+            <h2 class="card-header titel-commande bg-white">Commande : {{transformOrderIdentifier(order.orderIdentifier)}}</h2>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="card-body">
+                <ul class="list-group-flush">
+                    <li class="list-group-item"><span class="font-weight-bold">Payment Method</span>:<span> {{order.paymentMethod}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Prix total</span>:<span> {{order.totalPrice | number : '1.2-2'}} DT</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Prix</span>:<span> {{order.price | number : '1.2-2'}} DT</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Tax</span>:<span> {{order.tax}} %</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Status</span>:<span jhiTranslate="{{'paperlabsApp.OrderStatus.' + order.status}}"> {{order.status}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Destination Email</span>:<span> {{order.destinationEmail}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Documents</span>:<span> {{order.legalDocument.shortName}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Date de création</span>:<span> {{order.generatedLegalDocument.date | date:'dd/MM/yy HH:mm'}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Date de paiement</span>:<span> {{order.generatedLegalDocument.paymentDate | date:'dd/MM/yy HH:mm'}}</span></li>
+                </ul>
+                <button type="submit" [routerLink]="['/account/profile/orders']" class="btn btn-outline-primary">
+                    <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+                </button>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

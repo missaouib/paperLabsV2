@@ -1,0 +1,141 @@
+<div class="row justify-content-center">
+    <div class="card col-12 col-sm-12 col-xl-6 mr-xl-3">
+        <div class="card-header">
+            Récapitulatif
+        </div>
+        <div class="card-body p-4">
+            <table *ngIf="order" class="table table-sm table-borderless">
+                <thead>
+                <tr>
+                    <th scope="col" class="pb-2">Contenu</th>
+                    <th scope="col" class="pb-2 text-right">Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>"{{order?.legalDocument?.fullName}}" HT</td>
+                    <td class="text-right">{{order?.legalDocument?.price | number : '1.2-2'}}</td>
+                </tr>
+                <tr>
+                    <td>TVA à {{order?.tax}}% </td>
+                    <td class="text-right pb-2">{{getTaxPrice() | number : '1.2-2'}}</td>
+                </tr>
+                <tr *ngIf="invoiceIsConfirmed">
+                    <td>Timbre fiscal</td>
+                    <td class="text-right pb-4">{{getCompanyTaxStamp() | number : '1.2-2'}}</td>
+                </tr>
+                <tr class="border-top">
+                    <td class="font-weight-bold">Total TTC</td>
+                    <td class="font-weight-bold text-right">{{orderTotalPrice | number : '1.2-2'}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="!orderIsPurchased" class="card col-12 col-sm-12 col-xl-5 mr-xl-3">
+        <div class="card-header">
+            Formulaire paiement
+        </div>
+        <div class="card-body p-4">
+
+            <div class="row mx-0 justify-content-center">
+
+                <div class="mr-1">
+                    <label>
+                        <input type="radio" name="payment-options" class="payment-option" id="e-DINAR" [(ngModel)]="selectedPaymentOption" value="edinar">
+                        <img class="payment-option-img" src="../../../content/images/e-dinar-logo.png" alt="e-DINAR">
+                    </label>
+                </div>
+
+                <div class="ml-1">
+                    <label>
+                        <input type="radio" name="payment-options" class="payment-option" id="Mobicash" [(ngModel)]="selectedPaymentOption" value="mobicash">
+                        <img class="payment-option-img" src="../../../content/images/mobicash-logo.png" alt="Mobicash">
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="mt-4">
+                <div *ngIf="paymentOptionIsSelected('edinar')">
+                    <form class="form" role="form" (ngSubmit)="confirmPurchase()" [formGroup]="edinarForm">
+                        <div class="form-group">
+                            <label for="cardNumber">Numéro de la carte</label>
+                            <input type="number" class="form-control" name="cardNumber" id="cardNumber" formControlName="cardNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="expirationDate">Date d'expiration</label>
+<!--                            <span class="input-group">-->
+<!--                                <input class="form-control" name="expirationDate" id="expirationDate" ngbDatepicker #datepicker="ngbDatepicker"-->
+<!--                                       placeholder="dd/mm/yyyy" formControlName="expirationDate">-->
+<!--                                <span class="input-group-append">-->
+<!--                                    <button class="btn btn-outline-secondary" (click)="datepicker.toggle()" type="button">-->
+<!--                                        <fa-icon [icon]="['fas', 'calendar']" [fixedWidth]="true" size="lg"></fa-icon>-->
+<!--                                    </button>-->
+<!--                                </span>-->
+<!--                            </span>-->
+                            <input formControlName="expirationDate" autocomplete="off" class="form-control" id="expirationDate" name="date" bsDatepicker [bsConfig]="{dateInputFormat: 'MM/YYYY'}" (onShown)="onOpenCalendar($event)">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardVerificationCode">Crypto (CVV)</label>
+                            <input type="password" class="form-control" name="cardVerificationCode" id="cardVerificationCode" formControlName="cardVerificationCode">
+                        </div>
+                        <div class="form-check pl-0">
+                            <div class="row mx-0">
+                                <div class="col-md-12 px-0 py-2">
+                                    <mat-slide-toggle name="invoice-checkbox" id="invoice-checkbox" color="primary" class="py-3"
+                                                      (change)="invoiceIsConfirmed = ! invoiceIsConfirmed; upateTotalPrice()"
+                                                      [checked]="invoiceIsConfirmed">
+                                        Je souhaite recevoir une facture par email
+                                    </mat-slide-toggle>
+                                </div>
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-md-12 px-0 py-2">
+                                    <mat-slide-toggle name="conditions" id="conditions" formControlName="conditions" color="primary" class="link">
+                                        J'ai lu et j'accèpte les <a href="javascript:void(0);">conditions générales</a>
+                                    </mat-slide-toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12 d-flex justify-content-center mt-3">
+                                <button *ngIf="!purchaseConfirmed" type="submit" [disabled]="edinarForm.invalid" class="btn btn-indigo">
+                                    <fa-icon [icon]="['fas', 'credit-card']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
+                                    Acheter {{orderTotalPrice | number: '1.2-2'}} DT
+                                </button>
+                                <button *ngIf="purchaseConfirmed" class="btn btn-indigo" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Validation en cours...
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div *ngIf="paymentOptionIsSelected('mobicash')">
+                    <div class="row">
+                        <div class="ml-auto mr-auto">
+                            Mobicash in developpement . . .
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div *ngIf="orderIsPurchased" class="col-md-5 ml-auto mr-custom alert alert-success h-fit-content">
+        <p>
+            Votre achat est efféctuer avec succès ! <br><br>
+            Veuillez vérifier votre e-mail pour télécharger votre document ainsi que votre facture !
+        </p>
+    </div>
+</div>
+<div class="row btn-download-div">
+    <button *ngIf="orderIsPurchased" (click)="downloadPDF()" class="btn row no-margins col-md-12 ml-md-auto mr-md-auto btn-download text-left pl-md-4 pr-md-4">
+        <fa-icon [icon]="['fas', 'file-pdf']" [fixedWidth]="true" size="lg" pull="left" class="pdf-color"></fa-icon>
+        {{order.legalDocument.fullName}}<fa-icon [icon]="['fas', 'download']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
+    </button>
+</div>
+

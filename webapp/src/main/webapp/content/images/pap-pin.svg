@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>fic-pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8CA0B3" offset="0%"></stop>
+            <stop stop-color="#A2B6C9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ASSO-Webapp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer_M_D_1.0" transform="translate(-128.000000, -736.000000)" fill-rule="nonzero">
+            <g id="fic-pin" transform="translate(128.000000, 736.000000)">
+                <rect id="Rectangle-3" x="0" y="0" width="24" height="24"></rect>
+                <path d="M12,1 C7.58870588,1 4,4.49525 4,8.79166667 C4,12.34375 6.41788235,15.3953333 9.91529412,16.30925 L11.5425882,22.6525833 C11.5952941,22.857 11.7835294,23 11.9990588,23 C12.2145882,23 12.4037647,22.857 12.4555294,22.6525833 L14.0828235,16.30925 C17.5802353,15.3953333 19.9981176,12.3428333 19.9981176,8.79166667 C20,4.49525 16.4112941,1 12,1 Z M12,12.9166667 C9.66117647,12.9166667 7.76470588,11.0695833 7.76470588,8.79166667 C7.76470588,6.51375 9.66117647,4.66666667 12,4.66666667 C14.3388235,4.66666667 16.2352941,6.51375 16.2352941,8.79166667 C16.2352941,11.0695833 14.3388235,12.9166667 12,12.9166667 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

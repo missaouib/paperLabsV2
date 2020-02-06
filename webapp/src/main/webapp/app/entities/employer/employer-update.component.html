@@ -1,0 +1,34 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-employer-heading">Créer ou éditer un employeur</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_employerCinNumber">CIN de l'employeur</label>
+                    <input type="number" class="form-control" name="employerCinNumber" id="field_employerCinNumber"
+                           formControlName="employerCinNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label"  for="field_employerFullName">Nom complet</label>
+                    <input type="text" class="form-control" name="employerFullName" id="field_employerFullName"
+                           formControlName="employerFullName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label"  for="field_employerFullAddress">Adresse</label>
+                    <input type="text" class="form-control" name="employerFullAddress" id="field_employerFullAddress"
+                           formControlName="employerFullAddress"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

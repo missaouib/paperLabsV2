@@ -1,0 +1,129 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <br>  <h2 class="titel-commande">Créer ou éditer un document juridique</h2>
+            <jhi-alert-error></jhi-alert-error>
+            <hr>
+
+            <div class="row justify-content-center">
+                <aside class="col mb-5">
+                    <div class="card shadow-sm">
+                        <article class="card-body">
+                            <div class="form-group" [hidden]="!editForm.get('id').value">
+                                <label for="id" jhiTranslate="global.field.id">ID</label>
+                                <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                                       readonly />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="field_shortName">Abréviation</label>
+                                <input type="text" class="form-control" name="shortName" id="field_shortName"
+                                       formControlName="shortName"/>
+                                <div *ngIf="editForm.get('shortName').invalid && (editForm.get('shortName').dirty || editForm.get('shortName').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('shortName').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.fullName" for="field_fullName">Nom</label>
+                                <input type="text" class="form-control" name="fullName" id="field_fullName"
+                                       formControlName="fullName"/>
+                                <div *ngIf="editForm.get('fullName').invalid && (editForm.get('fullName').dirty || editForm.get('fullName').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('fullName').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.keywords" for="field_keywords">Keywords</label>
+                                <input type="text" class="form-control" name="keywords" id="field_keywords"
+                                       formControlName="keywords"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.description" for="field_description">Description</label>
+                                <input type="text" class="form-control" name="description" id="field_description"
+                                       formControlName="description"/>
+                                <div *ngIf="editForm.get('description').invalid && (editForm.get('description').dirty || editForm.get('description').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('description').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.templatePreviewPath" for="field_templatePreviewPath">Template Preview Path</label>
+                                <input type="text" class="form-control" name="templatePreviewPath" id="field_templatePreviewPath"
+                                       formControlName="templatePreviewPath"/>
+                                <div *ngIf="editForm.get('templatePreviewPath').invalid && (editForm.get('templatePreviewPath').dirty || editForm.get('templatePreviewPath').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('templatePreviewPath').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.templateFilePath" for="field_templateFilePath">Template File Path</label>
+                                <input type="text" class="form-control" name="templateFilePath" id="field_templateFilePath"
+                                       formControlName="templateFilePath"/>
+                                <div *ngIf="editForm.get('templateFilePath').invalid && (editForm.get('templateFilePath').dirty || editForm.get('templateFilePath').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('templateFilePath').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.stepperConfigFilePath" for="field_stepperConfigFilePath">Stepper Config File Path</label>
+                                <input type="text" class="form-control" name="stepperConfigFilePath" id="field_stepperConfigFilePath"
+                                       formControlName="stepperConfigFilePath"/>
+                                <div *ngIf="editForm.get('stepperConfigFilePath').invalid && (editForm.get('stepperConfigFilePath').dirty || editForm.get('stepperConfigFilePath').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('stepperConfigFilePath').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.workflowConfigFilePath" for="field_workflowConfigFilePath">Workflow Config File Path</label>
+                                <input type="text" class="form-control" name="workflowConfigFilePath" id="field_workflowConfigFilePath"
+                                       formControlName="workflowConfigFilePath"/>
+                                <div *ngIf="editForm.get('workflowConfigFilePath').invalid && (editForm.get('workflowConfigFilePath').dirty || editForm.get('workflowConfigFilePath').touched)">
+                                    <small class="form-text text-danger"
+                                           *ngIf="editForm.get('workflowConfigFilePath').errors.required" jhiTranslate="entity.validation.required">
+                                        This field is required.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="paperlabsApp.legalDocument.price" for="field_price">Price</label>
+                                <input type="number" class="form-control" name="price" id="field_price"
+                                       formControlName="price"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Legal documents recommendation :</label>
+
+                                <select *ngFor="let documentRecommendation of documentsRecommendation; let i = index" class="form-control" name="paymentMethod" formControlName="paymentMethod" [formControlName]="i" id="field_recomanded">
+                                    <option value="{{allLegalDocumentsOtherThanThis[i].shortName}}"> {{allLegalDocumentsOtherThanThis[i].shortName}}</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <button type="button" id="cancel-save" class="btn btn-outline-primary"  (click)="previousState()">
+                                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                                </button>
+                                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </aside>
+
+
+            </div>
+        </form>
+    </div>
+</div>
+

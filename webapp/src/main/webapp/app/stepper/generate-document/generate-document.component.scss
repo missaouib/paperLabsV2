@@ -1,0 +1,74 @@
+$indigo: #1400c3;
+
+.content {
+  // margin-left: 1em;
+}
+
+.mb-custom {
+  margin-bottom: 2em;
+}
+
+.ml-custom {
+  margin-left: -20px;
+}
+
+.fs-custom {
+  font-size: 0.85rem;
+}
+.para{
+  text-align: justify;
+}
+.card {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 35px;
+}
+
+.link a {
+  transition: all 1s linear;
+  display: inline;
+  font-size: 0.9rem;
+  color: $indigo;
+  font-weight: 100;
+  padding-bottom: 5px;
+  background: linear-gradient(to right, rgba(91, 58, 164, 0.32) 0%, $indigo 98%);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+
+  &:hover {
+    background-size: 100% 2px;
+  }
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.9rem;
+  margin-left: -1.25rem;
+}
+
+.form-check-label {
+  margin-left: 3%;
+}
+
+.account-form,
+.btn-indigo {
+  padding: 0 !important;
+}
+
+.btn-indigo {
+  padding: 3px !important;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.reg-down {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+  background: linear-gradient(90deg, #584fff 0%, #1700af 100%);
+}

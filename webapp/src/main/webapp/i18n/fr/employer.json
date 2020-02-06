@@ -1,0 +1,25 @@
+{
+  "paperlabsApp": {
+    "employer": {
+      "home": {
+        "title": "Employers",
+        "createLabel": "Créer un nouveau Employer",
+        "createOrEditLabel": "Créer ou éditer un Employer",
+        "search": "Recherche pour Employer",
+        "notFound": "Aucun Employer trouvé"
+      },
+      "created": "Un nouveau Employer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Employer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Employer avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Employer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Employer"
+      },
+      "employerCinNumber": "Employer Cin Number",
+      "employerFullName": "Employer Full Name",
+      "employerFullAddress": "Employer Full Address"
+    }
+  }
+}

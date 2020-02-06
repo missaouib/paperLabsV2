@@ -1,0 +1,1124 @@
+{
+  "steps": [
+    {
+      "id": "step_nature_employeur",
+      "title": "L'employeur est :",
+      "description": "",
+      "blocs": ["bloc_nature_employeur"],
+      "visibility": true
+    },
+    {
+      "id": "step_lemployeur",
+      "title": "L'employeur",
+      "description": "",
+      "blocs": [
+        "bloc_lemployeur_physique",
+        "bloc_lemployeur_morale"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "step_lemployé",
+      "title": "L'employé",
+      "description": "",
+      "blocs": ["bloc_lemployé"],
+      "visibility": true
+    },
+    {
+      "id": "step_description_du_contrat",
+      "title": "Description du contrat",
+      "description": "",
+      "blocs": ["bloc_poste_statut","bloc_periode_essai","bloc_details_du_contrat","bloc_Rémunération"],
+      "visibility": true
+    },
+    {
+      "id": "step_conditions_de_travail",
+      "title": "Conditions de travail",
+      "description": "",
+      "blocs": [ "bloc_lieu_de_travail", "bloc_conges_payes","bloc_clause_de_exculisivité", "bloc_clause_de_confidentialité", "bloc_propriété_des_travaux","bloc_non_concurrence"],
+      "visibility": true
+    }
+    
+  ],
+  "blocs": [
+    {
+      "id": "bloc_nature_employeur",
+      "title": "L'employeur est",
+      "description": "",
+      "inputs": [
+        "input_nature_employeur_morale",
+        "input_nature_employeur_physique"
+      ],
+      "visibility": true
+    },
+    
+    {
+      "id": "bloc_lemployeur_morale",
+      "title": "Détails sur l'employeur :",
+      "description": "",
+      "inputs": [
+		"input_nom_employeur",
+		"input_prénom_employeur",
+        "input_cin_employeur",
+        "input_adresse_employeur"
+      ],
+      "visibility": false
+    },
+	{
+      "id": "bloc_lemployeur_physique",
+      "title": "Détails sur la société :",
+      "description": "",
+      "inputs": [
+        "input_dénomination_de_la_societé",
+        "input_type_de_la_societé",
+		"input_adresse_de_la_societé",
+        "input_identifiant_unique_de_la_societé",
+		 "input_nom_du_representant_de_la_societé",
+		  "input_prénom_du_representant_de_la_societé"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_lemployé",
+      "title": "Détails sur l'employé :",
+      "description": "",
+      "inputs": [
+		"input_nom_de_lemployé",
+	    "input_prénom_de_lemployé",
+        "input_num_CIN_de_lemployé",
+        "input_adresse_de_lemployé"
+      ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_poste_statut",
+      "title": "Poste et statut du salarié",
+      "description": "",
+      "inputs": [
+	    "input_poste_de_lemployé"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_details_du_contrat",
+      "title": "Détails du contrat",
+      "description": "",
+      "inputs": [
+        "input_duree_hebdomadaire"
+		
+      ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_periode_essai",
+      "title": "Période d'essai",
+      "description": "Le salarié est-il soumis à une période d'essai ?",
+      "inputs": [        
+		"input_periode_dessai"],
+      "visibility": true
+    },
+	
+	
+    {
+      "id": "bloc_Rémunération",
+      "title": "Rémunération",
+      "description": "",
+      "inputs": [
+	  "input_salaire_mensuel_net_employé_chiffres",
+        "input_salaire_mensuel_net_employé_lettres"     
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_lieu_de_travail",
+      "title": "Lieu de travail",
+      "description": "",
+      "inputs": ["input_lieu_travail"],
+      "visibility": true
+    },
+    {
+      "id": "bloc_conges_payes",
+      "title": "Congés payés",
+      "description": "",
+      "inputs": ["input_clause_dexclusivité"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_clause_de_exculisivité",
+      "title": "L'employé est-il soumis à une clause d'exculusivité ?",
+      "description": "",
+      "inputs": ["input_clause_de_exculisivité"],
+      "visibility": true
+    },
+    {
+      "id": "bloc_clause_de_confidentialité",
+      "title": "L'employé est-il soumis à une clause de confidentialité ?",
+      "description": "",
+      "inputs": ["input_clause_de_confidentialité"],
+      "visibility": true
+    },
+    {
+      "id": "bloc_propriété_des_travaux",
+      "title": "L'employé est-il soumis à des droit de propriété des travaux ?",
+      "description": "",
+      "inputs": ["input_propriété_des_travaux"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_non_concurrence",
+      "title": "Non concurrence",
+      "description": "",
+      "inputs": ["input_non_concurrence_A","input_non_concurrence_B"],
+      "visibility": true
+    }
+	
+  ],
+  "inputs": [
+    {
+      "id": "input_dénomination_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_de_la_societé",
+      "label": "Dénomination sociale: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Dénomination_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_type_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_type_de_la_societé",
+      "label": "Forme juridique de la société: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Type_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_adresse_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_la_societé",
+      "label": "Adresse du siège social: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Adresse_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_identifiant_unique_de_la_societé",
+      "type": "number",
+      "description": "",
+      "name": "input_identifiant_unique_de_la_societé",
+      "label": "Identifiant unique: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Identifiant_unique_de_la_societé"]
+      },
+      "visibility": true
+    },
+    
+	{
+      "id": "input_nom_du_representant_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_du_representant_de_la_societé",
+      "label": "Nom du représentant signataire du document: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_representant_de_la_societé"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_prénom_du_representant_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_du_representant_de_la_societé",
+      "label": "Prénom du représentant: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_du_representant_de_la_societé"]
+      },
+      "visibility": true
+    },
+    
+    {
+      "id": "input_nature_employeur_morale",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "Personne physique tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_employeur_physique"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nature_employeur_physique",
+      "type": "radio",
+      "description": "",
+      "name": "nature_employeur",
+      "label": "Personne morale établie en Tunisie",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique",
+      "bookmarkIdPerValue": {
+        "Personne physique": ["Infos_employeur_moral"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nom_employeur",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_employeur",
+      "label": "Nom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_employeur"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_prénom_employeur",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_employeur",
+      "label": "Prénom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_employeur"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_cin_employeur",
+      "type": "number",
+      "description": "",
+      "name": "input_cin_employeur",
+      "label": "Numéro de carte d'identité nationale :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["CIN_de_employeur_physique"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_adresse_employeur",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_employeur",
+      "label": "Adresse/Domicilisation :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Adresse_de_employeur_physique"]
+      },
+      "visibility": true
+    },
+    
+    
+    {
+      "id": "input_clause_dexclusivité",
+      "type": "number",
+      "description": "",
+      "name": "Oui",
+      "label": "Combien de jours  de congé par mois travaillé,",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article8_titre"],
+        "true": []
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_clause_de_exculisivité",
+      "type": "checkbox",
+      "description": "",
+      "name": "Oui",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article9_titre", "Article9_texte1", "Article9_texte2"],
+        "true": []
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_clause_de_confidentialité",
+      "type": "checkbox",
+      "description": "",
+      "name": "Oui",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article9_titre", "Article9_texte1", "Article9_texte2"],
+        "true": []
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_propriété_des_travaux",
+      "type": "checkbox",
+      "description": "",
+      "name": "Oui",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article10_titre", "Article10_texte1", "Article10_texte2", "Article10_texte3"],
+        "true": []
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_non_concurrence_A",
+      "type": "number",
+      "description": "",
+      "name": "Oui",
+      "label": "Quelle est le périmètre géographique de la clause en kilomètres?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article10_titre", "Article10_texte1", "Article10_texte2", "Article10_texte3"],
+        "true": []
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_non_concurrence_B",
+      "type": "number",
+      "description": "",
+      "name": "Oui",
+      "label": "Quelle est la durée de l’obligation de non-concurrence en mois?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article10_titre", "Article10_texte1", "Article10_texte2", "Article10_texte3"],
+        "true": []
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_lieu_travail",
+      "type": "text",
+      "description": "",
+      "name": "Oui",
+      "label": "Quel sera le lieu de travail du salarié ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article11_titre"],
+        "true": []
+      },
+      "visibility": true
+    },
+    
+    
+	{
+      "id": "input_nom_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_de_lemployé",
+      "label": "Nom de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_de_lemployé"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_prénom_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "prénom_de_lemployé",
+      "label": "Prénom de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_num_CIN_de_lemployé",
+      "type": "number",
+      "description": "",
+      "name": "input_num_CIN_de_lemployé",
+      "label": "Numéro de carte d'identité nationale: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Num_CIN_de_lemployé"]
+      },
+      "visibility": true
+    },
+    
+    {
+      "id": "input_adresse_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_lemployé",
+      "label": "Adresse/Domicilisation: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Adresse_de_lemployé"]
+      },
+      "visibility": true
+    },
+    
+    {
+      "id": "input_poste_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_poste_de_lemployé",
+      "label": "Quelle est la fonction de l'employé ? ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Poste_de_lemployé"]
+      },
+      "visibility": true
+    },
+    
+   
+    {
+      "id": "input_periode_dessai",
+      "type": "checkbox",
+      "description": "",
+      "name": "",
+      "label": "oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["Article2_titre", "Article2_texte1", "Article2_texte2", "Article2_texte3"],
+        "true": []
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_salaire_mensuel_net_employé_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_salaire_mensuel_net_employé_lettres",
+      "label": "Quelle est le montant de la rémunération brute mensuelle en lettres?: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Salaire_mensuel_net_de_lemployé_lettres"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_salaire_mensuel_net_employé_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_salaire_mensuel_net_employé_chiffres",
+      "label": "Quelle est le montant de la rémunération brute mensuelle en chiffre?:",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Salaire_mensuel_net_de_lemployé_chiffres"]
+      },
+      "visibility": true
+    },
+    
+    
+    {
+      "id": "input_duree_hebdomadaire",
+      "type": "number",
+      "description": "Quel est le nombre d'heures de travail hebdomadaire ?",
+      "name": "input_date_signature_du_contrat",
+      "label": "Durée hebdomadaire de travail: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Date_début_du_contrat"]
+      },
+      "visibility": true
+    }
+  ],
+  "bookmarks": [
+    {
+      "bookmarkId": "Dénomination_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Capital_social_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Identifiant_unique_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Adresse_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nom_du_representant_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_du_representant_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+    {
+      "bookmarkId": "Nom_et_prénom_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+    {
+      "bookmarkId": "Num_CIN_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+
+    {
+      "bookmarkId": "Adresse_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Poste_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+   
+    {
+      "bookmarkId": "Durée_de_la_période_dessai",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Salaire_mensuel_net_de_lemployé_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Salaire_mensuel_net_de_lemployé_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Régime_de_travail_de_lemployé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    
+    {
+      "bookmarkId": "NomPrénom_representant_societé_signature",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+
+    {
+      "bookmarkId": "Date_début_du_contrat",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Type_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    
+	{
+      "bookmarkId": "nom_employeur",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_employeur",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "CIN_de_employeur_physique",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Adresse_de_employeur_physique",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Infos_employeur_moral",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Infos_employeur_physique",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article2_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article2_texte1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article2_texte2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article2_texte3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    
+    {
+      "bookmarkId": "Article8_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article8_texte1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article8_texte2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article8_texte3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article9_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article9_texte1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article9_texte2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article10_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article10_texte1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article10_texte2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article10_texte3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    
+    {
+      "bookmarkId": "Article11_titre",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article11_texte1",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article11_texte2",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Article11_texte3",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Article11_texte4",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    }
+  ]
+}

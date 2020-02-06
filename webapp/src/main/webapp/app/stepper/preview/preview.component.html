@@ -1,0 +1,16 @@
+
+<div class="preview marge-40" (click)="displayModal()"
+     [attr.data-toggle]="hasPreview() ? null : 'tooltip'" [attr.aria-disabled]="!hasPreview()"
+     [title]="hasPreview() ? '' : 'L\'aperçu est en cours de développement...'" [ngClass]="!hasPreview() ? 'disabled': 'enabled'">
+    <ul class="list-inline">
+        <li>
+            <p class="miniLegit"><strong><span>{{legalDocument.fullName | uppercase}}</span></strong></p>
+            <p class="miniFake inter-line">Lorem ____________ dolor sit amet, consectetur adipisicing elit. Excepturi laborum omnis ut! Accusamus ___________ dolores incidunt inventore repellat, repudiandae soluta. Adipisci, aspernatur culpa dolores est et id_________________ sequi?</p>
+            <p class="miniFake inter-line">Lorem ipsum dolor sit amet, ___________ adipisicing elit. ______________ laborum omnis ut! Accusamus ___________________ delectus dolores incidunt inventore repellat, r___________oluta. Adipisci, aspernatur culpa dolores est et id reprehenderit sequi?</p>
+            <p class="miniFake inter-line">Lorem ipsum dolor sit amet, adipisicing elit.  laborum omnis ut! Accusamus  delectus dolores incidunt inventore repellat, roluta. Adipisci, aspernatur culpa dolores est et id reprehenderit sequi?</p>
+            <p class="miniFake inter-line">Lorem  dolor sit amet, consectetur adipisicing elit._______________i laborum omnis ut! Accusamus ___________ dolores incidunt inventore repellat, repudiandae _______________. Adipisci, aspernatur culpa dolores est et id_________________ sequi?</p>
+            <p class="miniFake inter-line">Lorem ipsum ___________ ___________oluta. Adipisci</p>
+        </li>
+    </ul>
+</div>
+

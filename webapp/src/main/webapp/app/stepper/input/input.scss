@@ -1,0 +1,63 @@
+/* Rules for sizing the icon. */
+.material-icons.md-20 {
+  font-size: 20px;
+}
+.material-icons.md-22 {
+  font-size: 22px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons {
+  vertical-align: -webkit-baseline-middle;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Rules for coloring the icon. */
+.material-icons.gray {
+  color: #7f7f7f;
+}
+
+::ng-deep .md-13 {
+  font-size: 13px;
+}
+
+.text-descriptive {
+  font-size: 13px;
+  font-style: italic;
+  padding-left: 10px;
+  border-left: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+.input-margin {
+  margin-top: 10px;
+  width: auto;
+}
+
+.col-form-label {
+  width: auto;
+  padding-left: 5px !important;
+}

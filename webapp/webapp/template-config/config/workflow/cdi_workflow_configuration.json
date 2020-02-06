@@ -1,0 +1,86 @@
+{
+  "workflow": [
+    {
+      "inputId": "input_nature_employeur_morale",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale",
+          "constraints": [
+            {
+              "elementId": "bloc_lemployeur_morale",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_nature_employeur_physique",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique",
+          "constraints": [
+            {
+              "elementId": "bloc_lemployeur_physique",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_periode_dessai",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_durée_de_la_période_dessai",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_durée_de_la_période_dessai",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_non_concurrence",
+      "valuesConstraints": [
+        {
+          "value": "true",
+          "constraints": [
+            {
+              "elementId": "input_durée_non_concurrence",
+              "visibility": true
+            },
+            {
+              "elementId": "input_périmètre_non_concurrence",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "false",
+          "constraints": [
+            {
+              "elementId": "input_durée_non_concurrence",
+              "visibility": false
+            },
+            {
+              "elementId": "input_périmètre_non_concurrence",
+              "visibility": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

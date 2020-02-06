@@ -1,0 +1,25 @@
+<div class="container-fluid col-md-10 mb-lg-5">
+    <br>  <h2 class="titel-commande" >Mes employeurs:</h2>
+    <hr>
+
+    <jhi-alert-error></jhi-alert-error>
+    <div class="card text-center shadow-sm ">
+        <div class="card-header  bg-white">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <nav class="nav nav-tabs card-header-tabs mb-1" mat-tab-nav-bar>
+                        <a lass="nav-link active" mat-tab-link *ngFor="let link of navLinks"
+                           [routerLink]="link.link"
+                           routerLinkActive #rla="routerLinkActive"
+                           [active]="rla.isActive">{{link.label}}</a>
+                    </nav>
+                </li>
+
+            </ul>
+        </div>
+        <div class="card-body">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,163 @@
+
+
+
+    <div class="container-fluid bg-white card border-light mb-3 col-md-10 pt-lg-5">
+            <div class="row">
+                <div class="col-12 col-sm">
+                     <h2 class="text-left titel-commande" >Commandes</h2>
+                                  </div>
+                <div class="col search-wrapper pl-2">
+                    <form name="searchForm" class="form-inline">
+                    <div class="input-group w-100 p-1 rounded rounded-pill shadow-sm border bg-light">
+                        <button class="input-group-append btn" (click)="clear()" *ngIf="currentSearch">
+                            <fa-icon [icon]="'trash-alt'"></fa-icon>
+                        </button>
+                        <input type="search" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'paperlabsApp.order.home.search' | translate }}" aria-describedby="button-addon1" class="form-control border-0 bg-light ml-1">
+                        <button class="input-group-append btn" (click)="search(currentSearch)">
+                            <fa-icon [icon]="'search'"></fa-icon>
+                        </button>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+        <hr>
+
+                <jhi-alert></jhi-alert>
+                <div class="alert alert-warning" *ngIf="orders?.length === 0">
+                    <span jhiTranslate="paperlabsApp.order.home.notFound">No orders found</span>
+                </div>
+        <div class="col-md-12 mb-2 mt-1">
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body px-3 py-2">
+                                <div class="media d-flex lh-1">
+                                    <div class="media-body text-left">
+                                        <h3 class="color-orange">{{waitingOrderToday}}</h3>
+                                        <div class="lh-1">Commandes en attente</div>
+                                        <small class="text-muted lh-1">Aujourd'hui</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <em class="material-icons stat-icon color-orange">shopping_cart</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body px-3 py-2">
+                                <div class="media d-flex lh-1">
+                                    <div class="media-body text-left">
+                                        <h3 class="color-green">{{paidOrderToday}}</h3>
+                                        <div class="lh-1">Commandes payées</div>
+                                        <small class="text-muted lh-1">Aujourd'hui</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <em class="material-icons stat-icon color-green">add_shopping_cart</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body px-3 py-2">
+                                <div class="media d-flex lh-1">
+                                    <div class="media-body text-left">
+                                        <h3 class="color-red">{{abandonedOrderToday}}</h3>
+                                        <div class="lh-1">Commandes abandonnées</div>
+                                        <small class="text-muted lh-1">Aujourd'hui</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <em class="material-icons stat-icon color-red">remove_shopping_cart</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right p-3">
+
+            <button id="jh-create-entity" class="btn btn-primary create-new-bg float-right jh-create-entity create-legal-document" [routerLink]="['/order/new']">
+                <fa-icon [icon]="'plus'"></fa-icon>
+                <span class="hidden-sm-down"  jhiTranslate="paperlabsApp.order.home.createLabel">Create a new order
+            </span>
+            </button>
+        </div>
+                <div class="table-responsive col-md-12 rounded-top" *ngIf="orders?.length > 0">
+
+                    <!--Table-->
+                    <table class="table text-center shadow-sm">
+                        <thead class="rounded-top bg-light">
+                        <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+                            <th scope="col">N° <fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col" jhiSortBy="paymentMethod"><span>Mode de paiement</span><fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col"jhiSortBy="totalPrice"><span>Prix total </span><fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col"jhiSortBy="price"><span>Prix </span><fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col"jhiSortBy="tax"><span>Tax </span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col"jhiSortBy="status"><span>Status </span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col"jhiSortBy="destinationEmail"><span>Email de destination </span> <fa-icon [icon]="'sort'"></fa-icon></th>
+                            <th scope="col" >Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr *ngFor="let order of orders ;trackBy: trackId">
+                                <th scope="row"><a [routerLink]="['/order', order.id, 'view' ]">{{transformOrderIdentifier(order.orderIdentifier)}}</a></th>
+                                <td jhiTranslate="{{'paperlabsApp.PaymentMethod.' + order.paymentMethod}}">{{order.paymentMethod}}</td>
+                                <td>{{order.totalPrice | number : '1.2-2'}} DT</td>
+                                <td>{{order.price | number : '1.2-2'}} DT</td>
+                                <td>{{order.tax}} %</td>
+                                <td jhiTranslate="{{'paperlabsApp.OrderStatus.' + order.status}}" [ngClass]="getOrderClassByStatus(order.status)">{{order.status}}</td>
+                                <td>{{order.destinationEmail}}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="submit"
+                                                [routerLink]="['/order', order.id, 'view' ]"
+                                                class="btn btn-sm">
+                                            <fa-icon [icon]="'eye'" ></fa-icon>
+
+                                        </button>
+                                        <button type="submit"
+                                                [routerLink]="['/order', order.id, 'edit']"
+                                                class="btn btn-sm">
+                                            <fa-icon [icon]="'pencil-alt'" style="color: #3e8acc"></fa-icon>
+
+                                        </button>
+                                        <button type="submit"
+                                                [routerLink]="['/order', { outlets: { popup: order.id + '/delete'} }]"
+                                                replaceUrl="true"
+                                                queryParamsHandling="merge"
+                                                class="btn btn-sm">
+                                            <fa-icon [icon]="'trash'" style="color: #dc3545"></fa-icon>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div [hidden]="orders?.length === 0">
+                        <div class="row justify-content-center">
+                            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+                        </div>
+                        <div class="row justify-content-center">
+                            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="8" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+

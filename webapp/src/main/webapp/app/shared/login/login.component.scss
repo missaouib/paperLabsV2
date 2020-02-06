@@ -1,0 +1,79 @@
+@import '~bootstrap/scss/bootstrap';
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../../../content/images/PAP_logo.png') no-repeat center center;
+  background-size: contain;
+}
+
+$modal-border-radius: 10px;
+@mixin fontawesome {
+  display: inline-block;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link {
+  text-align: center;
+}
+.link a {
+  transition: all 1s linear;
+  display: inline;
+  font-size: 0.9rem;
+  color: #1400c3;
+  font-weight: 100;
+  padding-bottom: 5px;
+  background: linear-gradient(
+    34deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(88, 79, 255, 1) 49%,
+    rgba(23, 0, 175, 1) 100%
+  );
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+
+  &:hover {
+    background-size: 100% 2px;
+  }
+}
+.form-check-input {
+  margin-left: 10px;
+  margin-top: 13px;
+}
+.submit-btn {
+  background-color: #1400c3;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.form {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+::ng-deep .modal-content {
+  border-radius: 10px;
+}
+
+::ng-deep .modal-dialog {
+  @extend .modal-dialog-centered;
+}
+
+::ng-deep .mat-slide-toggle-content {
+  font-family: 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  overflow: unset !important;
+}

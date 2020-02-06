@@ -1,0 +1,127 @@
+
+{
+  "workflow": [
+    {
+      "inputId": "input_nature_personne_physique_tunisienne",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique tunisienne",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_étrangère",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique étrangère",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_étrangère",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale tunisienne",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_étrangère",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale étrangère",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_étrangère",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    
+	{
+      "inputId": "input_nature_personne_physique_tunisienne_d",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique tunisienne",
+          "constraints": [
+            {
+              "elementId": "bloc_personne_physique_tunisienne_d",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_physique_étrangère_d",
+      "valuesConstraints": [
+        {
+          "value": "Personne physique étrangère",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_physique_étrangère_d",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_tunisienne_d",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale tunisienne",
+          "constraints": [
+            
+			{
+              "elementId": "bloc_personne_morale_tunisienne_d",
+              "visibility": true
+            }
+			
+          ]
+        }
+      ]
+    },
+	{
+      "inputId": "input_nature_personne_morale_étrangère_d",
+      "valuesConstraints": [
+        {
+          "value": "Personne morale étrangère",
+          "constraints": [
+			{
+              "elementId": "bloc_personne_morale_étrangère_d",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+      ]
+    }
+  

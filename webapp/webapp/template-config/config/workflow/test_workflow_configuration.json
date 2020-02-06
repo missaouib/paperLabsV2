@@ -1,0 +1,62 @@
+{
+  "workflow": [
+    {
+      "inputId": "input1",
+      "valuesConstraints": [
+        {
+          "value": "Une entreprise",
+          "constraints": [
+            {
+              "elementId": "step2",
+              "visibility": true
+            },
+            {
+              "elementId": "step6",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input2",
+      "valuesConstraints": [
+        {
+          "value": "Une association",
+          "constraints": [
+            {
+              "elementId": "step3",
+              "visibility": true
+            },
+            {
+              "elementId": "step7",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input3",
+      "valuesConstraints": [
+        {
+          "value": "Un particulier",
+          "constraints": [
+            {
+              "elementId": "input4",
+              "visibility": true
+            },
+            {
+              "elementId": "step4",
+              "visibility": true
+            },
+            {
+              "elementId": "step8",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

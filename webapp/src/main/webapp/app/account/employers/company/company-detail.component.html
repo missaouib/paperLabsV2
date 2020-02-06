@@ -1,0 +1,25 @@
+<div class="col-md">
+    <div *ngIf="company">
+        <div class="card text-left">
+            <h2 class="card-header bg-white">Société: {{company.companyName}}</h2>
+            <jhi-alert-error></jhi-alert-error>
+
+            <div class="card-body">
+                <ul class="list-group-flush">
+                    <li class="list-group-item"><span class="font-weight-bold">Nom de la société</span>:<span> {{company.companyName}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Représentant</span>:<span> {{company.companyRepresentativeFullName}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Identifiant</span>:<span> {{company.companyUniqueIdentification}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Adresse</span>:<span> {{company.companyFullAddress}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Type</span>:<span> {{company.companyType}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold">Capital</span>:<span> {{company.companyCapital}}</span></li>
+
+                </ul>
+                <button type="submit"
+                        (click)="previousState()"
+                        class="btn btn-outline-primary">
+                    <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

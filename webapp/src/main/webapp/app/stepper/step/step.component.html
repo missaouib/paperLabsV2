@@ -1,0 +1,46 @@
+<div id="{{step.id}}" [style.display]="step.visibility ? 'block' : 'none'" class="step">
+    <div *ngIf="step.title !== ''" class="step-title">{{step.title}}</div>
+    <div *ngIf="step.description !== ''">{{step.description}}</div>
+    <div *ngIf="!isConfirmGenerationStep && !isFinalStep">
+        <div class="tab" *ngFor="let bloc of step.blocs" id="{{bloc.id}}" [style.display]="bloc.visibility ? 'block' : 'none'" [class.innerBloc]="!bloc.visibility">
+            <jhi-bloc [bloc]="bloc"></jhi-bloc>
+        </div>
+    </div>
+
+    <div *ngIf="isConfirmGenerationStep">
+        <jhi-generate-document (submitEvent)="nextPrev(step.id, 1, $event)"></jhi-generate-document>
+    </div>
+
+    <div *ngIf="isFinalStep">
+        <jhi-payment-step (purchaseEvent)="purchase($event)"></jhi-payment-step>
+    </div>
+
+    <div class="navigation-buttons row no-margins ">
+        <button *ngIf="!isFirstStep && !orderIsPurchased" (click)="nextPrev(step.id, -1, undefined)" class="btn btn-outline-primary mr-custom">
+            <fa-icon [icon]="['fas', 'angle-left']" [fixedWidth]="true" size="lg"></fa-icon>Précédent
+        </button>
+        <button [disabled]="!hasPreview()" (click)="displayModal()" class="btn btn-outline-primary preview-btn" [attr.data-toggle]="hasPreview() ? null : 'tooltip'" [title]="hasPreview() ? '' : 'L\'aperçu est en cours de développement...'">
+            <fa-icon [icon]="['fas', 'eye']" [fixedWidth]="true" size="lg"></fa-icon>
+        </button>
+        <button *ngIf="!isConfirmGenerationStep && !isFinalStep" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-indigo ">
+            Suivant<fa-icon [icon]="['fas', 'angle-right']" [fixedWidth]="true" size="lg"></fa-icon>
+        </button>
+        <!-- <button *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success ">
+            Télécharger<fa-icon [icon]="['fas', 'file-download']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
+        </button> -->
+
+        <!-- <a  *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success " 
+        [href]="fileUrl"  download="cdi_docx_model.docx">Télécharger   </a>-->
+
+        <!-- <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success" [href]="['user/legal-document-description/', legalDocument.id] " download="document.docx">Télécharger   </a> -->
+
+        <!--  <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success ">Télécharger   </a>
+        <a *ngIf="isConfirmGenerationStep && isAuthenticated()" [href]="fileUrl" [download]="fileUrl">download   </a>
+ -->
+
+
+        <!--  <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="nextPrev(step.id, 1, undefined)" class="btn btn-success " [href]="fileUrl" [download]="fileUrl">Télécharger   </a> -->
+
+        <a *ngIf="isConfirmGenerationStep && isAuthenticated()" (click)="download()" class="btn btn-success ">download   </a>
+    </div>
+</div>

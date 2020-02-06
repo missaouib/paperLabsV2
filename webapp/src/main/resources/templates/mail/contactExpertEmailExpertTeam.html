@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.contactExpertTeam.title}">PaperLabs Contact Expert</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.contactExpertTeam.text1}">
+            Demande d'assisstance d'un expert de l'utilisateur ayant ces coordonnées :
+        </p>
+        <div th:text="#{email.contactExpertTeam.firstName(${contact.getFirstName()})}">
+            Prénom :
+        </div>
+        <div th:text="#{email.contactExpertTeam.lastName(${contact.getLastName()})}">
+            Nom :
+        </div>
+        <div th:text="#{email.contactExpertTeam.email(${contact.getEmail()})}">
+            Email :
+        </div>
+        <div th:text="#{email.contactExpertTeam.phoneNumber(${contact.getPhoneNumber()})}">
+            Numéro de téléphone :
+        </div>
+        <div th:text="#{email.contactExpertTeam.company(${contact.getCompany()})}">
+            Société :
+        </div>
+    </body>
+</html>

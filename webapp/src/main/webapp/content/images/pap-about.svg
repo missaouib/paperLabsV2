@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>fic-about</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8CA0B3" offset="0%"></stop>
+            <stop stop-color="#A2B6C9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ASSO-Webapp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer_M_D_1.0" transform="translate(-128.000000, -614.000000)" fill-rule="nonzero">
+            <g id="fic-about" transform="translate(128.000000, 614.000000)">
+                <g id="Group">
+                    <rect id="Rectangle-3-Copy-3" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M4.2218,12 C4.2218,16.296 7.7038,19.7782 12,19.7782 C16.2962,19.7782 19.7782,16.2962 19.7782,12 C19.7782,7.7038 16.2962,4.2218 12,4.2218 C7.7038,4.2218 4.2218,7.7038 4.2218,12 Z M2,12 C2,6.4774 6.4758,2 12,2 C17.5226,2 22,6.4758 22,12 C22,17.5226 17.5242,22 12,22 C6.4774,22 2,17.5242 2,12 Z M10.889,10.89218 L10.889,16.44138 C10.889,17.06872 11.38666,17.55544 11.99994,17.55544 C12.6179,17.55544 13.11088,17.05622 13.11088,16.44138 L13.11088,10.89218 C13.11088,10.26406 12.61322,9.77812 11.99994,9.77812 C11.38198,9.77812 10.889,10.27656 10.889,10.89218 Z M10.889,7.55538 C10.889,8.17334 11.38666,8.66632 11.99994,8.66632 C12.6179,8.66632 13.11088,8.16944 13.11088,7.55538 C13.11088,6.93742 12.61322,6.44444 11.99994,6.44444 C11.38198,6.44444 10.889,6.9421 10.889,7.55538 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

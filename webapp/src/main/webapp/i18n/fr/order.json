@@ -1,0 +1,29 @@
+{
+  "paperlabsApp": {
+    "order": {
+      "home": {
+        "title": "Commandes",
+        "createLabel": "Créer un nouveau Order",
+        "createOrEditLabel": "Créer ou éditer un Order",
+        "search": "Recherche pour Order",
+        "notFound": "Aucun Order trouvé"
+      },
+      "created": "Un nouveau Order a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Order avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Order avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Order {{ id }} ?"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "paymentMethod": "Mode de paiement",
+      "totalPrice": "Prix total (dt)",
+      "price": "Prix (dt)",
+      "tax": "Tax (%)",
+      "invoiceFilePath": "Chemin du fichier",
+      "status": "Status",
+      "destinationEmail": "Email de destination"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="descriptionSection">
+            <h2><span jhiTranslate="paperlabsApp.descriptionSection.detail.title">Description Section</span> {{descriptionSection.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="paperlabsApp.descriptionSection.title">Title</span></dt>
+                <dd>
+                    <span>{{descriptionSection.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="paperlabsApp.descriptionSection.content">Content</span></dt>
+                <dd>
+                    <span>{{descriptionSection.content}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/description-section', descriptionSection.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

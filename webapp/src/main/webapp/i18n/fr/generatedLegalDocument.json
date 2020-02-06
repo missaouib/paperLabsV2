@@ -1,0 +1,25 @@
+{
+  "paperlabsApp": {
+    "generatedLegalDocument": {
+      "home": {
+        "title": "GeneratedLegalDocuments",
+        "createLabel": "Créer un nouveau Generated Legal Document",
+        "createOrEditLabel": "Créer ou éditer un Generated Legal Document",
+        "search": "Recherche pour Generated Legal Document",
+        "notFound": "Aucun Generated Legal Document trouvé"
+      },
+      "created": "Un nouveau Generated Legal Document a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Generated Legal Document avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Generated Legal Document avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Generated Legal Document {{ id }} ?"
+      },
+      "detail": {
+        "title": "Generated Legal Document"
+      },
+      "generatedWordFilePath": "Generated Word File Path",
+      "genratedPDFFilePath": "Genrated PDF File Path",
+      "date": "Date"
+    }
+  }
+}

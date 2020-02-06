@@ -1,0 +1,93 @@
+<div class="row justify-content-center pt-lg-5">
+    <div class="col-md-10">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+        <br>  <h2 class="text-center titel-commande">Créer ou éditer une commande</h2>
+        <jhi-alert-error></jhi-alert-error>
+        <hr>
+
+        <div class="row justify-content-center">
+            <aside class="col mb-5">
+                <div class="card shadow-sm">
+                    <article class="card-body">
+                        <div class="form-group" [hidden]="!editForm.get('id').value">
+                            <label for="id" jhiTranslate="global.field.id">ID</label>
+                            <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                                   readonly />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.paymentMethod" for="field_paymentMethod">Payment Method</label>
+                            <select class="form-control" name="paymentMethod" formControlName="paymentMethod" id="field_paymentMethod">
+                                <option value="MOBICACH">{{'paperlabsApp.PaymentMethod.MOBICACH' | translate}}</option>
+                                <option value="EDINAR">{{'paperlabsApp.PaymentMethod.EDINAR' | translate}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.totalPrice" for="field_totalPrice">Total Price</label>
+                            <input type="number" class="form-control" name="totalPrice" id="field_totalPrice"
+                                   formControlName="totalPrice"/>
+                            <div *ngIf="editForm.get('totalPrice').invalid && (editForm.get('totalPrice').dirty || editForm.get('totalPrice').touched)">
+                                <small class="form-text text-danger"
+                                       *ngIf="editForm.get('totalPrice').errors.required" jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.get('totalPrice')?.errors?.number" jhiTranslate="entity.validation.number">
+                                    This field should be a number.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.price" for="field_price">Price</label>
+                            <input type="number" class="form-control" name="price" id="field_price"
+                                   formControlName="price"/>
+                            <div *ngIf="editForm.get('price').invalid && (editForm.get('price').dirty || editForm.get('price').touched)">
+                                <small class="form-text text-danger"
+                                       *ngIf="editForm.get('price').errors.required" jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                                <small class="form-text text-danger"
+                                       [hidden]="!editForm.get('price')?.errors?.number" jhiTranslate="entity.validation.number">
+                                    This field should be a number.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.tax" for="field_tax">Tax</label>
+                            <input type="number" class="form-control" name="tax" id="field_tax"
+                                   formControlName="tax"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.invoiceFilePath" for="field_invoiceFilePath">Invoice File Path</label>
+                            <input type="text" class="form-control" name="invoiceFilePath" id="field_invoiceFilePath"
+                                   formControlName="invoiceFilePath"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.status" for="field_status">Status</label>
+                            <select class="form-control" name="status" formControlName="status" id="field_status">
+                                <option value="WAITING">{{'paperlabsApp.OrderStatus.WAITING' | translate}}</option>
+                                <option value="PAID">{{'paperlabsApp.OrderStatus.PAID' | translate}}</option>
+                                <option value="ABANDONED">{{'paperlabsApp.OrderStatus.ABANDONED' | translate}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" jhiTranslate="paperlabsApp.order.destinationEmail" for="field_destinationEmail">Destination Email</label>
+                            <input type="text" class="form-control" name="destinationEmail" id="field_destinationEmail"
+                                   formControlName="destinationEmail"/>
+                        </div>
+                        <div>
+                            <button type="button" id="cancel-save" class="btn btn-outline-primary"  (click)="previousState()">
+                                <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                            </button>
+                            <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                                <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+            </aside>
+        </div>
+        </form>
+    </div>
+</div>
+

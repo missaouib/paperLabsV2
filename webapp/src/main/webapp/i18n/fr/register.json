@@ -1,0 +1,31 @@
+{
+  "register": {
+    "title": "Création de compte utilisateur",
+    "form": {
+      "button": "Enregistrement"
+    },
+    "messages": {
+      "validate": {
+        "lastname": {
+          "required": "Votre nom est requis.",
+          "minlength": "Votre nom doit comporter au moins un caractère.",
+          "maxlength": "Votre nom ne doit pas comporter plus de 50 caractères.",
+          "pattern": "Votre nom est invalide."
+        },
+        "firstname": {
+          "required": "Votre prénom est requis.",
+          "minlength": "Votre prénom doit comporter au moins un caractère.",
+          "maxlength": "Votre prénom ne doit pas comporter plus de 50 caractères.",
+          "pattern": "Votre prénom est invalide."
+        }
+      },
+      "success": "<strong>Compte enregistré !</strong> Merci de vérifier votre email de confirmation pour activer votre compte.",
+      "successWithOrder": "<strong>Compte enregistré !</strong> Merci de vérifier votre email de confirmation pour activer votre compte et valider votre commande.",
+      "error": {
+        "fail": "<strong>Compte non créé !</strong> Merci d'essayer à nouveau plus tard.",
+        "userexists": "<strong>Ce compte utilisateur existe déjà !</strong> Veuillez en choisir un autre.",
+        "emailexists": "<strong>Cet email est déjà utilisé !</strong> Veuillez en choisir un autre."
+      }
+    }
+  }
+}

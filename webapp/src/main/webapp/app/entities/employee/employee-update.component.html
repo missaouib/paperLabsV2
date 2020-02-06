@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-employee-heading" jhiTranslate="paperlabsApp.employee.home.createOrEditLabel">Create or edit a Employee</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeeFullName" for="field_employeeFullName">Employee Full Name</label>
+                    <input type="text" class="form-control" name="employeeFullName" id="field_employeeFullName"
+                           formControlName="employeeFullName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeeCinNumber" for="field_employeeCinNumber">Employee Cin Number</label>
+                    <input type="text" class="form-control" name="employeeCinNumber" id="field_employeeCinNumber"
+                           formControlName="employeeCinNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeeCinDeliveredDate" for="field_employeeCinDeliveredDate">Employee Cin Delivered Date</label>
+                    <div class="input-group">
+                        <input id="field_employeeCinDeliveredDate" type="text" class="form-control" name="employeeCinDeliveredDate" ngbDatepicker  #employeeCinDeliveredDateDp="ngbDatepicker" formControlName="employeeCinDeliveredDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="employeeCinDeliveredDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeeCinDeliveredLocation" for="field_employeeCinDeliveredLocation">Employee Cin Delivered Location</label>
+                    <input type="text" class="form-control" name="employeeCinDeliveredLocation" id="field_employeeCinDeliveredLocation"
+                           formControlName="employeeCinDeliveredLocation"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeeFullAddress" for="field_employeeFullAddress">Employee Full Address</label>
+                    <input type="text" class="form-control" name="employeeFullAddress" id="field_employeeFullAddress"
+                           formControlName="employeeFullAddress"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="paperlabsApp.employee.employeePostion" for="field_employeePostion">Employee Postion</label>
+                    <input type="text" class="form-control" name="employeePostion" id="field_employeePostion"
+                           formControlName="employeePostion"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

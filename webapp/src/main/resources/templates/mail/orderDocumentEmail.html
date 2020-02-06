@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{email.document.title}">PaperLabs Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+</head>
+<body>
+<p th:text="#{email.activation.greeting(${order.getUser().getFirstName()+ ' '+ order.getUser().getLastName()})}">
+    Cher
+</p>
+<p th:text="#{email.document.text1}+' '+ ${order.getLegalDocument().getFullName()}"></p>
+<p th:text="#{email.document.text2}"></p>
+<p>
+    <a th:with="url=(@{|${baseUrl}/orders/user/${order.getUser().getId()}|})" th:href="${url}"
+       th:text="${url}"></a>
+</p>
+<p th:text="#{email.document.text3}">
+
+</p>
+
+<p>
+    <span th:text="#{email.document.text4}">Cordialement, </span>
+    <br/>
+    <em th:text="#{email.signature}">Équipe PaperLabs.</em>
+</p>
+</body>
+</html>

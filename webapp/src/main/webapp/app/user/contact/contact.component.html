@@ -1,0 +1,159 @@
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8 pb-5">
+            <div class="card">
+                <h2 class="card-header titel-commande bg-white">Contactez nous</h2>
+                <div class="card-body">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="alert alert-success" *ngIf="success">
+                        <strong>Message envoyé avec succée.</strong> Veuillez vérifier votre email.
+                    </div>
+
+                    <div class="alert alert-danger" *ngIf="error">
+                        <strong>Échec d'envoi de message !</strong> Veuillez réessayer ultérieurement.
+                    </div>
+                </div>
+            </div>
+
+            <form id="contact-form" name="form" role="form" (ngSubmit)="sendContactEmail()" [formGroup]="contactForm" *ngIf="!success">
+                <div class="controls">
+                    <ul class="list-group-flush">
+                        <li class="list-group-item">
+                        <div class="row">
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstName">Prénom*</label>
+                                    <input id="firstName" type="text" name="firstName" class="form-control"
+                                           placeholder="{{'global.form.firstName.placeholder' | translate}}" formControlName="firstName">
+                                    <div *ngIf="contactForm.get('firstName').invalid && (contactForm.get('firstName').dirty || contactForm.get('firstName').touched)">
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('firstName').errors.required" jhiTranslate="register.messages.validate.firstname.required">
+                                            Your firstName is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('firstName').errors.minlength"
+                                               jhiTranslate="register.messages.validate.firstname.minlength">
+                                            Your firstName is required to be at least 1 character.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('firstName').errors.maxlength"
+                                               jhiTranslate="register.messages.validate.firstname.maxlength">
+                                            Your firstName cannot be longer than 50 characters.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('firstName').errors.pattern"
+                                               jhiTranslate="register.messages.validate.firstname.pattern">
+                                            Your firstName can only contain letters and digits.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lastName">Nom*</label>
+                                    <input id="lastName" type="text" name="lastName" class="form-control"
+                                           placeholder="{{'global.form.lastName.placeholder' | translate}}" formControlName="lastName">
+                                    <div *ngIf="contactForm.get('lastName').invalid && (contactForm.get('lastName').dirty || contactForm.get('lastName').touched)">
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('lastName').errors.required" jhiTranslate="register.messages.validate.lastname.required">
+                                            Your lastName is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('lastName').errors.minlength"
+                                               jhiTranslate="register.messages.validate.lastname.minlength">
+                                            Your lastName is required to be at least 1 character.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('lastName').errors.maxlength"
+                                               jhiTranslate="register.messages.validate.lastname.maxlength">
+                                            Your lastName cannot be longer than 50 characters.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('lastName').errors.pattern"
+                                               jhiTranslate="register.messages.validate.lastname.pattern">
+                                            Your lastName can only contain letters and digits.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </li>
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email*</label>
+                                    <input id="email" type="email" name="email" class="form-control"
+                                           placeholder="{{'global.form.email.placeholder' | translate}}" formControlName="email">
+                                    <div *ngIf="contactForm.get('email').invalid && (contactForm.get('email').dirty || contactForm.get('email').touched)">
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('email').errors.required"
+                                               jhiTranslate="global.messages.validate.email.required">
+                                            Your email is required.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('email').errors.invalid"
+                                               jhiTranslate="global.messages.validate.email.invalid">
+                                            Your email is invalid.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('email').errors.minlength"
+                                               jhiTranslate="global.messages.validate.email.minlength">
+                                            Your email is required to be at least 5 characters.
+                                        </small>
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('email').errors.maxlength"
+                                               jhiTranslate="global.messages.validate.email.maxlength">
+                                            Your email cannot be longer than 100 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="need">Préciser votre besoin*</label>
+                                    <select id="need" name="need" class="form-control" formControlName="need">
+                                        <option value="" disabled>--Préciser votre besoin--</option>
+                                        <option value="Demande de cotation">Demande de cotation</option>
+                                        <option value="Demander le statut de la commande">Demander le statut de la commande</option>
+                                        <option value="Demander une copie d'une facture">Demander une copie d'une facture</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                    <div *ngIf="contactForm.get('need').invalid && (contactForm.get('need').dirty || contactForm.get('need').touched)">
+                                        <small class="form-text text-danger" *ngIf="contactForm.get('need').errors.required">
+                                            Vous devez préciser votre besoin.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" class="form-control" placeholder="Votre message"
+                                                  formControlName="message" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" [disabled]="contactForm.invalid" class="btn btn-success btn-send">
+                                        Envoyer message<fa-icon [icon]="['fas', 'paper-plane']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
+                                    </button>
+                                </div>
+                            </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-muted">
+                                <strong>*</strong> Ces champs sont obligatoires.</p>
+                        </div>
+                    </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+
+         </div>
+         </div>
+        </div>
+    </div>
+
+
+

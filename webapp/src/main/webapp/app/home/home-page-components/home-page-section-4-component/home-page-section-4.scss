@@ -1,0 +1,94 @@
+/* ==========================================================================
+Home page section 4 styles
+========================================================================== */
+
+section {
+  min-height: 700px;
+  margin-top: -105px;
+  display: block;
+  font-family: OpenSans;
+}
+.titel-line {
+  color: #1400c3;
+  padding-top: 120px;
+}
+.titel-line:before {
+  content: '';
+  background: url('../../../../content/images/bottom-line.png') no-repeat;
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  margin-top: 41px;
+  margin-left: -130px;
+}
+#section_4 {
+  background: url('../../../../content/images/section4-bg-01.png') no-repeat;
+  width: auto;
+  height: auto;
+  // background: radial-gradient(circle at 100%, #e4e4e4, #e4e4e4 50%, #e4e4e4 75%, #d7d7d7 75%);
+}
+section h2,
+h6 {
+  text-align: center;
+}
+
+section h2 {
+  font-weight: bold;
+}
+
+hr {
+  width: device-width;
+}
+
+.menu-button {
+  text-align: center;
+}
+
+.bloc {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.bloc_1 {
+  padding: 5px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.bloc_1 h4,
+h6 {
+  text-align: center;
+}
+
+.bloc_1 h4 {
+  font-weight: bold;
+}
+
+.bloc_1 h6 {
+  color: grey;
+}
+
+.img {
+  padding-top: 100px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .titel-line:before {
+    width: 200% !important;
+    z-index: 0 !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}

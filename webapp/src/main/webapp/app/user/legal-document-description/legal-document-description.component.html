@@ -1,0 +1,43 @@
+<div class="doc-containter">
+    <div class="col-12 col-sm-12 col-xl-8 float-left">
+        <div class="headings">
+            <h1 class="doc-title">{{legalDocument.fullName}}</h1>
+            <h2 class="doc-description">{{legalDocument.description}}</h2>
+        </div>
+
+        <ul class="doc-features mt-4 mb-4">
+            <li class="doc-feature-item">
+                <span class="material-icons doc-feature-icon">create</span><a
+                [routerLink]="['/stepper/doc/', legalDocument.id]">Créez votre contrat</a>
+            </li>
+            <li class="doc-feature-item">
+                <span class="material-icons doc-feature-icon">save</span><a
+                [routerLink]="['/stepper/doc/', legalDocument.id]">Enregistrez et imprimez</a>
+            </li>
+            <li class="doc-feature-item">
+                <span class="material-icons doc-feature-icon">insert_drive_file</span><a
+                [routerLink]="['/stepper/doc/', legalDocument.id]">Signez et partagez</a>
+            </li>
+        </ul>
+        <button class="btn btn-paperlabs" [routerLink]="['/stepper/doc/', legalDocument.id]">
+            <span class="material-icons icn-paperlabs">create</span>Remplir ce modèle
+        </button>
+        <div class="doc-sections">
+            <h3 class="doc-sections-title">A propos de ce document</h3>
+
+            <div class="doc-sections-content">
+                <div *ngFor="let descriptionSection of legalDocument.descriptionSections" class="doc-section">
+                    <h2 class="doc-section-title">{{descriptionSection.title}}</h2>
+                    <p class="doc-section-content">{{descriptionSection.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-xl-4 float-right">
+        <span *ngIf="legalDocument.documentsRecommendation.length > 0">Legal documents recommendations :</span>
+            <span  *ngFor="let documentRecommendation of legalDocument.documentsRecommendation" >
+                <button class="font-weight-bold btn btn-info" [routerLink]="['../', documentRecommendation.id]">{{documentRecommendation.shortName}}</button>
+            </span>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "paperlabsApp": {
+    "legalDocument": {
+      "home": {
+        "title": "Document juridique",
+        "createLabel": "Créer un  document juridique",
+        "createOrEditLabel": "Créer ou éditer un Legal Document",
+        "search": "Recherche pour Legal Document",
+        "notFound": "Aucun Legal Document trouvé"
+      },
+      "created": "Un nouveau Legal Document a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Legal Document avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Legal Document avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Legal Document {{ id }} ?"
+      },
+      "detail": {
+        "title": "Document juridique"
+      },
+      "shortName": "Abréviastion",
+      "fullName": "Nom",
+      "keywords": "Mot clés",
+      "description": "Description",
+      "templatePreviewPath": "Chemin d'aperçu du modèle",
+      "templateFilePath": "Chemin du fichier modèle",
+      "stepperConfigFilePath": "\nChemin du fichier de configuration Stepper",
+      "workflowConfigFilePath": "Flux de travail",
+      "price": "Prix"
+    }
+  }
+}

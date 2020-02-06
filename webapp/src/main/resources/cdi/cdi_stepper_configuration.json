@@ -1,0 +1,596 @@
+{
+  "steps": [
+    {
+      "id": "step_lemployeur",
+      "title": "L'employeur",
+      "description": "",
+      "blocs": ["bloc_lemployeur"],
+      "visibility": true
+    },
+    {
+      "id": "step_lemployé",
+      "title": "L'employé",
+      "description": "",
+      "blocs": ["bloc_lemployé"],
+      "visibility": true
+    },
+    {
+      "id": "step_description_du_contrat",
+      "title": "Description du contrat :",
+      "description": "",
+      "blocs": ["bloc_details_du_contrat", "bloc_periode_dessai"],
+      "visibility": true
+    },
+    {
+      "id": "step_conditions_de_travail",
+      "title": "Conditions de travail :",
+      "description": "",
+      "blocs": ["bloc_conditions_de_travail", "bloc_non_concurrence"],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+    {
+      "id": "bloc_lemployeur",
+      "title": "L'employeur est :",
+      "description": "",
+      "inputs": [
+        "input_dénomination_de_la_societé",
+        "input_capital_social_de_la_societé",
+        "input_identifiant_unique_de_la_societé",
+        "input_nomPrénom_du_representant_de_la_societé",
+        "input_adresse_de_la_societé"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_lemployé",
+      "title": "L'employé est :",
+      "description": "",
+      "inputs": [
+        "input_nom_et_prénom_de_lemployé",
+        "input_num_CIN_de_lemployé",
+        "input_data_délivrance_de_la_CIN_de_lemployé",
+        "input_lieu_de_délivrance_de_la_CIN_de_lemployé",
+        "input_adresse_de_lemployé"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_details_du_contrat",
+      "title": "Détails du contrat :",
+      "description": "",
+      "inputs": ["input_date_adressage_de_loffre_de_lemployeur", "input_poste_de_lemployé", "input_date_début_du_contrat"],
+      "visibility": true
+    },
+    {
+      "id": "bloc_periode_dessai",
+      "title": "Période d'essai : ",
+      "description": "",
+      "inputs": ["input_durée_de_la_période_dessai"],
+      "visibility": true
+    },
+    {
+      "id": "bloc_conditions_de_travail",
+      "title": "Détails du contrat :",
+      "description": "",
+      "inputs": [
+        "input_salaire_mensuel_net_de_lemployé",
+        "input_régime_de_travail_de_lemployé",
+        "input_nombre_jours_de_congé_payé_de_lemployé"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_non_concurrence",
+      "title": "Détails du contrat :",
+      "description": "",
+      "inputs": ["input_pourcentage_compensation_de_concurrence"],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "input_dénomination_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_de_la_societé",
+      "label": "Dénomination de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Dénomination_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_capital_social_de_la_societé",
+      "type": "number",
+      "description": "",
+      "name": "input_capital_social_de_la_societé",
+      "label": "Capital social de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Capital_social_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_identifiant_unique_de_la_societé",
+      "type": "number",
+      "description": "",
+      "name": "input_identifiant_unique_de_la_societé",
+      "label": "Identifiant unique de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Identifiant_unique_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nomPrénom_du_representant_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_du_representant_de_la_societé",
+      "label": "Nom et Prénom du representant de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["NomPrénom_du_representant_de_la_societé", "NomPrénom_representant_societé_signature"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_adresse_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_la_societé",
+      "label": "Adresse de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Adresse_de_la_societé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nom_et_prénom_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_et_prénom_de_lemployé",
+      "label": "Nom et prénom de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Nom_et_prénom_de_lemployé", "Nom_et_prénom_de_lemployé_signature", "Nom_et_prénom_de_lemployé_article1"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_num_CIN_de_lemployé",
+      "type": "number",
+      "description": "",
+      "name": "input_num_CIN_de_lemployé",
+      "label": "Num CIN de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Num_CIN_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_date_délivrance_de_la_CIN_de_lemployé",
+      "type": "date",
+      "description": "",
+      "name": "input_date_délivrance_de_la_CIN_de_lemployé",
+      "label": "Date de délivrance de la CIN de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Date_délivrance_de_la_CIN_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_lieu_de_délivrance_de_la_CIN_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_de_délivrance_de_la_CIN_de_lemployé",
+      "label": "Lieu de délivrance de la CIN de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Lieu_de_délivrance_de_la_CIN_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_adresse_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_lemployé",
+      "label": "Adresse de l'employé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Adresse_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_date_adressage_de_loffre_de_lemployeur",
+      "type": "date",
+      "description": "",
+      "name": "input_date_adressage_de_loffre_de_lemployeur",
+      "label": "Date d'adressage de l'offre de l'employeur: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Date_adressage_de_loffre_de_lemployeur"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_poste_de_lemployé",
+      "type": "text",
+      "description": "",
+      "name": "input_poste_de_lemployé",
+      "label": "Poste de l'employé : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Poste_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_date_début_du_contrat",
+      "type": "date",
+      "description": "",
+      "name": "input_date_début_du_contrat",
+      "label": "Date de début du contrat : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Date_début_du_contrat"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_durée_de_la_période_dessai",
+      "type": "select",
+      "description": "",
+      "name": "input_durée_de_la_période_dessai",
+      "label": "Durée de la période d'essai : ",
+      "placeHolder": "",
+      "help": "",
+      "options": ["12 mois", "9 mois", "6 mois"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "12 mois": ["Durée_de_la_période_dessai"],
+        "9 mois": ["Durée_de_la_période_dessai"],
+        "6 mois": ["Durée_de_la_période_dessai"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_salaire_mensuel_net_de_lemployé",
+      "type": "number",
+      "description": "",
+      "name": "input_salaire_mensuel_net_de_lemployé",
+      "label": "Salaire mensuel net de lemployé : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Salaire_mensuel_net_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_régime_de_travail_de_lemployé",
+      "type": "select",
+      "description": "",
+      "name": "input_régime_de_travail_de_lemployé",
+      "label": "Régime de travail de l'employé : ",
+      "placeHolder": "",
+      "help": "",
+      "options": ["40", "41", "42", "43", "44", "45", "46", "47", "48"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "40": ["Régime_de_travail_de_lemployé"],
+        "41": ["Régime_de_travail_de_lemployé"],
+        "42": ["Régime_de_travail_de_lemployé"],
+        "43": ["Régime_de_travail_de_lemployé"],
+        "44": ["Régime_de_travail_de_lemployé"],
+        "45": ["Régime_de_travail_de_lemployé"],
+        "46": ["Régime_de_travail_de_lemployé"],
+        "47": ["Régime_de_travail_de_lemployé"],
+        "48": ["Régime_de_travail_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_jours_de_congé_payé_de_lemployé",
+      "type": "number",
+      "description": "",
+      "name": "input_nombre_jours_de_congé_payé_de_lemployé",
+      "label": "Nombre de jours de congé payé de l'employé : ",
+      "placeHolder": "",
+      "help": "En cas de non-respect de l'obligation de non-concurrence, l’Employé accepte de verser à l’Employeur un pourcentage de son salaire annuel brut au titre de dommages et intérêts résultant du non-respect de cette obligation.",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Nombre_jours_de_congé_payé_de_lemployé"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_pourcentage_compensation_de_concurrence",
+      "type": "number",
+      "description": "",
+      "name": "input_pourcentage_compensation_de_concurrence",
+      "label": "Pourcentage de la compensation de concurrence : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Pourcentage_compensation_de_concurrence"]
+      },
+      "visibility": true
+    }
+  ],
+  "bookmarks": [
+    {
+      "bookmarkId": "Dénomination_de_la_societé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Capital_social_de_la_societé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Identifiant_unique_de_la_societé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_du_representant_de_la_societé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nom_et_prénom_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Num_CIN_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Date_délivrance_de_la_CIN_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Lieu_de_délivrance_de_la_CIN_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Adresse_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Date_adressage_de_loffre_de_lemployeur",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Poste_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Date_début_du_contrat",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Durée_de_la_période_dessai",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Salaire_mensuel_net_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Régime_de_travail_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_jours_de_congé_payé_de_lemployé",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Pourcentage_compensation_de_concurrence",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_representant_societé_signature",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nom_et_prénom_de_lemployé_signature",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nom_et_prénom_de_lemployé_article1",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+  ]
+}

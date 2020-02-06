@@ -1,0 +1,22 @@
+<div class="col-md text-left">
+<div *ngIf="employer">
+    <div class="card">
+        <h2 class="card-header bg-white">Particulier: {{employer.employerFullName}}</h2>
+        <jhi-alert-error></jhi-alert-error>
+        <div class="card-body">
+            <ul class="list-group-flush">
+                <li class="list-group-item"><span class="font-weight-bold">Nom et prénom</span>:<span> {{employer.employerFullName}}</span></li>
+                <li class="list-group-item"><span class="font-weight-bold">CIN</span>:<span> {{employer.employerCinNumber}}</span></li>
+                <li class="list-group-item"><span class="font-weight-bold">Adresse</span>:<span> {{employer.employerFullAddress}}</span></li>
+            </ul>
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-outline-primary">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+        </div>
+    </div>
+
+
+</div>
+</div>

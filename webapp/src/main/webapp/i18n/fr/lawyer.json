@@ -1,0 +1,28 @@
+{
+  "paperlabsApp": {
+    "lawyer": {
+      "home": {
+        "title": "Lawyers",
+        "createLabel": "Créer un nouveau Lawyer",
+        "createOrEditLabel": "Créer ou éditer un Lawyer",
+        "search": "Recherche pour Lawyer",
+        "notFound": "Aucun Lawyer trouvé"
+      },
+      "created": "Un nouveau Lawyer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Lawyer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Lawyer avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Lawyer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Lawyer"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "mobile": "Mobile",
+      "tel": "Tel",
+      "email": "Email",
+      "address": "Address"
+    }
+  }
+}

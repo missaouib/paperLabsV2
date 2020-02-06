@@ -1,0 +1,269 @@
+<div class="ml-auto">    
+    <span> okkkkkkkkkkkkkkk</span>
+    <div class="slideshow-container">
+
+        <button aria-label="Close " class="close mt-1 mr-2" (click)="dismissModal()">x</button>
+        <div class="mySlides">
+            <div class="numbertext mt-custom-2">1 / 4</div>
+            <div class="page-content">
+                <p><strong><span id="title" class="d-flex justify-content-center">Accord de Confidentialité</span></strong></p><br>
+                <p><strong><span>ENTRE LES SOUSSIGNEES</span></strong></p>
+                <p *ngIf="getHtmlInputElement('input_nature_employeur_morale').checked">
+                    <span *ngIf="getHtmlInputElement('input_dénomination_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_dénomination_de_la_societé').value !== '' ">{{getHtmlInputElement('input_dénomination_de_la_societé').value}}</span><span>, société <span
+                    *ngIf="getHtmlInputElement('input_type_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_type_de_la_societé').value !== '' ">{{getHtmlInputElement('input_type_de_la_societé').value}}</span>,
+                    au capital social de <span *ngIf="getHtmlInputElement('input_capital_social_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_capital_social_de_la_societé').value !== '' ">{{getHtmlInputElement('input_capital_social_de_la_societé').value}}</span>                    dinars tunisiens, titulaire de l’identifiant unique numéro <span *ngIf="getHtmlInputElement('input_identifiant_unique_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_identifiant_unique_de_la_societé').value !== '' ">{{getHtmlInputElement('input_identifiant_unique_de_la_societé').value}}</span>,
+                    dont le siège social est situé sis <span *ngIf="getHtmlInputElement('input_adresse_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_adresse_de_la_societé').value !== '' ">{{getHtmlInputElement('input_adresse_de_la_societé').value}}</span>,
+                    représentée par <span *ngIf="getHtmlInputElement('input_nomPrénom_du_representant_de_la_societé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_nomPrénom_du_representant_de_la_societé').value !== '' ">{{getHtmlInputElement('input_nomPrénom_du_representant_de_la_societé').value}}</span>.
+                    </span>
+                </p>
+                <p *ngIf="getHtmlInputElement('input_nature_employeur_physique').checked">
+                    <span>
+                        <span
+                            *ngIf="getHtmlInputElement('input_nomPrénom_employeur').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_nomPrénom_employeur').value !== '' ">{{getHtmlInputElement('input_nomPrénom_employeur').value}}</span></span><span>, titulaire de l’identifiant unique numéro <span
+                    *ngIf="getHtmlInputElement('input_cin_employeur').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_cin_employeur').value !== '' ">{{getHtmlInputElement('input_cin_employeur').value}}</span>, établi à
+                    <span *ngIf="getHtmlInputElement('input_adresse_employeur').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_adresse_employeur').value !== '' ">{{getHtmlInputElement('input_adresse_employeur').value}}</span>.
+                    </span>
+                </p>
+                <p><span>Ci-après dénommée, l’« <strong>Employeur</strong> ».</span></p>
+                <p><strong><span>D’une part,</span></strong></p>
+                <p><strong><span>ET</span></strong></p>
+                <p><span>Monsieur/Madame <span
+                    *ngIf="getHtmlInputElement('input_nom_et_prénom_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_nom_et_prénom_de_lemployé').value !== '' ">{{getHtmlInputElement('input_nom_et_prénom_de_lemployé').value}}</span>,
+                    titulaire de la carte d’identité nationale numéro <span *ngIf="getHtmlInputElement('input_num_CIN_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_num_CIN_de_lemployé').value !== '' ">{{getHtmlInputElement('input_num_CIN_de_lemployé').value}}</span>,
+                    délivrée le <span *ngIf="getHtmlInputElement('input_date_délivrance_de_la_CIN_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_date_délivrance_de_la_CIN_de_lemployé').value !== '' ">{{getHtmlInputElement('input_date_délivrance_de_la_CIN_de_lemployé').value}}</span>                    à <span *ngIf="getHtmlInputElement('input_lieu_de_délivrance_de_la_CIN_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_lieu_de_délivrance_de_la_CIN_de_lemployé').value !== '' ">{{getHtmlInputElement('input_lieu_de_délivrance_de_la_CIN_de_lemployé').value}}</span>,
+                    demeurant au <span *ngIf="getHtmlInputElement('input_adresse_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_adresse_de_lemployé').value !== '' ">{{getHtmlInputElement('input_adresse_de_lemployé').value}}</span>.</span>
+                </p>
+                <p><span>Ci-après dénommé l’« <strong>Employé</strong> ».</span></p>
+                <p><strong><span>D’autre part.&nbsp;</span></strong></p>
+                <p>
+                    <span>L’Employeur et l’Employé seront ci-après désignés, collectivement par les « <strong>Parties</strong> » et individuellement par la « <strong>Partie</strong> ».</span>
+                </p>
+                <p><strong><span>ETANT PREALABLEMENT RAPPELE QUE</span></strong></p>
+                <p><span>Suite à l'acceptation verbale par l'Employé, de l’offre de l’Employeur qui lui a été adressée le <span
+                    *ngIf="getHtmlInputElement('input_date_adressage_de_loffre_de_lemployeur').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_date_adressage_de_loffre_de_lemployeur').value !== '' ">{{getHtmlInputElement('input_date_adressage_de_loffre_de_lemployeur').value}}</span>,
+                    les Parties se sont rapprochées en vue de conclure le présent contrat de travail à durée indéterminée (le <strong>« Contrat »</strong>).</span>
+                </p>
+                <ol>
+                    <li><span>Objet du Contrat</span></li>
+                    <p class="inside-p"><span>L’Employeur engage l’Employé, en qualité de « <span
+                        *ngIf="getHtmlInputElement('input_poste_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_poste_de_lemployé').value !== '' ">{{getHtmlInputElement('input_poste_de_lemployé').value}}</span> »,
+                    pour une durée indéterminée, à compter du <span *ngIf="getHtmlInputElement('input_date_début_du_contrat').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_date_début_du_contrat').value !== '' ">{{getHtmlInputElement('input_date_début_du_contrat').value}}</span>.</span>
+                    </p>
+                    <p class="inside-p"><span>L’Employé se déclare libre de tout autre engagement, conformément aux conditions générales de la législation tunisienne du travail, et aux conditions particulières précisées dans le présent Contrat, qu’il accepte.</span>
+                    </p>
+                    <div *ngIf="getHtmlInputElement('input_periode_dessai').checked">
+                        <li><span>Période d’essai</span></li>
+                        <p class="inside-p"><span>Le présent Contrat est conclu pour une durée indéterminée, sous réserve de l’accomplissement d’une période d’essai de&nbsp;</span><span><span
+                            *ngIf="getHtmlInputElement('input_durée_de_la_période_dessai').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_durée_de_la_période_dessai').value !== '' ">{{getHtmlInputElement('input_durée_de_la_période_dessai').value}}</span></span><span>de travail effectif, renouvelable une (1) fois pour la même durée.</span>
+                        </p>
+                        <p class="inside-p"><span>Avant l’expiration de la première période d’essai et en cas de renouvellement de cette dernière, l’Employeur devra informer l’Employé de sa volonté de procéder à son renouvellement, par écrit.</span>
+                        </p>
+                        <p class="inside-p"><span>Au cours de cette période d’essai, chacune des deux Parties peut mettre fin au Contrat, sans préavis et sur simple notification.</span>
+                        </p>
+                    </div>
+                    <div *ngIf="!getHtmlInputElement('input_periode_dessai').checked" class="strike">
+                        <li><span>Période d’essai</span></li>
+                        <p class="inside-p"><span>Le présent Contrat est conclu pour une durée indéterminée, sous réserve de l’accomplissement d’une période d’essai de&nbsp;</span><span><span
+                            *ngIf="getHtmlInputElement('input_durée_de_la_période_dessai').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_durée_de_la_période_dessai').value !== '' ">{{getHtmlInputElement('input_durée_de_la_période_dessai').value}}</span></span><span>de travail effectif, renouvelable une (1) fois pour la même durée.</span>
+                        </p>
+                        <p class="inside-p"><span>Avant l’expiration de la première période d’essai et en cas de renouvellement de cette dernière, l’Employeur devra informer l’Employé de sa volonté de procéder à son renouvellement, par écrit.</span>
+                        </p>
+                        <p class="inside-p"><span>Au cours de cette période d’essai, chacune des deux Parties peut mettre fin au Contrat, sans préavis et sur simple notification.</span>
+                        </p>
+                    </div>
+                </ol>
+
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <div class="page-content">
+                <ol start="3">
+                    <li><span>Fin du Contrat</span></li>
+                    <p class="inside-p"><span>Le présent Contrat prendra fin : &nbsp;</span></p>
+                    <ul class="inside-p">
+                        <li class="inside-p"><span>Par accord des Parties ;</span></li>
+                        <li class="inside-p"><span>Par la faute lourde, l’insuffisance professionnelle de l’Employé dûment prouvée, son manque de discipline, son refus d’obtempérer aux ordres donnés ou d’accomplir le travail pour lequel il a été engagé ;</span>
+                        </li>
+                        <li class="inside-p"><span>Par l’impossibilité d’exécution du présent Contrat résultant d’un cas fortuit ou d’une force majeure;</span>
+                        </li>
+                        <li class="inside-p"><span>D’une manière générale pour toute violation par l’Employé de l’une quelconque des clauses du présent Contrat. &nbsp;</span>
+                        </li>
+                    </ul>
+                    <p><span>Sous réserve de l’expiration de la période d’essai, le présent Contrat pourra être résilié par l’une ou l’autre des Parties moyennant un préavis d’au moins <span
+                        *ngIf="getHtmlInputElement('input_duree_periode_preavis_lettres').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_duree_periode_preavis_lettres').value !== '' ">{{getHtmlInputElement('input_duree_periode_preavis_lettres').value}}</span>                    (<span *ngIf="getHtmlInputElement('input_duree_periode_preavis_chiffres').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_duree_periode_preavis_chiffres').value !== '' ">{{getHtmlInputElement('input_duree_periode_preavis_chiffres').value}}</span>)
+                    mois, adressé à l’autre Parties par lettre recommandée.</span>
+                    </p>
+                    <li><span>Rémunération</span></li>
+                    <p class="inside-p"><span>En contrepartie de l’exécution de ses fonctions et compte tenu de la nature de son travail, l’Employé percevra, un salaire mensuel brut de <span
+                        *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_lettres').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_lettres').value !== '' ">{{getHtmlInputElement('input_salaire_mensuel_net_employé_lettres').value}}</span>                    (<span *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_chiffres').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_salaire_mensuel_net_employé_chiffres').value !== '' ">{{getHtmlInputElement('input_salaire_mensuel_net_employé_chiffres').value}}</span>)
+                    dinars tunisiens.</span>
+                    </p>
+                    <li><span>Lieu de travail et mobilité géographique</span></li>
+                    <p class="inside-p"><span>L’Employé est engagé et affecté pour travailler principalement dans les locaux que de l’Employeur à Tunis.</span>
+                    </p>
+                    <p class="inside-p"><span>Toutefois, l’Employé reconnait et accepte formellement la possibilité de se déplacer partout où le besoin de ses fonctions le nécessiterait.</span>
+                    </p>
+                    <li><span>Régime de durée du travail et congés payés</span></li>
+                    <p class="inside-p"><span>L’Employé sera soumis au régime de travail de <span
+                        *ngIf="getHtmlInputElement('input_régime_de_travail_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_régime_de_travail_de_lemployé').value !== '' ">{{getHtmlInputElement('input_régime_de_travail_de_lemployé').value}}</span>                    par semaine et bénéficiera d’un congé payé de <span *ngIf="getHtmlInputElement('input_nombre_jours_de_congé_payé_de_lemployé').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_nombre_jours_de_congé_payé_de_lemployé').value !== '' ">{{getHtmlInputElement('input_nombre_jours_de_congé_payé_de_lemployé').value}}</span>                    jours ouvrables par mois travaillé.</span>
+                    </p>
+                    <li><span>Absence pour maladie</span></li>
+                    <p  class="inside-p"><span>L’absence pour maladie doit être justifiée dans les 48 heures par un certificat médical délivré par un médecin, précisant sa durée et sa cause.</span>
+                    </p>
+                    <div *ngIf="getHtmlInputElement('input_clause_dexclusivité').checked">
+                        <li><span>Clause d’exclusivité</span></li>
+                        <p><span>Tout au long de la période de validité du présent Contrat, l’Employé s’engage à :</span></p>
+                    </div>
+                    <div *ngIf="!getHtmlInputElement('input_clause_dexclusivité').checked" class="strike">
+                        <li><span>Clause d’exclusivité</span></li>
+                        <p><span>Tout au long de la période de validité du présent Contrat, l’Employé s’engage à :</span></p>
+                    </div>
+                </ol>
+
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <div class="page-content">
+                    <ol class="pl-0">
+                        <div *ngIf="getHtmlInputElement('input_clause_dexclusivité').checked">
+                            <ul style="margin-bottom:0cm;">
+                                <li><span>Consacrer toute son activité professionnelle à l’Employeur et à se conformer strictement aux instructions données par son supérieur hiérarchique et à respecter les horaires de travail ;</span>
+                                </li>
+                                <li><span>Consacrer tous ses soins, diligences et la totalité de son activité professionnelle à l’Employeur. Il lui est interdit d’exercer toute autre activité professionnelle.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div *ngIf="!getHtmlInputElement('input_clause_dexclusivité').checked" class="strike">
+                            <ul style="margin-bottom:0cm;">
+                                <li><span>Consacrer toute son activité professionnelle à l’Employeur et à se conformer strictement aux instructions données par son supérieur hiérarchique et à respecter les horaires de travail ;</span>
+                                </li>
+                                <li><span>Consacrer tous ses soins, diligences et la totalité de son activité professionnelle à l’Employeur. Il lui est interdit d’exercer toute autre activité professionnelle.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div *ngIf="getHtmlInputElement('input_clause_de_confidentialité').checked">
+                            <li><span>Clause de confidentialité</span></li>
+                            <p><span>L’Employé s’engage, tant pendant l’exécution du présent Contrat qu’après sa résiliation, à conserver la confidentialité la plus stricte sur les informations inconnues du public, concernant les activités de l’Employeur, y compris et sans limitation, les spécifications de produits et formules, méthodes, documents techniques et produits, ainsi que les études, programmes de recherche et développement, correspondances, liste de clients, noms des clients, rapports de vente et informations financières.&nbsp;</span>
+                            </p>
+                            <p><span>L’Employé s’engage à ne pas utiliser et à ne pas communiquer ces informations confidentielles pour quelque motif que ce soit, sans l’accord préalable et écrit de l’Employeur.&nbsp;</span>
+                            </p>
+                        </div>
+                        <div *ngIf="!getHtmlInputElement('input_clause_de_confidentialité').checked" class="strike">
+                            <li><span>Clause de confidentialité</span></li>
+                            <p><span>L’Employé s’engage, tant pendant l’exécution du présent Contrat qu’après sa résiliation, à conserver la confidentialité la plus stricte sur les informations inconnues du public, concernant les activités de l’Employeur, y compris et sans limitation, les spécifications de produits et formules, méthodes, documents techniques et produits, ainsi que les études, programmes de recherche et développement, correspondances, liste de clients, noms des clients, rapports de vente et informations financières.&nbsp;</span>
+                            </p>
+                            <p><span>L’Employé s’engage à ne pas utiliser et à ne pas communiquer ces informations confidentielles pour quelque motif que ce soit, sans l’accord préalable et écrit de l’Employeur.&nbsp;</span>
+                            </p>
+                        </div>
+                        <div *ngIf="getHtmlInputElement('input_propriété_des_travaux').checked">
+                            <li><span>Propriété des travaux</span></li>
+                            <p><span>L’Employeur conserve la propriété et les droits d’utilisation des logiciels, de la documentation, et de toutes les informations de toute nature (notamment technique ou commerciale) mis à la disposition ou même élaborés par l’Employé dans le cadre du Contrat.</span>
+                            </p>
+                            <p><span>A l’expiration du Contrat, quelle qu’en soit la cause, l’Employé remettra automatiquement et sans délai à l’Employeur tous les supports de quelque nature que ce soit, qui lui auront été confiés ou élaborés par lui dans le cadre du Contrat.</span>
+                            </p>
+                            <p><span>L’Employé déclare renoncer de manière ferme et définitive à toute revendication ou droit de propriété intellectuelle relatifs à tout travail réalisé dans le cadre du présent Contrat pour le compte de l’Employeur ou d’un tier.</span>
+                            </p>
+                        </div>
+                        <div *ngIf="!getHtmlInputElement('input_propriété_des_travaux').checked" class="strike">
+                            <li><span>Propriété des travaux</span></li>
+                            <p><span>L’Employeur conserve la propriété et les droits d’utilisation des logiciels, de la documentation, et de toutes les informations de toute nature (notamment technique ou commerciale) mis à la disposition ou même élaborés par l’Employé dans le cadre du Contrat.</span>
+                            </p>
+                            <p><span>A l’expiration du Contrat, quelle qu’en soit la cause, l’Employé remettra automatiquement et sans délai à l’Employeur tous les supports de quelque nature que ce soit, qui lui auront été confiés ou élaborés par lui dans le cadre du Contrat.</span>
+                            </p>
+                            <p><span>L’Employé déclare renoncer de manière ferme et définitive à toute revendication ou droit de propriété intellectuelle relatifs à tout travail réalisé dans le cadre du présent Contrat pour le compte de l’Employeur ou d’un tier.</span>
+                            </p>
+                        </div>
+                        <div *ngIf="getHtmlInputElement('input_non_concurrence').checked">
+                            <li><span>Non-concurrence</span></li>
+                            <p><span>Compte tenu de la nature des informations détenues par l’Employé et des fonctions assurées par ce dernier, et afin de préserver les intérêts de l’Employeur en cas de résiliation du Contrat pour quelque motif que ce soit, l’Employé accepte de ne pas entrer au service d’une entreprise concurrente, ni à participer directement ou indirectement à toute activité pouvant concurrencer l’activité de l’Employeur.</span>
+                            </p>
+                            <p><span>La présente clause de non-concurrence s’applique pour une durée de&nbsp;</span><span><span
+                                *ngIf="getHtmlInputElement('input_durée_non_concurrence').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_durée_non_concurrence').value !== '' ">{{getHtmlInputElement('input_durée_non_concurrence').value}}</span></span><span>&nbsp;ans à compter de la date de résiliation du Contrat et ce dans un périmètre de <span
+                                *ngIf="getHtmlInputElement('input_périmètre_non_concurrence').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_périmètre_non_concurrence').value !== '' ">{{getHtmlInputElement('input_périmètre_non_concurrence').value}}</span>                        kilomètres du lieu d’établissement de l’Employeur.</span>
+                            </p>
+                        </div>
+                        <div *ngIf="!getHtmlInputElement('input_non_concurrence').checked" class="strike">
+                            <li><span>Non-concurrence</span></li>
+                            <p><span>Compte tenu de la nature des informations détenues par l’Employé et des fonctions assurées par ce dernier, et afin de préserver les intérêts de l’Employeur en cas de résiliation du Contrat pour quelque motif que ce soit, l’Employé accepte de ne pas entrer au service d’une entreprise concurrente, ni à participer directement ou indirectement à toute activité pouvant concurrencer l’activité de l’Employeur.</span>
+                            </p>
+                            <p><span>La présente clause de non-concurrence s’applique pour une durée de&nbsp;</span><span><span
+                                *ngIf="getHtmlInputElement('input_durée_non_concurrence').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_durée_non_concurrence').value !== '' ">{{getHtmlInputElement('input_durée_non_concurrence').value}}</span></span><span>&nbsp;ans à compter de la date de résiliation du Contrat et ce dans un périmètre de <span
+                                *ngIf="getHtmlInputElement('input_périmètre_non_concurrence').value === '' ">_______________</span><span *ngIf="getHtmlInputElement('input_périmètre_non_concurrence').value !== '' ">{{getHtmlInputElement('input_périmètre_non_concurrence').value}}</span>                        kilomètres du lieu d’établissement de l’Employeur.</span>
+                            </p>
+                        </div>
+
+                    </ol>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <div class="page-content">
+                <br>
+                <ol start="9" class="pl-0">
+                    <div *ngIf="getHtmlInputElement('input_non_concurrence').checked">
+                        <p><span>Après la rupture du Contrat pour quelque motif que ce soit, l’Employeur se réserve le droit de libérer l’Employé de l’interdiction de concurrence moyennant une lettre recommandée avec accusé de réception.</span>
+                        </p>
+                        <p><span>En cas de non-respect de la présente obligation de non-concurrence, l’Employé accepte de verser à l’Employeur des dommages et intérêts résultant du non-respect de cette obligation.</span>
+                        </p>
+                    </div>
+                    <div *ngIf="!getHtmlInputElement('input_non_concurrence').checked" class="strike">
+                        <p><span>Après la rupture du Contrat pour quelque motif que ce soit, l’Employeur se réserve le droit de libérer l’Employé de l’interdiction de concurrence moyennant une lettre recommandée avec accusé de réception.</span>
+                        </p>
+                        <p><span>En cas de non-respect de la présente obligation de non-concurrence, l’Employé accepte de verser à l’Employeur des dommages et intérêts résultant du non-respect de cette obligation.</span>
+                        </p>
+                    </div>
+                    <li><span>Election de domicile</span></li>
+                    <p><span>Pour l’exécution du présent Contrat, les Parties font élection de domicile en leur lieu respectif de résidence effectif.</span></p>
+                    <li><span>Droit applicable et attribution de compétences</span></li>
+                    <p><span>Le présent Contrat sera régi et interprété selon les lois de la République Tunisienne.</span></p>
+                    <li><span>Tous litiges pouvant naître à l’occasion de l’interprétation ou de l’exécution du présent Contrat seront soumis aux tribunaux tunisiens.&nbsp;</span>
+                        <br><br><br>
+                        <p><strong><span>L’EMPLOYEUR  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp; L’EMPLOYE</span></strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <span>
+                                    <span *ngIf="getHtmlInputElement('input_date_signature_employeur').value !== '' ">{{getHtmlInputElement('input_date_signature_employeur').value}}</span>
+                                </span>
+                            </strong>
+                            <strong>
+                                <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <span *ngIf="getHtmlInputElement('input_date_signature_employé').value !== '' ">{{getHtmlInputElement('input_date_signature_employé').value}}</span>
+                                </span>
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <span *ngIf="getHtmlInputElement('input_nature_employeur_morale').checked ">
+                                    <span *ngIf="getHtmlInputElement('input_nomPrénom_du_representant_de_la_societé').value !== '' ">{{getHtmlInputElement('input_nomPrénom_du_representant_de_la_societé').value}}</span>
+                                </span>
+                                <span *ngIf="getHtmlInputElement('input_nature_employeur_physique').checked">
+                                    <span *ngIf="getHtmlInputElement('input_nomPrénom_employeur').value !== '' ">{{getHtmlInputElement('input_nomPrénom_employeur').value}}</span>
+                                </span>
+                            </strong>
+                            <strong>
+                                <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <span *ngIf="getHtmlInputElement('input_nom_et_prénom_de_lemployé').value !== '' ">{{getHtmlInputElement('input_nom_et_prénom_de_lemployé').value}}</span>
+                                </span>
+                            </strong>
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+        <a class="prev" (click)="plusSlides(-1)">
+            <span class="fa fa-tasks fa-fw"><fa-icon icon="arrow-alt-circle-left"></fa-icon></span>
+        </a>
+        <a class="next" (click)="plusSlides(1)">
+            <span class="fa fa-tasks fa-fw"><fa-icon icon="arrow-alt-circle-right"></fa-icon></span>
+
+        </a>
+    </div>
+</div>

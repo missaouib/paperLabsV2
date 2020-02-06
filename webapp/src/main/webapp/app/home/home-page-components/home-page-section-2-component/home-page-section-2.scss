@@ -1,0 +1,122 @@
+/* ==========================================================================
+Home page section 2 styles
+========================================================================== */
+
+section {
+  min-height: 1080px;
+  margin-top: -30px;
+  display: block;
+  text-align: center;
+  font-family: OpenSans;
+}
+
+h2,
+h4 {
+  text-align: center;
+  font-family: OpenSans;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.top-documents {
+  text-decoration: none;
+  h4 {
+    color: #000;
+    text-align: center;
+  }
+}
+
+.top-documents:hover {
+  text-decoration: none;
+  h4 {
+    color: #1400c3;
+  }
+}
+#section_2 {
+  background: url('../../../../content/images/section2-bg-01.png') no-repeat;
+  width: auto;
+  height: auto;
+  // background: radial-gradient(circle at 100%, #e4e4e4, #e4e4e4 50%, #e4e4e4 75%, #d7d7d7 75%);
+}
+.titel-line {
+  color: #1400c3;
+}
+.titel-line:before {
+  content: '';
+  background: url('../../../../content/images/bottom-line.png') no-repeat;
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  margin-top: 41px;
+  margin-left: -122px;
+}
+.bloc {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.bloc_1 {
+  padding: 5px;
+  margin: 5px auto;
+}
+
+.bloc_1 h4 {
+  text-align: center;
+}
+
+.bloc h4 {
+  font-weight: bold;
+}
+
+.bloc h6 {
+  color: grey;
+}
+
+.img {
+  padding: 50px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .bloc_1 {
+    display: block;
+  }
+
+  .titel-line:before {
+    width: 200% !important;
+    // margin-left: -15px !important;
+    z-index: 0 !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .bloc_1 {
+    display: block;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .bloc_1 {
+    display: block;
+  }
+  h4,
+  h6 {
+    margin-left: 0;
+  }
+
+  .img {
+    padding: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h4,
+  h6 {
+    margin-left: 0;
+  }
+}

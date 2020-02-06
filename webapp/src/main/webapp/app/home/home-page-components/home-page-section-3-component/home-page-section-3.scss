@@ -1,0 +1,112 @@
+/* ==========================================================================
+Home page section 3 styles
+========================================================================== */
+
+section {
+  min-height: 1080px;
+  margin-top: -30px;
+  display: block;
+  font-family: OpenSans;
+}
+section h2,
+h6 {
+  text-align: center;
+}
+
+.menu-button {
+  text-align: center;
+}
+
+section h2 {
+  font-weight: bold;
+}
+
+hr {
+  width: device-width;
+}
+#section_3 {
+  background: url('../../../../content/images/section3-bg-01.png') no-repeat;
+  width: auto;
+  height: 1175px;
+  // background: radial-gradient(circle at 100%, #e4e4e4, #e4e4e4 50%, #e4e4e4 75%, #d7d7d7 75%);
+}
+
+.titel-line {
+  color: #1400c3;
+}
+.titel-line:before {
+  content: '';
+  background: url('../../../../content/images/bottom-line.png') no-repeat;
+  height: 8px;
+  width: 100%;
+
+  position: absolute;
+  margin-top: 41px;
+  margin-left: -122px;
+}
+
+.bloc {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.bloc_1 {
+  padding: 5px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.bloc_1 h4,
+h6 {
+  text-align: center;
+}
+
+.bloc h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.bloc h6 {
+  text-align: center;
+}
+
+iframe {
+  border: none;
+
+  height: 600px;
+}
+.row {
+  text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section h2,
+  h6 {
+    margin: 10px auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  section h2,
+  h6 {
+    margin: 20px auto;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  section h2,
+  h6 {
+    margin: 30px auto;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  section h2,
+  h6 {
+    margin: 50px auto;
+  }
+}

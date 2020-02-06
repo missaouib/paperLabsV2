@@ -1,0 +1,102 @@
+<div class="container-fluid col-md-10">
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-sm-9">
+            <h2 class="titel-commande">Mes commandes:</h2>
+        </div>
+        <div class="col-sm-3">
+
+            <form name="searchForm" class="form-inline">
+
+
+                <div class="input-group w-100 p-1 rounded rounded-pill shadow-sm border bg-light">
+
+                    <input type="search" placeholder="Chercher une commande..."
+                           [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch"
+                           (ngModelChange)="paramChanged($event)" aria-describedby="button-addon1"
+                           class="form-control border-0 bg-light ml-1">
+                    <button class="input-group-append btn">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+            <div class="alert alert-warning" *ngIf="ordersByUserId?.length === 0">
+                <span jhiTranslate="paperlabsApp.order.home.notFound">No orders found</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <jhi-alert></jhi-alert>
+    <div class="row justify-content-center">
+        <aside class="col">
+            <table id="e-commerce-orders-table" class="table dataTable">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">N°</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Date de création</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Prix TTC</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Status</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title text-center">Actions</span>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let orderByUserId of ordersByUserIdCopy ;">
+                    <td><a [routerLink]="[orderByUserId.id, 'view' ]">{{transformOrderIdentifier(orderByUserId.orderIdentifier)}}</a></td>
+                    <td>{{orderByUserId.generatedLegalDocument.date | date:'dd/MM/yy HH:mm'}}</td>
+                    <td>{{orderByUserId.totalPrice | number : '1.2-2'}} DT</td>
+                    <td jhiTranslate="{{'paperlabsApp.OrderStatus.' + orderByUserId.status}}">{{orderByUserId.status}}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-sm" style="color: #3e8acc"
+                                    [routerLink]="[orderByUserId.id, 'view' ]">
+                                <fa-icon [icon]="'eye'"></fa-icon>
+
+                            </button>
+                            <button type="submit" class="btn btn-download btn-sm" style="color: #dc3545"
+                                    (click)="downloadPDF(orderByUserId.generatedLegalDocument.genratedPDFFilePath, orderByUserId.status, orderByUserId)">
+                                <fa-icon *ngIf="orderByUserId.status === 'PAID'" [icon]="'download'"></fa-icon>
+                                <span *ngIf="orderByUserId.status === 'PAID'" class="d-none d-md-inline"></span>
+                                <fa-icon *ngIf="orderByUserId.status === 'WAITING'" [icon]="'credit-card'"
+                                         class="ml-3 "></fa-icon>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div [hidden]="ordersByUserId?.length === 0">
+                <div class="row justify-content-center">
+                    <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+                </div>
+                <div class="row justify-content-center">
+                    <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage"
+                                    [maxSize]="5" [rotate]="true" [boundaryLinks]="true"
+                                    (pageChange)="loadPage(page)"></ngb-pagination>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+
+

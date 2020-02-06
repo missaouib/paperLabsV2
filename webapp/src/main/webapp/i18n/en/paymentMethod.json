@@ -1,0 +1,9 @@
+{
+  "paperlabsApp": {
+    "PaymentMethod": {
+      "null": "",
+      "MOBICACH": "MOBICACH",
+      "EDINAR": "EDINAR"
+    }
+  }
+}

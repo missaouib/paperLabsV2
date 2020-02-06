@@ -1,0 +1,92 @@
+<div class="row mb-5 justify-content-center">
+    <div class="col-md-10" *ngIf="legalDocument">
+        <div class="card">
+            <h2 class="card-header titel-commande bg-white">Document juridique : {{legalDocument.shortName}}</h2>
+            <jhi-alert-error></jhi-alert-error>
+            <div class="card-body">
+                <ul class="list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-body p-3">
+                                            <div class="media d-flex lh-1">
+                                                <div class="media-body text-left">
+                                                    <h3 class="color-green">{{numberOfCanceledDownload}}</h3>
+                                                    <div class="lh-1">Nombre de commandes annulées</div>
+                                                </div>
+                                                <div class="align-self-center">
+                                                    <em class="material-icons stat-icon color-green">remove_shopping_cart</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-body p-3">
+                                            <div class="media d-flex lh-1">
+                                                <div class="media-body text-left">
+                                                    <h3 class="color-green">{{sumDocumentRevenue | number : '1.2-2'}} DT</h3>
+                                                    <div class="lh-1">Revenues de ce document</div>
+                                                </div>
+                                                <div class="align-self-center">
+                                                    <fa-icon [icon]="['fas', 'wallet']" [fixedWidth]="true" [classes]="['stat-icon', 'color-green']"></fa-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-12 mb-3">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-body p-3">
+                                            <div class="media d-flex lh-1">
+                                                <div class="media-body text-left">
+                                                    <h3 class="color-green">{{numberOfDownloads}}</h3>
+                                                    <div class="lh-1">Nombre total de téléchargements</div>
+                                                </div>
+                                                <div class="align-self-center">
+                                                    <fa-icon [icon]="['fas', 'download']" [fixedWidth]="true" [classes]="['stat-icon', 'color-green']"></fa-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><span class="font-weight-bold">Abréviation</span>: <span> {{legalDocument.shortName}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Nom</span>: <span> {{legalDocument.fullName}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Mots clés</span> :<span> {{legalDocument.keywords}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Description</span> :<span> {{legalDocument.description}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >vue modèle</span> :<span > {{legalDocument.templatePreviewPath}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Chemin du modèle</span> :<span> {{legalDocument.templateFilePath}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Chemin du Stepper</span> :<span> {{legalDocument.stepperConfigFilePath}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Flux de travail</span> :<span> {{legalDocument.workflowConfigFilePath}}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Date de création</span>:<span> {{legalDocument.createdDate | date:'dd/MM/yy HH:mm' }}</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Prix</span>:<span> {{legalDocument.price}} DT</span></li>
+                    <li class="list-group-item"><span class="font-weight-bold" >Documents juridiques recommendés :</span>
+                        <span  *ngFor="let documentRecommendation of legalDocument.documentsRecommendation" >
+                        <button class="font-weight-bold btn btn-secondary"disabled>{{documentRecommendation.shortName}}</button>
+
+                    </span>
+                    </li>
+                </ul>
+                <button type="submit"(click)="previousState()"
+                        class="btn btn-outline-primary">
+                    <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+                </button>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+

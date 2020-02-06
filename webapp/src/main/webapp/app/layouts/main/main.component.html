@@ -1,0 +1,11 @@
+<div>
+    <router-outlet *jhiHasAnyAuthority="'ROLE_ADMIN'" name="navbar"></router-outlet>
+    <jhi-main-menu></jhi-main-menu>
+</div>
+<div>
+    <div class="card jh-card min-height-footer-bottom">
+        <router-outlet (activate)="onActivate()"></router-outlet>
+        <router-outlet name="popup"></router-outlet>
+    </div>
+    <jhi-footer></jhi-footer>
+</div>

@@ -1,0 +1,20 @@
+<div class="row d-flex justify-content-center marge">
+    <form class="stepper col-12 col-sm-12 col-md-8">
+        <div *ngIf="progressBar <= 100" class="mb-4">
+            <ngb-progressbar type="info" [value]="progressBar" [striped]="true" [animated]="true"><em>{{progressBar}}% {{legalDocument.shortName}}</em></ngb-progressbar>
+        </div>
+        <mat-horizontal-stepper #stepper>
+            <div class="tab" *ngFor="let step of stepsEntity">
+                <mat-step>
+                    <ng-template matStepLabel>{{step.title}}</ng-template>
+                    <jhi-step [step]="step"
+                              [isFirstStep]="isFirstStep(step.id)" [isFinalStep]="isFinalStep(step.id)"
+                              [isConfirmGenerationStep]="isConfirmGenerationStep(step.id)"
+                              [legalDocument]="legalDocument"></jhi-step>
+                </mat-step>
+            </div>
+        </mat-horizontal-stepper>
+    </form>
+    <jhi-preview *ngIf="progressBar < 100" id="preview col-0 col-md-2"></jhi-preview>
+</div>
+

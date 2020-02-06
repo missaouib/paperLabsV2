@@ -1,0 +1,9 @@
+{
+  "paperlabsApp": {
+    "user-orders": {
+      "title": "Mes commandes",
+      "details": "Détails de la commande",
+      "payment": "Payer la commande"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="generatedLegalDocument">
+            <h2><span jhiTranslate="paperlabsApp.generatedLegalDocument.detail.title">Generated Legal Document</span> {{generatedLegalDocument.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="paperlabsApp.generatedLegalDocument.generatedWordFilePath">Generated Word File Path</span></dt>
+                <dd>
+                    <span>{{generatedLegalDocument.generatedWordFilePath}}</span>
+                </dd>
+                <dt><span jhiTranslate="paperlabsApp.generatedLegalDocument.genratedPDFFilePath">Genrated PDF File Path</span></dt>
+                <dd>
+                    <span>{{generatedLegalDocument.genratedPDFFilePath}}</span>
+                </dd>
+                <dt><span jhiTranslate="paperlabsApp.generatedLegalDocument.date">Date</span></dt>
+                <dd>
+                    <span>{{generatedLegalDocument.date}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/generated-legal-document', generatedLegalDocument.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

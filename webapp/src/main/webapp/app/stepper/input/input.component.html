@@ -1,0 +1,77 @@
+<div class="form-group row" *ngIf="(input.type === 'radio' || input.type === 'checkbox') && input.label !== ''">
+    <!--SWITCHCASE INPUT TYPE-->
+    <span [ngSwitch]="input.type" class="col-lg-1 col-xl-1 col-md-1 col-1 pl-5">
+        <span *ngSwitchCase="'checkbox'">
+            <input type="{{input.type}}" id="{{input.id}}" name="{{input.name}}"
+                   (change)="onChange(input.id)" class="form-control h-50 input-margin">
+        </span>
+
+         <span *ngSwitchCase="'radio'">
+            <input type="{{input.type}}" id="{{input.id}}" name="{{input.name}}"
+                   (change)="onChange(input.id)" value="{{input.value}}" class="form-control h-50 input-margin">
+        </span>
+    </span>
+    <label *ngIf="(input.type === 'radio' || input.type === 'checkbox') && input.label !== ''" for="{{input.id}}"
+           class="col-lg-6 col-xl-6 col-form-label pl-0">{{input.label}}</label>
+
+    <span *ngIf="input.help !== ''" matTooltip="{{input.help}}" matTooltipPosition="right" matTooltipClass="md-13"><em
+        class="material-icons md-22 gray">help</em></span>
+    <div class="text-descriptive text-muted" *ngIf="input.description !== ''">{{input.description}}</div>
+</div>
+
+<div class="form-group row" *ngIf="input.type !== 'radio' && input.type !== 'checkbox' && input.label !== ''">
+
+    <label for="{{input.id}}" class="col-lg-6 col-xl-6 col-form-label">{{input.label}}</label>
+    <!--SWITCHCASE INPUT TYPE-->
+    <span [ngSwitch]="input.type" class="col-lg-5 col-xl-5">
+        <span *ngSwitchCase="'text'">
+            <input type="{{input.type}}" id="{{input.id}}" name="{{input.name}}"
+                   placeholder="{{input.placeHolder}}" value="{{input.value}}"
+                   (change)="onChange(input.id)" class="form-control">
+        </span>
+        <span *ngSwitchCase="'textarea'">
+            <textarea id="{{input.id}}" name="{{input.name}}" cols="30" rows="2"
+                      placeholder="{{input.placeHolder}}"
+                      (change)="onChange(input.id)" class="form-control">{{input.value}}</textarea>
+        </span>
+        <span *ngSwitchCase="'select'">
+            <select name="{{input.name}}" id="{{input.id}}" (change)="onChange(input.id)" class="form-control">
+                <option value="" disabled selected>{{input.placeHolder}}</option>
+                <option *ngFor="let option of input.options"
+                        value="{{option}}">{{option}}</option>
+            </select>
+        </span>
+        <span *ngSwitchCase="'select_input_generator'">
+            <select name="{{input.name}}" id="{{input.id}}" (change)="onChange(input.id)" class="form-control">
+                <option value="{{input.value}}" disabled selected>{{input.placeHolder}}</option>
+                <option *ngFor="let option of input.options"
+                        value="{{option}}">{{option}}</option>
+            </select>
+        </span>
+        <span *ngSwitchCase="'country'">
+            <select name="{{input.name}}" id="{{input.id}}" (change)="onChange(input.id)" class="form-control">
+                <option value="" disabled selected>{{input.placeHolder}}</option>
+                <option *ngFor="let country of countries"
+                        value="{{country}}">{{country}}</option>
+            </select>
+        </span>
+        <span *ngSwitchCase="'date'">
+            <span class="input-group">
+                <input id="{{input.id}}" name="{{input.name}}" ngbDatepicker #datepicker="ngbDatepicker" value="{{input.value}}"
+                       placeholder="dd/mm/yyyy" (change)="onChange(input.id)" class="form-control">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="datepicker.toggle()" type="button">
+                        <fa-icon [icon]="['fas', 'calendar']" [fixedWidth]="true" size="lg"></fa-icon>
+                    </button>
+                </span>
+            </span>
+        </span>
+        <span *ngSwitchDefault>
+            <input type="{{input.type}}" id="{{input.id}}" name="{{input.name}}"
+                   value="{{input.value}}" (change)="onChange(input.id)" class="form-control">
+        </span>
+    </span>
+    <span *ngIf="input.help !== ''" matTooltip="{{input.help}}" matTooltipPosition="right" matTooltipClass="md-13"><em
+        class="material-icons md-22 gray">help</em></span>
+    <div class="text-descriptive text-muted" *ngIf="input.description !== ''">{{input.description}}</div>
+</div>

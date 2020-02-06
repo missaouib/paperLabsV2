@@ -1,0 +1,242 @@
+.logo-pap {
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../../../content/images/icon-logo-color.png') no-repeat center center;
+    background-size: contain;
+}
+
+.mon-compte {
+    background: url('../../../content/images/mon-compte.png') no-repeat;
+    width: 198px;
+    height: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+    .indexing {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .indexing {
+        padding-bottom: 0 !important;
+    }
+    .pap-brand {
+        margin-left: 10%;
+        padding-top: 1%;
+    }
+}
+
+.indexing {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: linear-gradient( 34deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33%, rgba(88, 79, 255, 1) 49%, rgba(23, 0, 175, 1) 100%);
+}
+
+.item-compte {
+    padding-left: 70px;
+}
+
+.item {
+    color: #fff !important;
+}
+
+.dropdown-toggle::after {
+    color: #fff;
+}
+
+.sticky {
+    width: 100%;
+    transition: all 0.2s ease 0s;
+    background: white;
+    .item {
+        color: #1400c3 !important;
+    }
+    .dropdown-toggle::after {
+        color: #1400c3;
+    }
+    .mon-compte {
+        background: url('../../../content/images/user-bg.png') no-repeat;
+        width: 198px;
+        height: 55px;
+    }
+    #accountNameSpan {
+        color: #1400c3 !important;
+        /*background: linear-gradient(90deg, rgba(88, 79, 255, 1) 0%, rgba(23, 0, 175, 1) 100%);*/
+    }
+}
+
+.pap-menu-items-container {
+    min-width: 30%;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.pap-menu-items {
+    width: auto;
+}
+
+.pap-brand {
+    margin-left: 15%;
+}
+
+.level0-item-1 {
+    width: auto;
+    float: left;
+    display: block;
+    list-style: none;
+    border-left: 2px solid #1400c3;
+}
+
+.level1 {
+    list-style: none;
+    margin-left: -38px;
+}
+
+.level0-item-2 {
+    float: left;
+    display: block;
+    list-style: none;
+    border-left: 2px solid #1400c3;
+}
+
+.level0-item-3 {
+    margin-top: 35%;
+    list-style: none;
+}
+
+.popular-document {
+    float: left;
+    list-style: none;
+    padding-right: 35px;
+    border-left: 2px solid #1400c3;
+}
+
+.entreprise-drop {
+    width: 700px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1550px) {
+    .pap-brand {
+        margin-left: 10%;
+    }
+    .indexing {
+        background-image: none;
+        background-color: white !important;
+    }
+    .item {
+        color: #1400c3 !important;
+    }
+    .dropdown-toggle::after {
+        color: #1400c3;
+    }
+    .mon-compte {
+        background: url('../../../content/images/user-bg.png') no-repeat;
+        width: 198px;
+        height: 55px;
+    }
+    #accountNameSpan {
+        color: #1400c3 !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .indexing {
+        // padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .pap-brand {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 1253px) {
+    .pap-brand {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .pap-brand {
+        margin-left: 15%;
+        width: 100%;
+    }
+    .navbar-toggler {
+        margin-right: 15%;
+        float: right;
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pap-brand {
+        margin-left: 10%;
+    }
+    .navbar-toggler {
+        margin-right: 10%;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .popular-document {
+        display: block;
+        float: left;
+        list-style: none;
+        margin-top: 0;
+        border-left: 1px solid #1400c3;
+    }
+    .entreprise-drop {
+        width: 500px;
+    }
+    .level0-item-3 {
+        margin-top: 0;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pap-brand {
+        margin-left: 5%;
+    }
+    .navbar-toggler {
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .pap-brand {
+        margin-left: 0;
+    }
+    .navbar-toggler {
+        margin-right: 0;
+    }
+}
+
+#accountName {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 4px;
+}
+
+#accountNameSpan {
+    display: inline-flex !important;
+    color: white;
+    border-radius: 50px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .isAdmin {
+        padding-top: 45px;
+    }
+}

@@ -1,0 +1,7 @@
+<div class="bloc-title">{{bloc.title}}</div>
+{{bloc.description}}
+
+<div *ngFor="let input of bloc.inputs" id="InputDiv{{input.id}}"
+     [style.display]="input.visibility ? 'block' : 'none'">
+    <jhi-input [input]="input"></jhi-input>
+</div>

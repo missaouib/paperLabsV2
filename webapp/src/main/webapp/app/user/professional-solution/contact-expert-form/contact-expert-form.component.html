@@ -1,0 +1,135 @@
+<div class="shadow-sm border rounded pl-5 pr-5 pb-5 pt-4">
+    <h5 class="text-center font-weight-bold mb-4 titel-commande">Obtenez plus d'informations avec l'un de nos experts</h5>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12">
+            <div class="alert alert-success" *ngIf="success">
+                <strong>Message envoyé avec succée.</strong> Veuillez vérifier votre email.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="error">
+                <strong>Échec d'envoi de message !</strong> Veuillez réessayer ultérieurement.
+            </div>
+        </div>
+    </div>
+
+    <form id="contact-form" name="form" role="form" (ngSubmit)="sendContactExpertEmail()" [formGroup]="contactExpertForm" *ngIf="!success">
+        <div class="controls">
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="firstName">Prénom*</label>
+                        <input id="firstName" type="text" name="firstName" class="form-control"
+                               placeholder="{{'global.form.firstName.placeholder' | translate}}" formControlName="firstName">
+                        <div *ngIf="contactExpertForm.get('firstName').invalid && (contactExpertForm.get('firstName').dirty || contactExpertForm.get('firstName').touched)">
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('firstName').errors.required" jhiTranslate="register.messages.validate.firstname.required">
+                                Your firstName is required.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('firstName').errors.minlength"
+                                   jhiTranslate="register.messages.validate.firstname.minlength">
+                                Your firstName is required to be at least 1 character.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('firstName').errors.maxlength"
+                                   jhiTranslate="register.messages.validate.firstname.maxlength">
+                                Your firstName cannot be longer than 50 characters.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('firstName').errors.pattern"
+                                   jhiTranslate="register.messages.validate.firstname.pattern">
+                                Your firstName can only contain letters and digits.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="lastName">Nom*</label>
+                        <input id="lastName" type="text" name="lastName" class="form-control"
+                               placeholder="{{'global.form.lastName.placeholder' | translate}}" formControlName="lastName">
+                        <div *ngIf="contactExpertForm.get('lastName').invalid && (contactExpertForm.get('lastName').dirty || contactExpertForm.get('lastName').touched)">
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('lastName').errors.required" jhiTranslate="register.messages.validate.lastname.required">
+                                Your lastName is required.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('lastName').errors.minlength"
+                                   jhiTranslate="register.messages.validate.lastname.minlength">
+                                Your lastName is required to be at least 1 character.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('lastName').errors.maxlength"
+                                   jhiTranslate="register.messages.validate.lastname.maxlength">
+                                Your lastName cannot be longer than 50 characters.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('lastName').errors.pattern"
+                                   jhiTranslate="register.messages.validate.lastname.pattern">
+                                Your lastName can only contain letters and digits.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="phoneNumber">Numéro de téléphone*</label>
+                        <input id="phoneNumber" type="text" name="phoneNumber" class="form-control"
+                               placeholder="Votre numéro de téléphone" formControlName="phoneNumber">
+                        <div *ngIf="contactExpertForm.get('phoneNumber').invalid && (contactExpertForm.get('phoneNumber').dirty || contactExpertForm.get('phoneNumber').touched)">
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('phoneNumber').errors.required">
+                                Votre numéro de téléphone est requis.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input id="email" type="email" name="email" class="form-control"
+                               placeholder="{{'global.form.email.placeholder' | translate}}" formControlName="email">
+                        <div *ngIf="contactExpertForm.get('email').invalid && (contactExpertForm.get('email').dirty || contactExpertForm.get('email').touched)">
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('email').errors.required"
+                                   jhiTranslate="global.messages.validate.email.required">
+                                Your email is required.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('email').errors.invalid"
+                                   jhiTranslate="global.messages.validate.email.invalid">
+                                Your email is invalid.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('email').errors.minlength"
+                                   jhiTranslate="global.messages.validate.email.minlength">
+                                Your email is required to be at least 5 characters.
+                            </small>
+                            <small class="form-text text-danger" *ngIf="contactExpertForm.get('email').errors.maxlength"
+                                   jhiTranslate="global.messages.validate.email.maxlength">
+                                Your email cannot be longer than 100 characters.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="company">Société</label>
+                        <input id="company" type="text" name="company" class="form-control"
+                               placeholder="Votre société" formControlName="company">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <p class="text-muted">
+                            <strong>*</strong> Ces champs sont obligatoires.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 d-flex justify-content-center mt-4 mb-2">
+                    <button type="submit" [disabled]="contactExpertForm.invalid" class="btn btn-success btn-send">
+                        Obtenir plus d'information
+                        <fa-icon [icon]="['fas', 'paper-plane']" [fixedWidth]="true" size="lg" pull="right"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>

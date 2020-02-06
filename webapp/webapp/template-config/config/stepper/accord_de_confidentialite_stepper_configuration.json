@@ -1,0 +1,1910 @@
+{
+"steps":[
+{
+      "id": "step_nature_personne_partie_emettrice",
+      "title": "Nature de la personne  :",
+      "description": "Est-ce-que la personne est une personne physique ou morale ? ",
+      "blocs": ["bloc_nature_personne"],
+      "visibility": true
+    },
+	{
+      "id": "step_partie_emettrice",
+      "title": "Partie Emettrice",
+      "description": "",
+      "blocs": [
+        "bloc_personne_physique_tunisienne",
+        "bloc_personne_physique_étrangère",
+		"bloc_personne_morale_tunisienne",
+		"bloc_personne_morale_étrangère"],
+      "visibility": true
+    },
+	{
+      "id": "step_nature_personne_partie_destinataire",
+      "title": "Nature de la personne  :",
+      "description": "Est-ce-que la personne est une personne physique ou morale ?",
+      "blocs": ["bloc_nature_personne_d"],
+      "visibility": true
+    },
+	{
+      "id": "step_partie_destinaire",
+      "title": "Partie Destinaire",
+      "description": "",
+      "blocs": [
+        "bloc_personne_physique_tunisienne_d",
+        "bloc_personne_physique_étrangère_d",
+		"bloc_personne_morale_tunisienne_d",
+		"bloc_personne_morale_étrangère_d"],
+      "visibility": true
+    },
+	{
+	"id": "step_Contexte",
+      "title": "Contexte",
+      "description": "3 Souhaitez-vous introduire un préambule pour donner un contexte (préambule) à cet accord la confidentialité ?",
+      "blocs": ["bloc_oui", "bloc_non"],
+      "visibility": true
+    },
+	{
+	"id": "step_Juridiction_Arbitrage",
+      "title": "Juridiction ou Arbitrage",
+	  "description": "(Cette section est à utiliser uniquement dans le cas où l'utilsateur a une connaisance de ces options sinon passez cette étape)",
+      "description": "Vous souhaitez soumettre les différents relatifs à ce contrat à",
+      "blocs": ["bloc_arbitrage", "bloc_tribunal_étatique"],
+      "visibility": true
+    }
+	],
+	"blocs":[
+	{
+      "id": "bloc_nature_personne",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_nature_personne_physique_tunisienne",
+        "input_nature_personne_physique_étrangère",
+		"input_nature_personne_morale_tunisienne",
+		"input_nature_personne_morale_étrangère"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_nature_personne_d",
+      "title": "Le personne est",
+      "description": "",
+      "inputs": [
+        "input_nature_personne_physique_tunisienne_d",
+        "input_nature_personne_physique_étrangère_d",
+		"input_nature_personne_morale_tunisienne_d",
+		"input_nature_personne_morale_étrangère_d"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_tunisienne",
+      "title": "Personne physique tunisienne",
+      "description": "",
+      "inputs": [
+         "input_nom_pt",
+        "input_prénom_pt",
+        "input_numéro_de_la_carte_d'identité_nationale",
+        "input_adresse_domicilisation_pt"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_étrangère",
+      "title": "Personne physique étrangère",
+      "description": "",
+      "inputs": [
+        "input_nom_pe",
+        "input_prénom_pe",
+        "input_nationalité",
+        "input_numéro_de_passport",
+		"input_pays_émetteur_de_passeport",
+		"input_adresse_domicilisation_pe"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_tunisienne",
+      "title": "Personne morale tunisienne",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale_mt",
+        "input_forme_SA_SARL_SUARL",
+        "input_adresse_du_siège_social",
+        "input_identifiant_unique",
+		"input_nom_du_représentant signataire_du_document",
+		"input_prénom_du_représentant_mt"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_morale_étrangère",
+      "title": "Personne morale étrangère",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale_me",
+        "input_forme_SA_SARL_SUARL_LLP_GMBH",
+        "input_pays_d'immatriculation",
+        "input_adresse_du_siège_social_1",
+		"input_numéro_d'immatriculation_dans_le_pays_d'origine",
+		"input_nom_du_représentant_signataire_du_document",
+		"input_prénom_du_représentant_me"],
+      "visibility": false
+    },
+	{
+      "id": "bloc_personne_physique_tunisienne_d",
+      "title": "Personne physique tunisienne",
+      "description": "",
+      "inputs": [
+         "input_nom_pt_d",
+        "input_prénom_pt_d",
+        "input_numéro_de_la_carte_d'identité_nationale_d",
+        "input_adresse_domicilisation_pt_d"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_physique_étrangère_d",
+      "title": "Personne physique étrangère",
+      "description": "",
+      "inputs": [
+        "input_nom_pe_d",
+        "input_prénom_pe_d",
+        "input_nationalité_d",
+        "input_numéro_de_passport_d",
+		"input_pays_émetteur_de_passeport_d",
+		"input_adresse_domicilisation_pe_d"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_morale_tunisienne_d",
+      "title": "Personne morale tunisienne",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale_mt_d",
+        "input_forme_SA_SARL_SUARL_d",
+        "input_adresse_du_siège_social_d",
+        "input_identifiant_unique_d",
+		"input_nom_du_représentant signataire_du_document_d",
+		"input_prénom_du_représentant_mt_d"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_personne_morale_étrangère_d",
+      "title": "Personne morale étrangère",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale_me_d",
+        "input_forme_SA_SARL_SUARL_LLP_GMBH_d",
+        "input_pays_d'immatriculation_d",
+        "input_adresse_du_siège_social_d_1",
+		"input_numéro_d'immatriculation_dans_le_pays_d'origine_d",
+		"input_nom_du_représentant_signataire_du_document_d",
+		"input_prénom_du_représentant_me_d"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_oui",
+      "title": "Oui :",
+      "description": "",
+      "inputs": [
+        "input_quelle_activité_partie_emettrice",
+        "input_quelle_activité_partie_destinaire",
+        "input_pourquoi_est_ce_que_parties_contractent"
+      ],
+      "visibility": true
+	  },
+	   {
+      "id": "bloc_non",
+      "title": "Non :",
+      "description": "",
+      "inputs": [
+        "input_non"
+      ],
+      "visibility": true
+	  },
+	  
+	  {
+      "id": "bloc_arbitrage",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_Quelle_siège_tribunal_arbitral"
+      ],
+      "visibility": true
+	  },
+	  
+	  {
+      "id": "bloc_tribunal_étatique",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_Quelle_juridiction"],
+      "visibility": true
+	  }
+	],
+	
+	
+	"inputs":[
+	{
+	"id": "input_nom_pt",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_pt",
+      "label": "Nom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_pt"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_prénom_pt",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_pt",
+      "label": "Prénom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_pt"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_numéro_de_la_carte_d'identité_nationale",
+      "type": "text",
+      "description": "[La valeur doit être un nombre]",
+      "name": "input_numéro_de_la_carte_d'identité_nationale",
+      "label": "Numéro de carte d'identité nationale ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_de_la_carte_d'identité_nationale"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_adresse_domicilisation_pt",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_domicilisation_pt",
+      "label": "Adresse/Domicilisation ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_domicilisation_pt"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_nom_pe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_pe",
+      "label": "Nom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_pe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_prénom_pe",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_pe",
+      "label": "Prénom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_pe"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_nationalité",
+      "type": "text",
+      "description": "[liste déroulante]",
+      "name": "input_nationalité",
+      "label": "Nationalité ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalité"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_numéro_de_passport",
+      "type": "text",
+      "description": "[liste déroulante]",
+      "name": "input_numéro_de_passport",
+      "label": "Numéro de Passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_de_passport"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_pays_émetteur_de_passeport",
+      "type": "text",
+      "name": "input_pays_émetteur_de_passeport",
+      "label": "Pays émetteur du Passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_émetteur_de_passeport"]
+		},
+		"visibility":true
+		},
+	
+	{
+	"id": "input_adresse_domicilisation_pe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_domicilisation_pe",
+      "label": "Adresse/Domicilisation ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_domicilisation_pe"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_dénomination_sociale_mt",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale_mt",
+      "label": "Dénomination sociale ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dénomination_sociale_mt"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_forme_SA_SARL_SUARL",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_SA_SARL_SUARL",
+      "label": "Forme (SA, SARL, SUARL... ) ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_SA_SARL_SUARL"]
+      },
+      "visibility": true
+	  },
+	
+	{
+	"id": "input_adresse_du_siège_social",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_du_siège_social",
+      "label": "Adresse du siège social ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_du_siège_social"]
+      },
+      "visibility": true
+	  },
+	  
+	  {
+	"id": "input_identifiant_unique",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique",
+      "label": "Identifiant Unique ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identifiant_unique"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_nom_du_représentant signataire_du_document",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_du_représentant signataire_du_document",
+      "label": "Nom du représentant signataire du document ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_représentant signataire_du_document"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_prénom_du_représentant_mt",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_du_représentant",
+      "label": "Prénom du représentant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_du_représentant_mt"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_dénomination_sociale_me",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale_me",
+      "label": "Dénomination sociale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dénomination_sociale_me"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_forme_SA_SARL_SUARL_LLP_GMBH",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_SA_SARL_SUARL_LLP_GMBH",
+      "label": "Forme (SA, SARL, SUARL, SUARL, LLP, GMBH... )",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_SA_SARL_SUARL_LLP_GMBH"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_pays_d'immatriculation",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_d'immatriculation",
+      "label": "Pays d'immatriculation",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_d'immatriculation"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_adresse_du_siège_social_1",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_du_siège_social_1",
+      "label": "Adresse du siège social (adresse, ville, pays)",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_du_siège_social"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_numéro_d'immatriculation_dans_le_pays_d'origine",
+      "type": "text",
+      "description": "",
+      "name": "input_numéro_d'immatriculation_dans_le_pays_d'origine",
+      "label": "Numéro du représentant signataire du document",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_d'immatriculation_dans_le_pays_d'origine"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_nom_du_représentant_signataire_du_document",
+      "description": "",
+      "name": "input_nom_du_représentant_signataire_du_document",
+      "label": "Nom du représentant signataire du document",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_représentant_signataire_du_document"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_prénom_du_représentant_me",
+      "description": "",
+      "name": "_prénom_du_représentant_me",
+      "label": "Prénom du représentant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_du_représentant_me"]
+      },
+      "visibility": true
+	  },
+	
+	
+	{
+	"id": "input_nom_pt_d",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_pt_d",
+      "label": "Nom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_pt_d"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_prénom_pt_d",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_pt_d",
+      "label": "Prénom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_pt_d"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_numéro_de_la_carte_d'identité_nationale_d",
+      "type": "text",
+      "description": "[La valeur doit être un nombre]",
+      "name": "input_numéro_de_la_carte_d'identité_nationale_d",
+      "label": "Numéro de carte d'identité nationale ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_de_la_carte_d'identité_nationale_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_adresse_domicilisation_pt_d",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_domicilisation_pt_d",
+      "label": "Adresse/Domicilisation ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_domicilisation_pt_d"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_nom_pe_d",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_pe_d",
+      "label": "Nom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_pe_d"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_prénom_pe_d",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_pe_d",
+      "label": "Prénom ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_pe_d"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_nationalité_d",
+      "type": "text",
+      "description": "[liste déroulante]",
+      "name": "input_nationalité_d",
+      "label": "Nationalité ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalité_d"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_numéro_de_passport_d",
+      "type": "text",
+      "description": "[liste déroulante]",
+      "name": "input_numéro_de_passport_d",
+      "label": "Numéro de Passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_de_passport_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_pays_émetteur_de_passeport_d",
+      "type": "text",
+      "name": "input_pays_émetteur_de_passeport",
+      "label": "Pays émetteur du Passeport",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_émetteur_de_passeport_d"]
+		},
+		"visibility":true
+		},
+	
+	{
+	"id": "input_adresse_domicilisation_pe_d",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_domicilisation_pe_d",
+      "label": "Adresse/Domicilisation ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_domicilisation_pe_d"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_dénomination_sociale_mt_d",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale_mt_d",
+      "label": "Dénomination sociale ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dénomination_sociale_mt_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_forme_SA_SARL_SUARL_d",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_SA_SARL_SUARL_d",
+      "label": "Forme (SA, SARL, SUARL... ) ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_SA_SARL_SUARL_d"]
+      },
+      "visibility": true
+	  },
+	
+	{
+	"id": "input_adresse_du_siège_social_d",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_du_siège_social_d",
+      "label": "Adresse du siège social ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_du_siège_social_d"]
+      },
+      "visibility": true
+	  },
+	  
+	  {
+	"id": "input_identifiant_unique_d",
+      "type": "text",
+      "description": "",
+      "name": "input_identifiant_unique_d",
+      "label": "Identifiant Unique ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["identifiant_unique_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_nom_du_représentant signataire_du_document_d",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_du_représentant signataire_du_document_d",
+      "label": "Nom du représentant signataire du document ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_représentant signataire_du_document_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_prénom_du_représentant_mt_d",
+      "type": "text",
+      "description": "",
+      "name": "input_prénom_du_représentant_d",
+      "label": "Prénom du représentant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_du_représentant_mt_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_dénomination_sociale_me_d",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale_me_d",
+      "label": "Dénomination sociale",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["dénomination_sociale_me_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_forme_SA_SARL_SUARL_LLP_GMBH_d",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_SA_SARL_SUARL_LLP_GMBH_d",
+      "label": "Forme (SA, SARL, SUARL, SUARL, LLP, GMBH... )",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_SA_SARL_SUARL_LLP_GMBH_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_pays_d'immatriculation_d",
+      "type": "text",
+      "description": "",
+      "name": "input_pays_d'immatriculation_d",
+      "label": "Pays d'immatriculation",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pays_d'immatriculation_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_adresse_du_siège_social_d_1",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_du_siège_social_d_1",
+      "label": "Adresse du siège social (adresse, ville, pays)",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_du_siège_social_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_numéro_d'immatriculation_dans_le_pays_d'origine_d",
+      "type": "text",
+      "description": "",
+      "name": "input_numéro_d'immatriculation_dans_le_pays_d'origine_d",
+      "label": "Numéro du représentant signataire du document",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numéro_d'immatriculation_dans_le_pays_d'origine_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_nom_du_représentant_signataire_du_document_d",
+      "description": "",
+      "name": "input_nom_du_représentant_signataire_du_document_d",
+      "label": "Nom du représentant signataire du document",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_représentant_signataire_du_document_d"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_prénom_du_représentant_me_d",
+      "description": "",
+      "name": "_prénom_du_représentant_me_d",
+      "label": "Prénom du représentant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prénom_du_représentant_me_d"]
+      },
+      "visibility": true
+	  },
+	{
+      "id": "input_nature_personne_physique_tunisienne",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne physique tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique tunisienne",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_physique_tunisienne"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_physique_étrangère",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne physique étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique étrangère",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_physique_étrangère"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_nature_personne_morale_tunisienne",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne morale tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale tunisienne",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_morale_tunisienne"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_nature_personne_morale_étrangère",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne morale étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale étrangère",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_morale_étrangère"]
+      },
+      "visibility": true
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+      "id": "input_nature_personne_physique_tunisienne_d",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne physique tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique tunisienne",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_physique_tunisienne_d"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nature_personne_physique_étrangère_d",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne physique étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne physique étrangère",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_physique_étrangère_d"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_nature_personne_morale_tunisienne_d",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne morale tunisienne",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale tunisienne",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_morale_tunisienne_d"]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_nature_personne_morale_étrangère_d",
+      "type": "radio",
+      "description": "",
+      "name": "test",
+      "label": "Personne morale étrangère",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Personne morale étrangère",
+      "bookmarkIdPerValue": {
+        "Personne morale": ["Infos_personne_morale_étrangère_d"]
+      },
+      "visibility": true
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+	"id": "input_quelle_activité_partie_emettrice",
+      "description": "",
+      "name": "input_quelle_activité_partie_emettrice",
+      "label": "Quelle est l'activité de la Partie Emettrice ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["quelle_activité_partie_emettrice"]
+      },
+      "visibility": true
+	  },
+	  {
+	"id": "input_quelle_activité_partie_destinaire",
+      "description": "",
+      "name": "input_quelle_activité_partie_destinaire",
+      "label": "Quelle est l'activité de la Partie Destinataire ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["quelle_activité_partie_destinaire"]
+      },
+      "visibility": true
+	  },
+	{
+	"id": "input_pourquoi_est_ce_que_parties_contractent",
+      "description": "",
+      "name": "input_pourquoi_est_ce_que_parties_contractent",
+      "label": "Pourquoi est ce que les parties contactent ?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["pourquoi_est_ce_que_parties_contractent"]
+      },
+      "visibility": true
+	  },
+	  
+	  {
+	"id": "input_non",
+	"type":"radio",
+      "description": "",
+      "name": "input_non",
+      "label": "Non",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["no"]
+      },
+      "visibility": true
+	  },
+	
+	{
+	"id": "input_Quelle_siège_tribunal_arbitral",
+      "description": "",
+      "name": "input_Quelle_siège_tribunal_arbitral",
+      "label": "Quelle est le siège du tribunal arbitral (indiquez une ville ou une adresse)?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Quelle_siège_tribunal_arbitral"]
+      },
+      "visibility": true
+	  },
+	
+	{
+	"id": "input_Quelle_juridiction",
+      "description": "",
+      "name": "input_Quelle_juridiction",
+      "label": "Quelle juridiction (Tunis, Nabeul, Sousse...)?",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Quelle_juridiction"]
+      },
+      "visibility": true
+	  }
+	],
+	
+	"bookmarks":[
+	{
+      "bookmarkId": "nom_pt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_pt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_de_la_carte_d'identité_nationale",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_domicilisation_pt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_pe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_pe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalité",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_de_passport",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_émetteur_de_passeport",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_domicilisation_pe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dénomination_sociale_mt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_SA_SARL_SUARL",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_du_siège_social",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_du_représentant signataire_du_document",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_du_représentant_mt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dénomination_sociale_me",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_SA_SARL_SUARL_LLP_GMBH",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_d'immatriculation",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_du_siège_social",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_d'immatriculation_dans_le_pays_d'origine",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_du_représentant_signataire_du_document",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_du_représentant_me",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	
+		{
+      "bookmarkId": "nom_pt_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_pt_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_de_la_carte_d'identité_nationale_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_domicilisation_pt_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_pe_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_pe_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalité_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_de_passport_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_émetteur_de_passeport_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_domicilisation_pe_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dénomination_sociale_mt_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_SA_SARL_SUARL_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_du_siège_social_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_du_représentant signataire_du_document_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_du_représentant_mt_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dénomination_sociale_me_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_SA_SARL_SUARL_LLP_GMBH_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pays_d'immatriculation_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_du_siège_social_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numéro_d'immatriculation_dans_le_pays_d'origine_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_du_représentant_signataire_du_document_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "prénom_du_représentant_me_d",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+      "bookmarkId": "Infos_personne_physique_tunisienne",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_physique_étrangère",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_morale_tunisienne",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_morale_étrangère",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	
+	
+	
+	
+	{
+      "bookmarkId": "Infos_personne_physique_tunisienne_d",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_physique_étrangère_d",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_morale_tunisienne_d",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Infos_personne_morale_étrangère_d",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+      "bookmarkId": "quelle_activité_partie_emettrice",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "quelle_activité_partie_destinaire",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "pourquoi_est_ce_que_parties_contractent",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "no",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Quelle_siège_tribunal_arbitral",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "Quelle_juridiction",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }	
+	]
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

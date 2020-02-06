@@ -1,0 +1,419 @@
+{
+  "workflow": [
+    {
+      "inputId": "input_gérant_préside_assemblée_oui",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_nom_prénom_ancien_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_gérant_préside_assemblée_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_nom_prénom_préside_assemblée",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_constitution_de_la_société",
+      "valuesConstraints": [
+        {
+          "value": "Constitution de la société",
+          "constraints": []
+        }
+      ]
+    },
+    {
+      "inputId": "input_révocation_du_précédent_gérant",
+      "valuesConstraints": [
+        {
+          "value": "Révocation du précédent gérant",
+          "constraints": [
+            {
+              "elementId": "input_rév_nom_prénom_ancien_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_démission_du_précédent_gérant",
+      "valuesConstraints": [
+        {
+          "value": "Démission du précédent gérant",
+          "constraints": [
+            {
+              "elementId": "input_dém_nom_prénom_ancien_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_décès_du_précédent_gérant",
+      "valuesConstraints": [
+        {
+          "value": "Décès du précédent gérant",
+          "constraints": [
+            {
+              "elementId": "input_déc_nom_prénom_ancien_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_nouveau_gérant_tunisien_oui",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_num_CIN_du_nouveau_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_nouveau_gérant_tunisien_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": [
+            {
+              "elementId": "input_num_passeport_du_nouveau_gérant",
+              "visibility": true
+            },
+            {
+              "elementId": "input_natio_passeport_du_nouveau_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_gérant_rémunéré_oui",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_montant_rémunération_gérant",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_gérant_rémunéré_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": []
+        }
+      ]
+    },
+    {
+      "inputId": "input_convocations_assemblée_oui",
+      "valuesConstraints": [
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "input_date_convocations_assemblée",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "bloc_nom_prénom_émetteur_convocation",
+              "visibility": true
+            }
+          ]
+        },
+        {
+          "value": "Oui",
+          "constraints": [
+            {
+              "elementId": "bloc_qualité_émetteur_convocation",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_convocations_assemblée_non",
+      "valuesConstraints": [
+        {
+          "value": "Non",
+          "constraints": []
+        }
+      ]
+    },
+    {
+      "inputId": "input_nombre_dassociés",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+            {
+              "elementId": "bloc_associé_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_4",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_5",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_6",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_7",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_8",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_9",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_10",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_11",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_12",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_13",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_14",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_15",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_16",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_17",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_18",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_19",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_20",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_21",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_22",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_23",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_24",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_25",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_26",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_27",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_28",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_29",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_30",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_31",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_32",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_33",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_34",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_35",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_36",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_37",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_38",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_39",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_40",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_41",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_42",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_43",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_44",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_45",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_46",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_47",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_48",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_49",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_associé_50",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "inputId": "input_nombre_autres_personnes",
+      "valuesConstraints": [
+        {
+          "value": "select_input_generator",
+          "constraints": [
+            {
+              "elementId": "bloc_autre_personne_1",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_autre_personne_2",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_autre_personne_3",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_autre_personne_4",
+              "visibility": true
+            },
+            {
+              "elementId": "bloc_autre_personne_5",
+              "visibility": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

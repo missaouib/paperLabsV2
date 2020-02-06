@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.contactSupportTeam.title}">PaperLabs contact</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.contactSupportTeam.text1}">
+            Demande d'aide de l'utilisateur ayant ces coordonnées :
+        </p>
+        <div th:text="#{email.contactSupportTeam.firstName(${contact.getFirstName()})}">
+            Prénom :
+        </div>
+        <div th:text="#{email.contactSupportTeam.lastName(${contact.getLastName()})}">
+            Nom :
+        </div>
+        <div th:text="#{email.contactSupportTeam.email(${contact.getEmail()})}">
+            Email :
+        </div>
+        <div th:text="#{email.contactSupportTeam.need(${contact.getNeed()})}">
+            Motif d'envoi de ce message :
+        </div>
+        <div th:text="#{email.contactSupportTeam.message}">
+            Message :
+        </div>
+        <p><em th:utext="${#strings.replace(contact.getMessage(), T(org.apache.commons.lang3.StringUtils).LF, '&lt;br /&gt;')}"></em></p>
+    </body>
+</html>

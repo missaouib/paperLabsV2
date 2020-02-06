@@ -1,0 +1,10 @@
+{
+  "paperlabsApp": {
+    "OrderStatus": {
+      "null": "",
+      "WAITING": "WAITING",
+      "PAID": "PAID",
+      "ABANDONED": "ABANDONED"
+    }
+  }
+}

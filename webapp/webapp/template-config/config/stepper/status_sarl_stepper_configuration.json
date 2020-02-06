@@ -1,0 +1,1140 @@
+{
+  "steps": [
+    {
+      "id": "step_informations_générales_société",
+      "title": "La société",
+      "description": "",
+      "blocs": [
+        "bloc_informations_générales_société",
+        "bloc_juridiction_société",
+        "bloc_exportabilité_société"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "step_associés_et_leur_apports",
+      "title": "Associés et apports",
+      "description": "",
+      "blocs": ["bloc_associés", "bloc_apports"],
+      "visibility": true
+    },
+    {
+      "id": "step_capital_social",
+      "title": "Capital social",
+      "description": "",
+      "blocs": ["bloc_capital_social", "bloc_parts_sociales"],
+      "visibility": true
+    },
+    {
+      "id": "step_manager",
+      "title": "Manager",
+      "description": "",
+      "blocs": ["bloc_manager"],
+      "visibility": true
+    },
+    {
+      "id": "step_date_signature",
+      "title": "Date de signature",
+      "description": "",
+      "blocs": ["bloc_signature"],
+      "visibility": true
+    }
+  ],
+  "blocs": [
+    {
+      "id": "bloc_informations_générales_société",
+      "title": "Informations générales de la société :",
+      "description": "",
+      "inputs": [
+        "input_dénomination_de_la_société",
+        "input_adresse_de_la_société",
+        "input_domaine_activité_société"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_juridiction_société",
+      "title": "Quelle est la juridiction de la société ?",
+      "description": "",
+      "inputs": [
+        "input_juridiction_société"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_exportabilité_société",
+      "title": "Quel est le dregré d'exportabilité de la société ?",
+      "description": "",
+      "inputs": [
+        "input_exportabilité_société"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_associés",
+      "title": "Les associés :",
+      "description": "",
+      "inputs": [
+        "input_nomPrénom_associé_fondateur1",
+        "input_nomPrénom_associé_fondateur2"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_apports",
+      "title": "Leurs apports respectifs :",
+      "description": "",
+      "inputs": [
+        "input_somme_apport_fondateur1_lettres",
+        "input_somme_apport_fondateur1_chiffres",
+        "input_somme_apport_fondateur2_lettres",
+        "input_somme_apport_fondateur2_chiffres",
+        "input_somme_total_apports_lettres",
+        "input_somme_total_apports_chiffres"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_capital_social",
+      "title": "Capital social de la société :",
+      "description": "",
+      "inputs": [
+        "input_capital_social_de_la_société_chiffres",
+        "input_capital_social_de_la_société_lettres",
+        "input_nombre_parts_capital_social_lettres",
+        "input_nombre_parts_capital_social_chiffres",
+        "input_montant_part_capital_social_lettres",
+        "input_montant_part_capital_social_chiffres"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_parts_sociales",
+      "title": "Les parts sociales :",
+      "description": "",
+      "inputs": [
+        "input_nombre_parts_fondateur1_chiffres",
+        "input_num_dernière_part_fondateur1_chiffres",
+        "input_nombre_parts_fondateur1_lettres",
+        "input_nombre_parts_fondateur2_chiffres",
+        "input_num_première_part_fondateur2_chiffres",
+        "input_num_dernière_part_fondateur2_chiffres",
+        "input_nombre_parts_fondateur2_lettres"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_manager",
+      "title": "Informations du manager :",
+      "description": "",
+      "inputs": [
+        "input_nomPrénom_Manager",
+        "input_numéro_CIN_manager",
+        "input_date_délivrance_de_la_CIN_du_manager",
+        "input_montant_emprunt"
+      ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_signature",
+      "title": "Quelle sera la date de signature ?",
+      "description": "",
+      "inputs": [
+        "input_date_signature"
+      ],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "input_dénomination_de_la_société",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_de_la_société",
+      "label": "Dénomination de la société: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Dénomination_de_la_société",
+          "Dénomination_sociale_de_la_société"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_adresse_de_la_société",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_la_société",
+      "label": "Adresse de la société : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Adresse_de_la_société",
+          "Adresse_de_la_société_art4"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_domaine_activité_société",
+      "type": "text",
+      "description": "",
+      "name": "input_domaine_activité_société",
+      "label": "Domaine d'activité de la société : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+            "Domaine_activité_société"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_juridiction_société",
+      "type": "select",
+      "description": "",
+      "name": "input_juridiction_société",
+      "label": "Juridiction : ",
+      "placeHolder": "",
+      "help": "",
+      "options": ["résidente","offshore"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "résidente": ["Juridiction_société"],
+        "offshore": ["Juridiction_société"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_exportabilité_société",
+      "type": "select",
+      "description": "",
+      "name": "input_exportabilité_société",
+      "label": "Exportabilité : ",
+      "placeHolder": "",
+      "help": "",
+      "options": ["non-exportatrice", "partiellement-exportatrice", "totalement-exportatrice"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "non-exportatrice": ["Exportabilité_société"],
+        "partiellement-exportatrice": ["Exportabilité_société"],
+        "totalement-exportatrice": ["Exportabilité_société"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nomPrénom_associé_fondateur1",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_associé_fondateur1",
+      "label": "Nom et prénom du premier associé fondateur : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "NomPrénom_associé_fondateur1",
+          "NomPrénom_associé_fondateur1_art6",
+          "NomPrénom_associé_fondateur1_art7",
+          "NomPrénom_fondateur1_signature"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nomPrénom_associé_fondateur2",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_associé_fondateur2",
+      "label": "Nom et prénom du second associé fondateur : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "NomPrénom_associé_fondateur2",
+          "NomPrénom_associé_fondateur2_art6",
+          "NomPrénom_associé_fondateur2_art7",
+          "NomPrénom_fondateur2_signature"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_apport_fondateur1_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_somme_apport_fondateur1_lettres",
+      "label": "Somme de l'apport du premier associé en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_apport_fondateur1_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_apport_fondateur1_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_somme_apport_fondateur1_chiffres",
+      "label": "Somme de l'apport du premier associé en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_apport_fondateur1_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_apport_fondateur2_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_somme_apport_fondateur2_lettres",
+      "label": "Somme de l'apport du second associé en lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_apport_fondateur2_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_apport_fondateur2_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_somme_apport_fondateur2_chiffres",
+      "label": "Somme de l'apport du second associé en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_apport_fondateur2_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_total_apports_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_somme_total_apports_lettres",
+      "label": "Somme tôtale des apports des associés en lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_total_apports_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_somme_total_apports_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_somme_total_apports_chiffres",
+      "label": "Somme tôtale des apports des associés en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Somme_total_apports_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_capital_social_de_la_société_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_capital_social_de_la_société_chiffres",
+      "label": "Capital social de la société en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Capital_social_de_la_société_chiffres",
+          "Capital_social_de_la_société"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_capital_social_de_la_société_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_capital_social_de_la_société_lettres",
+      "label": "Capital social de la société en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Capital_social_de_la_société_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_capital_social_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_nombre_parts_capital_social_lettres",
+      "label": "Nombre de parts du capital social en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_capital_social_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_capital_social_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_nombre_parts_capital_social_chiffres",
+      "label": "Nombre de parts du capital social en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_capital_social_chiffres",
+          "Nombre_total_parts_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_montant_part_capital_social_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_montant_part_capital_social_lettres",
+      "label": "Montant d'une part du capital social en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Montant_part_capital_social_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_montant_part_capital_social_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_montant_part_capital_social_chiffres",
+      "label": "Montant d'une part du capital social en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Montant_part_capital_social_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_fondateur1_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_nombre_parts_fondateur1_chiffres",
+      "label": "Nombre de parts du premier associé fondateur en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_fondateur1_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_num_dernière_part_fondateur1_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_num_dernière_part_fondateur1_chiffres",
+      "label": "Numero de la dernière part du premier associé fondateur en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Num_dernière_part_fondateur1_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_fondateur1_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_nombre_parts_fondateur1_lettres",
+      "label": "Nombre de parts du premier associé fondateur en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_fondateur1_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_fondateur2_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_nombre_parts_fondateur2_chiffres",
+      "label": "Nombre de parts du second associé fondateur en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_fondateur2_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_num_première_part_fondateur2_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_num_première_part_fondateur2_chiffres",
+      "label": "Numero de la première part du second associé fondateur en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Num_première_part_fondateur2_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_num_dernière_part_fondateur2_chiffres",
+      "type": "number",
+      "description": "",
+      "name": "input_num_dernière_part_fondateur2_chiffres",
+      "label": "Numero de la dernière part du second associé fondateur en chiffres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Num_dernière_part_fondateur2_chiffres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nombre_parts_fondateur2_lettres",
+      "type": "text",
+      "description": "",
+      "name": "input_nombre_parts_fondateur2_lettres",
+      "label": "Nombre de parts du second associé fondateur en toutes lettres : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Nombre_parts_fondateur2_lettres"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nomPrénom_Manager",
+      "type": "text",
+      "description": "",
+      "name": "input_nomPrénom_Manager",
+      "label": "Nom et prénom du manager : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "NomPrénom_Manager"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_numéro_CIN_manager",
+      "type": "number",
+      "description": "",
+      "name": "input_numéro_CIN_manager",
+      "label": "Numéro CIN du manager : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Numéro_CIN_manager"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_date_délivrance_de_la_CIN_du_manager",
+      "type": "date",
+      "description": "",
+      "name": "input_date_délivrance_de_la_CIN_du_manager",
+      "label": "Date de délivrance de la CIN du manager : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Date_délivrance_de_la_CIN_du_manager"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_montant_emprunt",
+      "type": "number",
+      "description": "",
+      "name": "input_montant_emprunt",
+      "label": "Montant possible pour un emprunt : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Montant_emprunt"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_date_signature",
+      "type": "date",
+      "description": "",
+      "name": "input_date_signature",
+      "label": "Date de signature : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Date_signature"
+        ]
+      },
+      "visibility": true
+    }
+  ],
+  "bookmarks": [
+
+    {
+      "bookmarkId": "Dénomination_de_la_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Dénomination_sociale_de_la_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Capital_social_de_la_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Capital_social_de_la_société_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Adresse_de_la_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Adresse_de_la_société_art4",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Domaine_activité_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Juridiction_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Exportabilité_société",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur1",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur1_art6",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur1_art7",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_fondateur1_signature",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur2",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur2_art6",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_associé_fondateur2_art7",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_fondateur2_signature",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_apport_fondateur1_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_apport_fondateur1_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_apport_fondateur2_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_apport_fondateur2_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_total_apports_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Somme_total_apports_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Capital_social_de_la_société_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_capital_social_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_capital_social_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_total_parts_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Montant_part_capital_social_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Montant_part_capital_social_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_fondateur1_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Num_dernière_part_fondateur1_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_fondateur1_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_fondateur2_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Num_première_part_fondateur2_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Num_dernière_part_fondateur2_chiffres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Nombre_parts_fondateur2_lettres",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NomPrénom_Manager",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Numéro_CIN_manager",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Date_délivrance_de_la_CIN_du_manager",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Montant_emprunt",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "Date_signature",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+  ]
+}

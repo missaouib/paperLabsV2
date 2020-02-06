@@ -1,0 +1,31 @@
+{
+  "paperlabsApp": {
+    "legalDocument": {
+      "home": {
+        "title": "Legal Documents",
+        "createLabel": "Create a new Legal Document",
+        "createOrEditLabel": "Create or edit a Legal Document",
+        "search": "Search for Legal Document",
+        "notFound": "No Legal Documents found"
+      },
+      "created": "A new Legal Document is created with identifier {{ param }}",
+      "updated": "A Legal Document is updated with identifier {{ param }}",
+      "deleted": "A Legal Document is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Legal Document {{ id }}?"
+      },
+      "detail": {
+        "title": "Legal Document"
+      },
+      "shortName": "Short Name",
+      "fullName": "Full Name",
+      "keywords": "Keywords",
+      "description": "Description",
+      "templatePreviewPath": "Template Preview Path",
+      "templateFilePath": "Template File Path",
+      "stepperConfigFilePath": "Stepper Config File Path",
+      "workflowConfigFilePath": "Workflow Config File Path",
+      "price": "Price"
+    }
+  }
+}

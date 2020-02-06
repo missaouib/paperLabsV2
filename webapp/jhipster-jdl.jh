@@ -1,0 +1,70 @@
+
+entity Category {
+	name String  required,
+    description String
+}
+
+entity LegalDocument {
+    shortName String required,
+    fullName String required,
+    keywords String,
+    description String required,
+    templatePreviewPath String required
+    templateFilePath String required, 
+    stepperConfigFilePath String required,
+    workflowConfigFilePath String required,
+    price Float,
+}
+
+entity GeneratedLegalDocument {
+    generatedWordFilePath String required,
+    genratedPDFFilePath String,
+    date Instant,
+}
+
+entity DescriptionSection {
+	title String  required,
+    content String  required,
+}
+
+entity Lawyer {
+	firstName String  required,
+    lastName String  required,
+    mobile String,
+    tel String,
+    email String,
+    address String
+}
+
+enum OrderStatus {
+	WAITING,
+  	PAID,
+    ABANDONED
+}
+
+entity Order {
+	paymentMethod PaymentMethod,
+    totalPrice Float  required,
+    price Float  required,
+    tax Float, 
+    invoiceFilePath String,
+    status OrderStatus
+	destinationEmail String
+}
+
+entity DowloadHistory {
+	date Instant required,
+}
+
+enum PaymentMethod {
+	MOBICACH, EDINAR
+}
+
+
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

@@ -1,0 +1,421 @@
+{
+"steps":[
+{
+      "id": "step_société",
+      "title": "Nature de la personne  :",
+      "description": "Détails de la société",
+      "blocs": ["bloc_details"],
+      "visibility": true
+    },
+	{
+      "id": "step_employé",
+      "title": "Nature de la personne  :",
+      "description": "L'employé",
+      "blocs": ["bloc_employer"],
+      "visibility": true
+    }
+	
+	],
+	
+	"blocs":[
+	{
+      "id": "bloc_details",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_date_de_conclusion_de_laccord",
+        "input_nom_de_la_societe",
+		"input_forme_juridique_de_la_societe",
+		"input_valeur_du_capital_de_la_societe",
+		"input_numero_de_identifiant_unique",
+		"input_adresse_de_la_societe",
+		"input_nom_du_representant_legal_de_la_societe"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_employer",
+      "title": "",
+      "description": "",
+      "inputs": [
+        "input_nom_prenom_employe",
+        "input_nationalite_employe",
+		"input_date_de_naissance_employe",
+		"input_lieu_de_naissance_employe",
+		"input_numero_cin",
+		"date_emission_cin",
+		"input_adresse_employe"],
+      "visibility": true
+    }
+	],
+	"inputs":[
+	{
+	"id": "input_date_de_conclusion_de_laccord",
+      "type": "text",
+      "description": "",
+      "name": "input_date_de_conclusion_de_laccord",
+      "label": "Date de conclusion de l'Accord ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_de_conclusion_de_laccord"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_nom_de_la_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_de_la_societe",
+      "label": "Nom de la société",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_de_la_societe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_forme_juridique_de_la_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_forme_juridique_de_la_societe",
+      "label": "Forme juridique de la société ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["forme_juridique_de_la_societe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_valeur_du_capital_de_la_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_valeur_du_capital_de_la_societe",
+      "label": "Valeur du capital de la société",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["valeur_du_capital_de_la_societe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_numero_de_identifiant_unique",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_de_identifiant_unique",
+      "label": "Numéro de l'identifiant unique",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numero_de_identifiant_unique"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_adresse_de_la_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_de_la_societe",
+      "label": "Adresse de la société",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_de_la_societe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_nom_du_representant_legal_de_la_societe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_du_representant_legal_de_la_societe",
+      "label": "Nom du représentant légal de la société",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_du_representant_legal_de_la_societe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_nom_prenom_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_nom_prenom_employe",
+      "label": "Nom et prénom de l'employé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nom_prenom_employe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_nationalite_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_nationalite_employe",
+      "label": "Nationalité de l'employé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nationalite_employe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_date_de_naissance_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_date_de_naissance_employe",
+      "label": "Date de naissance de l'employé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["date_de_naissance_employe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_lieu_de_naissance_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_lieu_de_naissance_employe",
+      "label": "Lieu de naissance de l'employé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["lieu_de_naissance_employe"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "input_numero_cin",
+      "type": "text",
+      "description": "",
+      "name": "input_numero_cin",
+      "label": "Numéro de la CIN",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["numero_cin"]
+      },
+      "visibility": true  	  
+    },
+	{
+	"id": "date_emission_cin",
+      "type": "text",
+      "description": "",
+      "name": "date_emission_cin",
+      "label": "Date de l'émission de la CIN",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["emission_cin"]
+      },
+      "visibility": true  	  
+    },
+	
+	{
+	"id": "input_adresse_employe",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_employe",
+      "label": "Adresse de l'employé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_employe"]
+      },
+      "visibility": true  	  
+    }
+	
+	],
+	"bookmarks":[
+	{
+      "bookmarkId": "date_de_conclusion_de_laccord",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_de_la_societe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "forme_juridique_de_la_societe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "valeur_du_capital_de_la_societe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+	  },
+	  {
+      "bookmarkId": "numero_de_identifiant_unique",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+	  },
+	  {
+      "bookmarkId": "adresse_de_la_societe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+	  },
+	  {
+      "bookmarkId": "nom_du_representant_legal_de_la_societe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+	  },  
+	  {
+      "bookmarkId": "nom_prenom_employe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalite_employe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_de_naissance_employe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "lieu_de_naissance_employe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "numero_cin",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "emission_cin",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "adresse_employe",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    }
+	 
+	]
+	}

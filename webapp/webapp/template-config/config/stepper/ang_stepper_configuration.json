@@ -1,0 +1,187 @@
+{
+"steps":[
+{
+      "id": "step_détails_societe",
+      "title": "",
+      "description": "",
+      "blocs": ["bloc_détails"],
+      "visibility": true
+    },
+{
+      "id": "step_détails_societe",
+      "title": "",
+      "description": "",
+      "blocs": ["bloc_soussignés"],
+      "visibility": true
+    }
+],
+
+"blocs":[
+{
+      "id": "bloc_détails",
+      "title": "Détails société",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale",
+        "input_capital_social",
+		"input_adresse_siege_social",
+		"input_code_postal",
+		"input_ville"
+      ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_soussignés",
+      "title": "Les soussignés",
+      "description": "",
+      "inputs": [
+        "input_identification_associé",
+        "input_adresse_associé",
+		"input_identification_associé_suivant",
+		"input_adresse_associé_suivant",
+		"input_denomination_sociale",
+		"input_adresse_siege_social",
+		"input_code_postal",
+		"input_ville",
+		"input_adresse_siege"
+      ],
+      "visibility": true
+    }
+],
+
+"inputs":[
+{
+      "id": "input_dénomination_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale",
+      "label": "Dénomination sociale: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["Dénomination_de_la_societé"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_capital_social",
+      "type": "text",
+      "description": "",
+      "name": "input_capital_social",
+      "label": "Capital social ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["capital_social"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_adresse_siege_social",
+      "type": "text",
+      "description": "",
+      "name": "input_adresse_siege_social",
+      "label": "Adresse du siège social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresse_siege_social"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_code_postal",
+      "type": "text",
+      "description": "",
+      "name": "input_code_postal",
+      "label": "Code postal",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["code_postal"]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_ville",
+      "type": "text",
+      "description": "",
+      "name": "input_ville",
+      "label": "Ville",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["ville"]
+      },
+      "visibility": true
+    }	
+],
+
+"bookmarks":[
+{
+      "bookmarkId": "Dénomination_de_la_societé",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+{
+      "bookmarkId": "capital_social",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+{
+      "bookmarkId": "adresse_siege_social",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+{
+      "bookmarkId": "code_postal",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+{
+      "bookmarkId": "ville",
+      "value": "",
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    }
+]
+}

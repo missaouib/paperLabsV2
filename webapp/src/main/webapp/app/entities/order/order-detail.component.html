@@ -1,0 +1,78 @@
+
+<div class="container-fluid">
+    <br>  <h2 class="text-center titel-commande">Commande: {{transformOrderIdentifier(order.orderIdentifier)}}</h2>
+    <hr>
+
+    <div class="row justify-content-center">
+        <aside class="col-md-5">
+            <div class="card shadow-sm">
+                <article class="card-body">
+                        <button type="button"
+                                [routerLink]="['/order', order.id, 'edit']"
+                                class="float-right btn btn-outline-primary">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                        </button>
+                    <h4 class="card-title mt-1 mb-3 titel-commande">Commande</h4>
+                    <jhi-alert-error></jhi-alert-error>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="font-weight-bold"><b></b>Méthode de paiement</span>: <span jhiTranslate="{{'paperlabsApp.PaymentMethod.' + order.paymentMethod}}">{{order.paymentMethod}}</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Prix tôtal</span>: <span>{{order.totalPrice | number : '1.2-2'}} DT</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Prix</span>: <span>{{order.price | number : '1.2-2'}} DT</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Tax</span>:   <span>{{order.tax}} %</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Status</span>: <span jhiTranslate="{{'paperlabsApp.OrderStatus.' + order.status}}">{{order.status}}</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Email de destination</span>: <span>{{order.destinationEmail}}</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Date de création</span>:<span> {{order.generatedLegalDocument.date | date:'dd/MM/yy HH:mm'}}</span></li>
+                        <li class="list-group-item"><span class="font-weight-bold">Date de paiement</span>:<span> {{order.generatedLegalDocument.paymentDate | date:'dd/MM/yy HH:mm'}}</span></li>
+                    </ul>
+                </article>
+            </div>
+
+        </aside>
+
+        <aside class="col-md-5 ">
+            <div class="card shadow-sm">
+                <article class="card-body pb-0">
+
+                    <h4 class="card-title titel-commande">Utilisateur</h4>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="font-weight-bold" >Nom</span>: {{order.user.lastName}} <span class="vl"></span>&nbsp;<span class="font-weight-bold"> Prenom</span>: {{order.user.firstName}}</li>
+                        <li class="list-group-item"><span class="font-weight-bold" >Email</span>: {{order.user.email}}</li>
+                    </ul>
+
+                </article>
+            </div>
+            <div class="card mt-3 shadow-sm">
+                <article class="card-body pb-3">
+
+                    <h4 class="card-title titel-commande">Legal document</h4>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="font-weight-bold" >Pseudo</span>: {{order.legalDocument.shortName}}</li>
+                        <li class="list-group-item"><span class="font-weight-bold" >Nom</span>: {{order.legalDocument.fullName}}</li>
+                        <li class="list-group-item"><span class="font-weight-bold" >Description</span>: {{order.legalDocument.description | lowercase}}</li>
+                        <li class="list-group-item"><span class="font-weight-bold" >Prix</span>:  {{order.legalDocument.price}} DT</li>
+
+                    </ul>
+
+                </article>
+            </div>
+        </aside>
+
+    </div>
+
+</div>
+    <div class="row m-5">
+        <button type="submit"
+                (click)="previousState()"
+                class="btn btn-info">
+            <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+        </button>
+    </div>
+
+    <style>
+        .vl {
+            border-left: 1px solid #3b424d;
+            height: 500px;
+        }
+    </style>

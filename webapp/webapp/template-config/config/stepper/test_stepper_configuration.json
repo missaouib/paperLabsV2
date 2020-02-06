@@ -1,0 +1,855 @@
+{
+  "steps": [
+    {
+      "id": "step1",
+      "title": "L'employeur",
+      "description": "",
+      "blocs": ["bloc1"],
+      "visibility": true
+    },
+    {
+      "id": "step2",
+      "title": "L'entreprise",
+      "description": "",
+      "blocs": ["bloc2", "bloc3"],
+      "visibility": false
+    },
+    {
+      "id": "step3",
+      "title": "L'association",
+      "description": "",
+      "blocs": [],
+      "visibility": false
+    },
+    {
+      "id": "step4",
+      "title": "Particulier",
+      "description": "",
+      "blocs": ["bloc4"],
+      "visibility": false
+    },
+    {
+      "id": "step5",
+      "title": "Quelle est l'identité du salarié ?",
+      "description": "Si vous n'avez pas encore toutes ces informations, vous pouvez passer à l'étape suivante et les compléter ultérieurement avant la signature du contrat.",
+      "blocs": ["bloc5"],
+      "visibility": true
+    },
+    {
+      "id": "step6",
+      "title": "Retraite et prévoyance",
+      "description": "",
+      "blocs": ["bloc6", "bloc7"],
+      "visibility": false
+    },
+    {
+      "id": "step7",
+      "title": "Poste et statut",
+      "description": "",
+      "blocs": [],
+      "visibility": false
+    },
+    {
+      "id": "step8",
+      "title": "Période d'essai",
+      "description": "",
+      "blocs": ["bloc8"],
+      "visibility": false
+    }
+  ],
+  "blocs": [
+    {
+      "id": "bloc1",
+      "title": "L'employeur est :",
+      "description": "",
+      "inputs": ["input1", "input2", "input3", "input4"],
+      "visibility": true
+    },
+    {
+      "id": "bloc2",
+      "title": "Quelle est l'identité de l'entreprise ?",
+      "description": "",
+      "inputs": ["input5", "input6"],
+      "visibility": true
+    },
+    {
+      "id": "bloc3",
+      "title": "Informations complémentaires",
+      "description": "",
+      "inputs": ["input7", "input8", "input9"],
+      "visibility": true
+    },
+    {
+      "id": "bloc4",
+      "title": "Quelle est l'identité du particulier ?",
+      "description": "",
+      "inputs": ["input10", "input11", "input12", "input13", "input26", "input27"],
+      "visibility": true
+    },
+    {
+      "id": "bloc5",
+      "title": "Quelle est l'identité du salarié ?",
+      "description": "",
+      "inputs": ["input14", "input15", "input16", "input17", "input23", "input24", "input25"],
+      "visibility": true
+    },
+    {
+      "id": "bloc6",
+      "title": "A quelle caisse de retraite complémentaire est affiliée l'entreprise employeur ?",
+      "description": "",
+      "inputs": ["input18", "input19"],
+      "visibility": true
+    },
+    {
+      "id": "bloc7",
+      "title": "A quel organisme de prévoyance adhère l'entreprise employeur ?",
+      "description": "",
+      "inputs": ["input20", "input21"],
+      "visibility": true
+    },
+    {
+      "id": "bloc8",
+      "title": "Le salarié est-il soumis à une période d'essai ?",
+      "description": "",
+      "inputs": ["input22"],
+      "visibility": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "input1",
+      "type": "radio",
+      "description": "",
+      "name": "function",
+      "label": "Une entreprise",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Une entreprise",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "infoParticulier",
+          "retraiteParticulier",
+          "arreteParticulierTitre",
+          "arreteParticulierText",
+          "article5titre",
+          "article5text"
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input2",
+      "type": "radio",
+      "description": "Lucrative ou non lucrative.",
+      "name": "function",
+      "label": "Une association",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Une association",
+      "bookmarkIdPerValue": {},
+      "visibility": true
+    },
+    {
+      "id": "input3",
+      "type": "radio",
+      "description": "",
+      "name": "function",
+      "label": "Un particulier",
+      "placeHolder": "",
+      "help": "Never be ashamed to ask for help :D",
+      "options": [],
+      "value": "Un particulier",
+      "bookmarkIdPerValue": {
+        "Un particulier": ["infoSociete", "retraiteSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input4",
+      "type": "text",
+      "description": "",
+      "name": "Précisez",
+      "label": "Précisez",
+      "placeHolder": "Précisez",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["fonctionParticulier"]
+      },
+      "visibility": false
+    },
+    {
+      "id": "input5",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination de la société",
+      "label": "Dénomination de la société",
+      "placeHolder": "Dénomination de la société",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nomSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input6",
+      "type": "text",
+      "description": "",
+      "name": "Forme de la société",
+      "label": "Forme de la société",
+      "placeHolder": "Forme de la société",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["formeSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input7",
+      "type": "number",
+      "description": "",
+      "name": "Montant du capital social de la société",
+      "label": "Montant du capital social de la société",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["capitalSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input8",
+      "type": "textarea",
+      "description": "",
+      "name": "Adresse du siège social",
+      "label": "Adresse du siège social",
+      "placeHolder": "Adresse du siège social",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresseSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input9",
+      "type": "number",
+      "description": "",
+      "name": "Numéro RCS (SIREN)",
+      "label": "Numéro RCS (SIREN)",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["rcsSociete"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input10",
+      "type": "radio",
+      "description": "",
+      "name": "CivilitéParticulier",
+      "label": "Monsieur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Monsieur",
+      "bookmarkIdPerValue": {
+        "Monsieur": ["civiliteParticulier"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input11",
+      "type": "radio",
+      "description": "",
+      "name": "CivilitéParticulier",
+      "label": "Madame",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Madame",
+      "bookmarkIdPerValue": {
+        "Madame": ["civiliteParticulier"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input12",
+      "type": "text",
+      "description": "",
+      "name": "Nom",
+      "label": "Nom",
+      "placeHolder": "Nom",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nomParticulier"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input13",
+      "type": "text",
+      "description": "",
+      "name": "Prénom",
+      "label": "Prénom",
+      "placeHolder": "Prénom",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenomParticulier"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input14",
+      "type": "radio",
+      "description": "",
+      "name": "CivilitéSalarié",
+      "label": "Monsieur",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Monsieur",
+      "bookmarkIdPerValue": {
+        "Monsieur": ["civiliteSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input15",
+      "type": "radio",
+      "description": "",
+      "name": "CivilitéSalarié",
+      "label": "Madame",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "Madame",
+      "bookmarkIdPerValue": {
+        "Madame": ["civiliteSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input16",
+      "type": "text",
+      "description": "",
+      "name": "Nom",
+      "label": "Nom",
+      "placeHolder": "Nom",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nomSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input17",
+      "type": "text",
+      "description": "",
+      "name": "Prénom",
+      "label": "Prénom",
+      "placeHolder": "Prénom",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["prenomSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input18",
+      "type": "text",
+      "description": "",
+      "name": "Nom de la caisse de retraite",
+      "label": "Nom de la caisse de retraite",
+      "placeHolder": "Nom de la caisse de retraite",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nomCaisseRetraite"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input19",
+      "type": "textarea",
+      "description": "",
+      "name": "Adresse complète",
+      "label": "Adresse complète",
+      "placeHolder": "Adresse complète",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresseCaisseRetraite"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input20",
+      "type": "text",
+      "description": "",
+      "name": "Nom de l'organisme de prévoyance",
+      "label": "Nom de l'organisme de prévoyance",
+      "placeHolder": "Nom de l'organisme de prévoyance",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["nomOrganismePrevoyance"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input21",
+      "type": "textarea",
+      "description": "",
+      "name": "Adresse complète",
+      "label": "Adresse complète",
+      "placeHolder": "Adresse complète",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresseOrganismePrevoyance"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input22",
+      "type": "checkbox",
+      "description": "",
+      "name": "Oui",
+      "label": "Oui",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "false": ["article5titre", "article5text"],
+        "true": []
+      },
+      "visibility": true
+    },
+    {
+      "id": "input23",
+      "type": "textarea",
+      "description": "",
+      "name": "Adresse complète",
+      "label": "Adresse complète",
+      "placeHolder": "Adresse complète",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresseSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input24",
+      "type": "number",
+      "description": "",
+      "name": "Numéro securité social",
+      "label": "Numéro securité social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["NSSSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input25",
+      "type": "select",
+      "description": "",
+      "name": "Fonction",
+      "label": "Fonction",
+      "placeHolder": "Selectionner une fonction",
+      "help": "",
+      "options": ["Employé", "Ouvrier", "Agent de maîtrise", "Cadre"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Employé": ["fonctionSalarie"],
+        "Ouvrier": ["fonctionSalarie"],
+        "Agent de maîtrise": ["fonctionSalarie"],
+        "Cadre": ["fonctionSalarie"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input26",
+      "type": "textarea",
+      "description": "",
+      "name": "Adresse complète",
+      "label": "Adresse complète",
+      "placeHolder": "Adresse complète",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["adresseParticulier"]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input27",
+      "type": "number",
+      "description": "",
+      "name": "Numéro securité social",
+      "label": "Numéro securité social",
+      "placeHolder": "Numéro securité social",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": ["NSSParticulier"]
+      },
+      "visibility": true
+    }
+  ],
+  "bookmarks": [
+    {
+      "bookmarkId": "infoSociete",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "formeSociete",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nomSociete",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "capitalSociete",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "rcsSociete",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "adresseSociete",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "civiliteSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nomSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "prenomSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "fonctionSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "adresseSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NSSSalarie",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "arreteParticulierTitre",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": true,
+      "type": "DEFAULT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "arreteParticulierText",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": true,
+      "type": "DEFAULT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "civiliteParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nomParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "prenomParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "adresseParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "NSSParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "fonctionParticulier",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "infoParticulier",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nomCaisseRetraite",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "adresseCaisseRetraite",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "nomOrganismePrevoyance",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "adresseOrganismePrevoyance",
+      "value": null,
+      "fontFamily": null,
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "type": "USER_INPUT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "article5titre",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "DEFAULT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "article5text",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "DEFAULT",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "retraiteSociete",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+    {
+      "bookmarkId": "retraiteParticulier",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "DEFAULT",
+      "fontSize": 11
+    }
+  ]
+}

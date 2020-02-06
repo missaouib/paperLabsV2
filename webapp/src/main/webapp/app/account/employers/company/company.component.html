@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+        <div class="col-sm-9">
+        </div>
+        <div class="col-sm-3 mb-3">
+
+            <form name="searchForm" class="form-inline">
+
+
+                <div class="input-group w-100 p-1 rounded rounded-pill shadow-sm border bg-light">
+
+                    <input type="search"  placeholder="Chercher une société..."
+                           [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch"
+                           (ngModelChange)="paramChanged($event)" aria-describedby="button-addon1"
+                           class="form-control border-0 bg-light ml-1">
+                    <button class="input-group-append btn" >
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+
+
+                </div>
+
+            </form>
+        </div>
+        <div class="alert alert-warning" *ngIf="companiesByUserId?.length === 0">
+            <span>Aucune société trouvée</span>
+        </div>
+    </div>
+
+    <jhi-alert></jhi-alert>
+    <div class="row justify-content-center">
+
+
+            <table id="e-commerce-orders-table" class="table dataTable">
+
+                <thead>
+
+                <tr >
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Nom</span>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Représentant</span>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">Adresse</span>
+                        </div>
+                    </th>
+
+
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title text-center">Actions</span>
+                        </div>
+                    </th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <tr *ngFor="let companyByUserId of companiesByUserIdCopy ;">
+                    <td><a [routerLink]="[companyByUserId.id, 'view' ]">{{companyByUserId.companyName}}</a></td>
+                    <td>{{companyByUserId.companyRepresentativeFullName}}</td>
+                    <td>{{companyByUserId.companyFullAddress}}</td>
+                    <td >
+                        <div class="btn-group">
+                            <button type="submit" class="btn text-info btn-sm" [routerLink]="[companyByUserId.id, 'view' ]">
+                                <fa-icon [icon]="'eye'"></fa-icon>
+                            </button>
+
+                        </div>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        <div [hidden]="companiesByUserId?.length === 0">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
