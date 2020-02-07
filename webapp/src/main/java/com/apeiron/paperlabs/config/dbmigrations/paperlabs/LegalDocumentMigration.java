@@ -462,6 +462,11 @@ public class LegalDocumentMigration {
 
         autoFillConcernedEntities.add(Company.class.getSimpleName());
 
+
+
+
+
+
         legalDocument = new LegalDocument();
         legalDocument.setId("5dad0d7dd1a76c479c02affa98");
         legalDocument.setShortName("LETTRE DE DEMISSION");
