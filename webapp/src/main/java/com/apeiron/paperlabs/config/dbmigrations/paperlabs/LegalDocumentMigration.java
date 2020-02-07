@@ -452,6 +452,7 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
+    
     @ChangeSet(order = "09", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "06-addLettreDeDemissionLegalDocument")
     public void addLettreDeDemissionLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
@@ -470,13 +471,13 @@ public class LegalDocumentMigration {
         legalDocument.setKeywords(" lettre de demission gérer droit de travail");
         legalDocument.setDescription("MODÈLE LETTRE DE DEMISSION");
         legalDocument.setTemplatePreviewPath("empty_preview");
-        legalDocument.setTemplateFilePath("lettre_de_demission_docx_model.docx");
+        legalDocument.setTemplateFilePath("lettre_de_demission_docx_model.doc");
         legalDocument.setStepperConfigFilePath("lettre_de_demission_stepper_configuration.json");
         legalDocument.setWorkflowConfigFilePath("lettre_de_demissionworkflow_configuration.json");
         legalDocument.setCategoryId("empty_category");
         legalDocument.setLawyerId("empty_lawyer");
         legalDocument.setCreatedDate(Instant.now());
-
+   
         descriptionSection = new DescriptionSection();
         descriptionSection.setTitle("Création de LETTRE DE DEMISSION:");
         descriptionSection.setContent("Procédure 100% en ligne pour créer votre LETTRE DE DEMISSION en toute simplicité.\n" +
@@ -490,7 +491,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    }
+    } 
     
     @ChangeSet(order = "10", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "10-addAractLegalDocument")
     public void addAractLegalDocument(MongoTemplate mongoTemplate) {     
@@ -589,7 +590,9 @@ public class LegalDocumentMigration {
     
     
     
-    @ChangeSet(order = "11", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "11-addFormulairestatusLegalDocument")
+  
+     
+    @ChangeSet(order = "12", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "11-addFormulairestatusLegalDocument")
     public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
 
@@ -606,11 +609,11 @@ public class LegalDocumentMigration {
         autoFillConcernedEntities.add(Company.class.getSimpleName());
 
         legalDocument = new LegalDocument();
-        legalDocument.setId("5dad0d7dd1a76c479c02affa914");
+        legalDocument.setId("5dad0d7dd1a76c479c02affa933");
         legalDocument.setShortName("FORMULIRE STATUS");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("FORMULIRE STATUS");
-        legalDocument.setKeywords(" FORMULIRE STATUS");
+        legalDocument.setKeywords("constitution sociétés");
         legalDocument.setDescription("FORMULIRE STATUS");
         legalDocument.setTemplatePreviewPath("empty_preview");
         legalDocument.setTemplateFilePath("formulaire_statuts_docx_model.docx");
@@ -638,5 +641,9 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
+   
+  
+    
+   
      
 }
