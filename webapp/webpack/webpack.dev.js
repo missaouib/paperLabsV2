@@ -31,7 +31,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
             target: `http${options.tls ? 's' : ''}://localhost:8080`,
             secure: false,
             changeOrigin: options.tls
-        },{
+        }, {
             context: [
                 '/websocket'
             ],
@@ -57,63 +57,64 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
     },
     module: {
         rules: [{
-            test: /\.(j|t)s$/,
-            enforce: 'pre',
-            loader: 'eslint-loader',
-            exclude: /node_modules/
-        },
-        {
-            test: /\.ts$/,
-            use: [
-                'angular2-template-loader',
-                {
-                    loader: 'cache-loader',
-                    options: {
-                      cacheDirectory: path.resolve('target/cache-loader')
+                test: /\.(j|t)s$/,
+                enforce: 'pre',
+                loader: 'eslint-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.ts$/,
+                use: [
+                    'angular2-template-loader',
+                    {
+                        loader: 'cache-loader',
+                        options: {
+                            cacheDirectory: path.resolve('target/cache-loader')
+                        }
+                    },
+                    {
+                        loader: 'thread-loader',
+                        options: {
+                            // There should be 1 cpu for the fork-ts-checker-webpack-plugin.
+                            // The value may need to be adjusted (e.g. to 1) in some CI environments,
+                            // as cpus() may report more cores than what are available to the build.
+                            workers: require('os').cpus().length - 1
+                        }
+                    },
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                            happyPackMode: true
+                        }
                     }
-                },
-                {
-                    loader: 'thread-loader',
-                    options: {
-                        // There should be 1 cpu for the fork-ts-checker-webpack-plugin.
-                        // The value may need to be adjusted (e.g. to 1) in some CI environments,
-                        // as cpus() may report more cores than what are available to the build.
-                        workers: require('os').cpus().length - 1
-                    }
-                },
-                {
-                    loader: 'ts-loader',
-                    options: {
-                        transpileOnly: true,
-                        happyPackMode: true
-                    }
-                }
-            ],
-            exclude: /(node_modules)/
-        },
-        {
-            test: /\.scss$/,
-            use: ['to-string-loader', 'css-loader', {
-                loader: 'sass-loader',
-                options: { implementation: sass }
-            }],
-            exclude: /(vendor\.scss|global\.scss)/
-        },
-        {
-            test: /(vendor\.scss|global\.scss)/,
-            use: ['style-loader', 'css-loader', 'postcss-loader', {
-                loader: 'sass-loader',
-                options: { implementation: sass }
-            }]
-        }]
+                ],
+                exclude: /(node_modules)/
+            },
+            {
+                test: /\.scss$/,
+                use: ['to-string-loader', 'css-loader', {
+                    loader: 'sass-loader',
+                    options: { implementation: sass }
+                }],
+                exclude: /(vendor\.scss|global\.scss)/
+            },
+            {
+                test: /(vendor\.scss|global\.scss)/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', {
+                    loader: 'sass-loader',
+                    options: { implementation: sass }
+                }]
+            }
+        ]
     },
     stats: process.env.JHI_DISABLE_WEBPACK_LOGS ? 'none' : options.stats,
     plugins: [
-        process.env.JHI_DISABLE_WEBPACK_LOGS
-            ? null
-            : new SimpleProgressWebpackPlugin({
-                format: options.stats === 'minimal' ? 'compact' : 'expanded'
-              }),
+        process.env.JHI_DISABLE_WEBPACK_LOGS ?
+        null :
+        new SimpleProgressWebpackPlugin({
+            format: options.stats === 'minimal' ? 'compact' : 'expanded'
+        }),
         new FriendlyErrorsWebpackPlugin(),
         new ForkTsCheckerWebpackPlugin(),
         new BrowserSyncPlugin({
@@ -121,10 +122,10 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
             host: 'localhost',
             port: 9090,
             proxy: {
-                target: `http${options.tls ? 's' : ''}://localhost:9061`,
+                target: `http${options.tls ? 's' : ''}://localhost:9060`,
                 ws: true,
                 proxyOptions: {
-                    changeOrigin: false  //pass the Host header to the backend unchanged  https://github.com/Browsersync/browser-sync/issues/430
+                    changeOrigin: false //pass the Host header to the backend unchanged  https://github.com/Browsersync/browser-sync/issues/430
                 }
             },
             socket: {
