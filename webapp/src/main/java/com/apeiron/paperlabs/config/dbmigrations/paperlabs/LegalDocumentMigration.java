@@ -463,6 +463,11 @@ public class LegalDocumentMigration {
 
         autoFillConcernedEntities.add(Company.class.getSimpleName());
 
+
+
+
+
+
         legalDocument = new LegalDocument();
         legalDocument.setId("5dad0d7dd1a76c479c02affa98");
         legalDocument.setShortName("LETTRE DE DEMISSION");
@@ -590,9 +595,8 @@ public class LegalDocumentMigration {
     
     
     
-  
-     
-    @ChangeSet(order = "12", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "11-addFormulairestatusLegalDocument")
+    @ChangeSet(order = "12", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "12-addFormulairestatusLegalDocument")
+
     public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
 
