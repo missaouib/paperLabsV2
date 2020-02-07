@@ -589,7 +589,7 @@ public class LegalDocumentMigration {
     
     
     
-    @ChangeSet(order = "11", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "11-addFormulairestatusLegalDocument")
+    @ChangeSet(order = "12", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "12-addFormulairestatusLegalDocument")
     public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
 
