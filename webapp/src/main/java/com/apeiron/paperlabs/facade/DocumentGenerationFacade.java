@@ -18,6 +18,9 @@ import com.apeiron.paperlabs.service.dto.OrderDTO;
 import com.apeiron.paperlabs.service.dto.UserDTO;
 import com.apeiron.paperlabs.service.mapper.UserMapper;
 import com.apeiron.paperlabs.service.mapper.documents.StepperDataToEntityMapper;
+
+import net.bytebuddy.asm.Advice.Exit;
+
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -64,10 +67,21 @@ public class DocumentGenerationFacade {
 
     public OrderDTO generateDocXFile(Map<String, InputData> stepperDataDTO, String legalDocumentId,
             boolean saveDataAuthorization, String userLogin, String orderId) {
-
+    	   System.out.println("*************************** 161");
+    	   System.out.println("************************* 161");   
+    	   System.out.println("************************ 161");
+    	   System.out.println("************************** 161");
+    	   System.out.println("***********************lllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
+    	   System.out.println("lllllllllllllllllllll 161");
         Optional<LegalDocumentDTO> legalDocument = legalDocumentService.findOne(legalDocumentId);
         String generatedLegalDocumentURL = null;
         OrderDTO orderDTO = new OrderDTO();
+
         if (orderId != null && !"undefined".equals(orderId)) {
             Optional<OrderDTO> optionalOrderDTO = orderService.findOne(orderId);
             if (optionalOrderDTO.isPresent()) {
@@ -76,10 +90,22 @@ public class DocumentGenerationFacade {
                 orderDTO.setId(orderId);
             }
         }
+        
         orderDTO.setDowloadHistories(new ArrayList<>());
         GeneratedLegalDocumentDTO generatedLegalDocumentDTO = new GeneratedLegalDocumentDTO();
 
         if (legalDocument.isPresent()) {
+        	 System.out.println("*************************** 98");
+      	   System.out.println("************************* 161");   
+      	   System.out.println("************************ 161");
+      	   System.out.println("************************** 161");
+      	   System.out.println("***********************lllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
+      	   System.out.println("lllllllllllllllllllll 161");
             URL stepperFileUrl = null;
             URL workflowFileUrl = null;
             try {
@@ -90,16 +116,34 @@ public class DocumentGenerationFacade {
                         TEMPLATE_WORKFLOW_CONFIG_PATH_PREFIX + legalDocument.get().getWorkflowConfigFilePath()).toURI()
                                 .toURL();
             } catch (MalformedURLException e) {
+            	System.out.println("*************************** 119"+stepperFileUrl+"\n"+workflowFileUrl);
+          	   System.out.println("************************* 161");   
+          	   System.out.println("************************ 161");
+          	   System.out.println("************************** 161");
                 e.printStackTrace();
             }
+            
+            System.out.println("*************************** 122"+stepperFileUrl+"\n"+workflowFileUrl);
+     	   System.out.println("************************* 161");   
+     	   System.out.println("************************ 161");
+     	   System.out.println("************************** 161");
+     	   System.out.println("***********************lllllllllllll 161");
+     	   System.out.println("lllllllllllllllllllll 161");
+     	   System.out.println("lllllllllllllllllllll 161");
+     	   System.out.println("lllllllllllllllllllll 161");
+     	   System.out.println("lllllllllllllllllllll 161");
+     	   
             String documentFileUrl = TEMPLATE_PATH_PREFIX + legalDocument.get().getTemplateFilePath();
             try {
+            	System.out.println("lllllllllllllllllllll 138 try");
                 generatedLegalDocumentURL = documentGenerationService.generateDocXFile(stepperDataDTO, stepperFileUrl,
                         documentFileUrl, workflowFileUrl);
 
             } catch (IOException e) {
+            	System.out.println("*************************** 143 actch");
                 e.getMessage();
             }
+            System.out.println("*************************** 146");
             generatedLegalDocumentDTO.setGeneratedWordFilePath(generatedLegalDocumentURL);
             generatedLegalDocumentDTO.setDate(Instant.now());
             generatedLegalDocumentDTO.setPaymentDate(null);
@@ -108,8 +152,10 @@ public class DocumentGenerationFacade {
 
             Optional<User> user = userRepository.findOneByLogin(userLogin);
             if (user.isPresent()) {
+            	System.out.println("lllllllllllllllllllll 154");
                 userDTO = userMapper.userToUserDTO(user.get());
             } else {
+            	System.out.println("lllllllllllllllllllll 157");
                 throw new UsernameNotFoundException(String.format("No user found with login : %s", userLogin));
             }
 
@@ -122,11 +168,26 @@ public class DocumentGenerationFacade {
             orderDTO.setUser(userDTO);
             orderDTO.setTax(new Float(applicationProperties.getCompanyInvoiceTva()));
             orderDTO.setDestinationEmail(userLogin);
+            System.out.println("*************************** 171");
+      	   System.out.println("************************* 161");   
+      	   System.out.println("************************ 161");
+      	   System.out.println("************************** 161");
             OrderDTO result = orderService.save(orderDTO);
-
+            System.out.println("*************************** 177 after save");
+      	 
             if (saveDataAuthorization) {
-                if (("CDI").equals(legalDocument.get().getShortName())
-                        || ("NDA").equals(legalDocument.get().getShortName())) {
+               if (("CDI").equals(legalDocument.get().getShortName()) || ("NDA").equals(legalDocument.get().getShortName())) {
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   System.out.println("lllllllllllllllllllll 130");
+            	   
                     // all inputs in stepper form must have a value
                     List<Map<String, String>> companiesAutoFillInputIdsByFieldName = legalDocument.get()
                             .getCompaniesAutoFillInputIdsByFieldName();
@@ -135,6 +196,17 @@ public class DocumentGenerationFacade {
 
                     // company
                     if (!companiesAutoFillInputIdsByFieldName.isEmpty()) {
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	System.out.println("lllllllllllllllllllll 138");
+                    	
+                    	System.out.println("lllllllllllllllllllll 138");
                         companiesAutoFillInputIdsByFieldName.forEach(companyAutoFillInputIdsByFieldName -> {
                             if (stepperDataDTO
                                     .get(companyAutoFillInputIdsByFieldName.get(COMPANY_NAME_FIELD_NAME)) != null) {
@@ -157,8 +229,18 @@ public class DocumentGenerationFacade {
                         });
                     }
                     // employer
-                    if (("CDI").equals(legalDocument.get().getShortName())
-                            && !employersAutoFillInputIdsByFieldName.isEmpty()) {
+                   if (("CDI").equals(legalDocument.get().getShortName()) && !employersAutoFillInputIdsByFieldName.isEmpty()) {
+                	   System.out.println("lllllllllllllllllllll 196");
+                	   System.out.println("lllllllllllllllllllll 161");   
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
                         employersAutoFillInputIdsByFieldName.forEach(employerAutoFillInputIdsByFieldName -> {
                             if (stepperDataDTO.get(
                                     employerAutoFillInputIdsByFieldName.get(EMPLOYER_CIN_NUMBER_FIELD_NAME)) != null) {
@@ -182,8 +264,18 @@ public class DocumentGenerationFacade {
                         });
                     }
                 }
-                if (("SARL").equals(legalDocument.get().getShortName())) {
-
+                 if (("SARL").equals(legalDocument.get().getShortName())) {
+                	   System.out.println("2222222222222222222222 161");
+                	   System.out.println("lllllllllllllllllllll 161");   
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
                     // company
                     String companyName = stepperDataDTO.get("input_dénomination_de_la_société").getValue();
                     List<String> companyFoundingPartners = new ArrayList<>();
@@ -221,12 +313,29 @@ public class DocumentGenerationFacade {
                     }
 
                     companyRepository.save(newCompany);
-                } else if (("PV-NNG").equals(legalDocument.get().getShortName())) {
-
+                }  else if (("PV-NNG").equals(legalDocument.get().getShortName())) {
+                	   System.out.println("lllllllllllllllllllll 280");
+                	   System.out.println("lllllllllllllllllllll 161");   
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
+                	   System.out.println("lllllllllllllllllllll 161");
                 }
             }
             return result;
         } else {
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+        	System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
             throw new NoSuchElementException("No legal document found with id : " + legalDocumentId);
         }
     }

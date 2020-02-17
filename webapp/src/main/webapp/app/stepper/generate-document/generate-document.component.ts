@@ -167,6 +167,7 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
 
   private submit() {
    // alert("eeeeeeeeeeeeeeeeeeeeeee");
+  
     this.accountService.identity().then((account: Account) => {
       if (account !== null) {
         this.userLogin = account.login;
@@ -174,8 +175,10 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
       if (this.userLogin === null || this.userLogin === undefined) {
         throw new Error('userLogin is : ' + this.userLogin);
       } else {
+       
         this.saveDataAuthorization = String(this.checked);
         this.stepperApiService
+        
           .generateDocXFile(this.stepperData, this.legalDocumentId, this.saveDataAuthorization, this.userLogin, this.orderId)
           .subscribe(res => {
             this.stepperEventManagerService.sendOrder(res.body);

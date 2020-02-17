@@ -20,12 +20,12 @@ export class PreviewComponent implements OnInit {
   }
 
   displayModal() {
-    if (this.legalDocument.shortName === 'OK') this.previewModalService.open();
+    if (this.legalDocument.shortName === 'CDI') this.previewModalService.open();
   }
 
   hasPreview(): boolean {
     if (this.legalDocument !== null && this.legalDocument !== undefined) {
-      return 'OK' === this.legalDocument.shortName;
+      return 'CDI' === this.legalDocument.shortName;
     } else {
       return false;
     }

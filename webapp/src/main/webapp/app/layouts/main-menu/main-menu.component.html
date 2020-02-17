@@ -24,7 +24,7 @@
                     <ul class="dropdown-menu entreprise-drop" ngbDropdownMenu aria-labelledby="entity-menu">
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>Constitution Sociétés</span>
+                                <span>Constitution</span>
 
                             </a>
                             <ul>
@@ -46,71 +46,37 @@
 
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>PV d’approbation de comptes</span>
+                                <span>Comptes annuels</span>
                             </a>
                             <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                                <li *ngFor="let legalDocument of filterByKeyword('constitution')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
                             </ul>
                         </li>
 
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>PV de nomination du gérant</span>
+                                <span>Capital</span>
                             </a>
                             <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                                <li *ngFor="let legalDocument of filterByKeyword('constitution')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
                             </ul>
                         </li>
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span>
-                                    PV de révocation du gérant
-                                </span>
+                                <span>Modification Statutaires</span>
                             </a>
                             <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                                <li *ngFor="let legalDocument of filterByKeyword('constitution')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
                             </ul>
                         </li>
                         <li class="level0-item-1">
                             <a class="dropdown-item">
-                                <span> 
-                                    Statuts SARL-SUARL
-
-
-                                </span>
+                                <span> Fonctionnement</span>
                             </a>
                             <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
+                                <li *ngFor="let legalDocument of filterByKeyword('constitution')" [routerLink]="['user/legal-document-description/', legalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{legalDocument.shortName}}</a></li>
                             </ul>
                         </li>
-
-                        <li class="level0-item-1">
-                            <a class="dropdown-item">
-                                <span> 
-                                    Procès verbal :nomination de gérant
-
-
-                                </span>
-                            </a>
-                            <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
-                            </ul>
-                        </li>
-
-    
-                        <li class="level0-item-1">
-                            <a class="dropdown-item">
-                                <span> 
-                                    Formulaire Sociétés commerciales
-
-
-                                </span>
-                            </a>
-                            <ul>
-                                <li *ngFor="let popularLegalDocument of popularLegalDocuments.slice(0, numberOfLegalDocumentsToShow)" [routerLink]="['user/legal-document-description/', popularLegalDocument.id]" class="dropdown-item level1"><a (click)="collapseNavbar()">{{popularLegalDocument.shortName}}</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
 
 
@@ -234,118 +200,88 @@
                                         </ul>
                                     </li>
 
+                                    <!------------------------------------------------------------------------------>
 
-
-                                    <!--test rami-->
-
-                                    <li class="level0-item-2">
-                                        <a class="dropdown-item">
-                                            <span>test</span>
-                                        </a>
-
-                                        <ul>
-                                            <li>
-
-                                                <ul>
-
-                                                    <li class="dropdown-toggle::after">11111</li>
-                                                    <li class="dropdown-toggle::after">2222</li.dropdown-toggle::after>
-                                                        <li class="dropdown-toggle::after">4444</li>
-                                                        <li>555</li>
-
-                                                </ul>
-
-                                                </li>
-                                        </ul>
-
-                                        </li>
-                                        <!--test rami-->
-                                </ul>
-
-                                <!------------------------------------------------------------------------------>
-
-                                <!------------------------------------------------------------------------------>
-
-                                </li>
-                                <li class="nav-item mx-2 ">
-                                    <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()">Guides</a>
-                                </li>
-                                <li ngbDropdown class="nav-item dropdown pointer mx-2 " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu-immobilier">
-                                        <span class="item">
+                            </li>
+                            <li class="nav-item mx-2 ">
+                                <a class="nav-link item" routerLink="user/legal-guides" (click)="collapseNavbar()">Guides</a>
+                            </li>
+                            <li ngbDropdown class="nav-item dropdown pointer mx-2 " display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu-immobilier">
+                                    <span class="item">
 
                             Immobilier
                         </span>
-                                    </a>
-                                    <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu-immobilier">
+                                </a>
+                                <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu-immobilier">
 
-                                        <li class="level0-item-1">
-                                            <a class="dropdown-item">
-                                                <span>Sous menu 1</span>
-                                            </a>
-                                            <ul>
-                                                <li class="dropdown-item level1"><a>lien 1</a></li>
-                                                <li class="dropdown-item level1"><a>lien 2</a></li>
-                                                <li class="dropdown-item level1"><a>lien 3</a></li>
-                                            </ul>
-                                        </li>
+                                    <li class="level0-item-1">
+                                        <a class="dropdown-item">
+                                            <span>Sous menu 1</span>
+                                        </a>
+                                        <ul>
+                                            <li class="dropdown-item level1"><a>lien 1</a></li>
+                                            <li class="dropdown-item level1"><a>lien 2</a></li>
+                                            <li class="dropdown-item level1"><a>lien 3</a></li>
+                                        </ul>
+                                    </li>
 
-                                    </ul>
-                                </li>
+                                </ul>
+                            </li>
 
-                                <li class="nav-item mx-2">
-                                    <a class="nav-link item" routerLink="user/professional-solution" (click)="collapseNavbar()">Solution
+                            <li class="nav-item mx-2">
+                                <a class="nav-link item" routerLink="user/professional-solution" (click)="collapseNavbar()">Solution
                         Pro</a>
-                                </li>
-                                <li class="nav-item mx-2">
-                                    <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()">Contact</a>
-                                </li>
-                                <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
-                                    <a class="nav-link item  " (click)="login()">
-                                        <span class="item-compte">
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link item" routerLink="user/contact" (click)="collapseNavbar()">Contact</a>
+                            </li>
+                            <li *ngSwitchCase="false" class="nav-item mx-2 mon-compte">
+                                <a class="nav-link item  " (click)="login()">
+                                    <span class="item-compte">
                             Mon compte
                         </span><span class="sr-only">(current)</span></a>
-                                </li>
-                                <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer mx-2" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                    <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
-                                        <span class="sr-only">(current)</span>
-                                        <span *ngIf="!getImageUrl()" id="accountNameSpan">
+                            </li>
+                            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer mx-2" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
+                                    <span class="sr-only">(current)</span>
+                                    <span *ngIf="!getImageUrl()" id="accountNameSpan">
                             <fa-icon icon="user"></fa-icon>
                             <span id="accountName">{{getAccountName()}}</span>
-                                        </span>
-                                        <span *ngIf="getImageUrl()">
+                                    </span>
+                                    <span *ngIf="getImageUrl()">
                             <img [src]="getImageUrl()" class="profile-image rounded-circle" alt="Avatar">
                         </span>
-                                    </a>
-                                    <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="account-menu">
-                                        <li>
-                                            <a class="dropdown-item" routerLink="account/profile/settings" routerLinkActive="active" (click)="collapseNavbar()">
-                                                <fa-icon icon="wrench" fixedWidth="true"></fa-icon>
-                                                <span jhiTranslate="global.menu.account.settings">Settings</span>
-                                            </a>
-                                        </li>
+                                </a>
+                                <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="account-menu">
+                                    <li>
+                                        <a class="dropdown-item" routerLink="account/profile/settings" routerLinkActive="active" (click)="collapseNavbar()">
+                                            <fa-icon icon="wrench" fixedWidth="true"></fa-icon>
+                                            <span jhiTranslate="global.menu.account.settings">Settings</span>
+                                        </a>
+                                    </li>
 
-                                        <li>
-                                            <a class="dropdown-item" routerLink="account/profile/employers/company" routerLinkActive="active" (click)="collapseNavbar()">
-                                                <fa-icon icon="user-friends" fixedWidth="true"></fa-icon>
-                                                <span>Mes employeurs</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" routerLink="account/profile/orders" routerLinkActive="active" (click)="collapseNavbar()">
-                                                <fa-icon icon="box-open" fixedWidth="true"></fa-icon>
-                                                <span>Mes commandes</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" (click)="logout()" id="logout">
-                                                <fa-icon icon="sign-out-alt" fixedWidth="true"></fa-icon>
-                                                <span jhiTranslate="global.menu.account.logout">Sign out</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-            </ul>
+                                    <li>
+                                        <a class="dropdown-item" routerLink="account/profile/employers/company" routerLinkActive="active" (click)="collapseNavbar()">
+                                            <fa-icon icon="user-friends" fixedWidth="true"></fa-icon>
+                                            <span>Mes employeurs</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" routerLink="account/profile/orders" routerLinkActive="active" (click)="collapseNavbar()">
+                                            <fa-icon icon="box-open" fixedWidth="true"></fa-icon>
+                                            <span>Mes commandes</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" (click)="logout()" id="logout">
+                                            <fa-icon icon="sign-out-alt" fixedWidth="true"></fa-icon>
+                                            <span jhiTranslate="global.menu.account.logout">Sign out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
         </div>
     </div>
 </nav>

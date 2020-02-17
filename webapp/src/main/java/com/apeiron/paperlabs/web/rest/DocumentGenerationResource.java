@@ -57,6 +57,7 @@ public class DocumentGenerationResource {
         this.mailService = mailService;
         this.fileDownloadService = fileDownloadService;
     }
+    
 
     /**
      * POST  /generateDocXFile : submit html form data to generate docX file.
