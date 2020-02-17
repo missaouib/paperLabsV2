@@ -39,13 +39,23 @@
 		},
 		{
 			"id": "step_titre2",
-			"title": "Titre 1",
+			"title": "Titre 2",
 			"description": "",
 			"blocs": [
 				"bloc_apports",
 				"bloc_apports",
-				"bloc_capital_social",
+				"bloc_capital_social"
+			
+			],
+			"visibility": true
+		}
+		,{
+			"id": "step_reglement",
+			"title": "REGLEMENT DES DIFFERENDS",
+			"description": "",
+			"blocs": [
 				"bloc_reglement"
+				
 			],
 			"visibility": true
 		}
@@ -162,7 +172,10 @@
 			"id": "bloc_reglement",
 			"title": "REGLEMENT DES DIFFERENDS",
 			"description": "",
-			"inputs": ["input_lieu_signature"],
+			"inputs": ["input_lieu_signature",
+			"input_date_signature",
+			"input_prenom_nom_ass1",
+			"input_prenom_nom_ass2"],
 			"visibility": true
 		}
 		
@@ -255,13 +268,13 @@
 		},
 		{
 			"id": "input_nationalite_associe1",
-			"type": "text",
+			"type": "select",
 			"description": "",
 			"name": "input_nationalite_associe1",
 			"label": "Nationalite :",
 			"placeHolder": "",
 			"help": "",
-			"options": [],
+			"options": ["Tunisienne"],
 			"value": "",
 			"bookmarkIdPerValue": {
 				"text": [
@@ -1071,6 +1084,59 @@
 				]
 			},
 			"visibility": true
+		},
+		{
+			"id": "input_date_signature",
+			"type": "date",
+			"description": "",
+			"name": "La date de la signature des statuts : ",
+			"label": "La date de la signature des statuts : ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"date_signature"
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_nom_ass1",
+			
+			"description": "",
+			"name": "Prénom et nom de l’associé 1: ",
+			"label": "Prénom et nom de l’associé 1: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_Nom_ass1"
+					
+				]
+			},
+			"visibility": true
+		},
+		{
+			"id": "input_prenom_nom_ass2",
+			
+			"description": "",
+			"name": "Prénom et nom de l’associé 2: ",
+			"label": "Prénom et nom de l’associé 2: ",
+			"placeHolder": "",
+			"help": "",
+			"options": [],
+			"value": "",
+			"bookmarkIdPerValue": {
+				"text": [
+					"prenom_Nom_ass2"
+					
+				]
+			},
+			"visibility": true
 		}
 	],
 	
@@ -1553,6 +1619,38 @@
 		},
 		{
 			"bookmarkId": "lieu_signature",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},{
+			"bookmarkId": "date_signature",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_Nom_ass1",
+			"value": "",
+			"fontFamily": "Times New Roman",
+			"color": null,
+			"bold": true,
+			"italic": false,
+			"capitalized": false,
+			"type": "PARAGRAPH_WITH_BOOKMARKS",
+			"fontSize": 11
+		},
+		{
+			"bookmarkId": "prenom_Nom_ass2",
 			"value": "",
 			"fontFamily": "Times New Roman",
 			"color": null,

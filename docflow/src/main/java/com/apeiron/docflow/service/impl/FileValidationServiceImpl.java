@@ -56,6 +56,7 @@ public class FileValidationServiceImpl implements FileValidationService {
         for(Map.Entry<String, Bookmark> bookmarkEntry : allCustomBookmarks.entrySet()) {
             bookmarkKey = bookmarkEntry.getKey();
             if(!bookmarkIdListFoundInDocXFile.contains(bookmarkKey)) {
+            	 System.out.println("lllllllllllllllllllll exceptionnnnnnnnnnnn");
                 throw new NoSuchElementException(String.format("Caught a : \"%s\", message: bookmark with name \"%s\" not found among .docx file custom bookmark list", "NoSuchElementException", bookmarkKey));
             }
         }

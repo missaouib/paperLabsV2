@@ -1,0 +1,677 @@
+{
+  "steps": [
+    {
+      "id": "Step_societe",
+      "title": "Détails Société",
+      "description": "",
+      "blocs": ["bloc_info"],
+      "visibility": true
+    },
+	{
+      "id": "Step_convocation",
+      "title": "Détails Convocation",
+      "description": "",
+      "blocs": ["bloc_convocation"],
+      "visibility": true
+    },
+	{
+      "id": "Step_deuxieme_resolution",
+      "title": "DEUXIEME RESOLUTION",
+      "description": "",
+      "blocs": ["bloc_deuxieme_resolution"],
+      "visibility": true
+    },
+	{
+      "id": "Step_troisieme_resolution",
+      "title": "TROISIEME RESOLUTION",
+      "description": "",
+      "blocs": ["bloc_troisieme_resolution"],
+      "visibility": true
+    }
+	
+	
+  ],
+  "blocs": [
+    {
+      "id": "bloc_info",
+      "title": "",
+      "description": "",
+      "inputs": ["input_date_convocation",
+	  "input_denomination_social",
+	  "input_siege_social",
+	  "input_identifint_unique", 
+	  "input_liste_associes"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_convocation",
+      "title": "",
+      "description": "",
+      "inputs": [
+	  "input_denomination_convocation",
+	  "input_date_convocation",
+	  "input_heure_reunion",
+	  "input_siege_social_convocation",
+	  "input_nom_prenom_emetteur",
+	  "input_qualite_emetteur",
+	  "input_date_reunion"],
+      "visibility": true
+    },
+	{
+      "id": "bloc_deuxieme_resolution",
+      "title": "",
+      "description": "",
+      "inputs": [
+	  "input_nom_prenom_ancien_gerant",
+	  "input_nom_prenom_nouveau_gerant",
+	   "input_cin_nouveau_gerant",
+	   "input_duree_mandat",
+	    "input_passport_nouveau_gerant",
+		 "input_nationalite_passport_nouveau_gerant",
+		  "input_duree_mandat",
+		  "input_rémunération"
+		  
+	  ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_troisieme_resolution",
+      "title": "",
+      "description": "",
+      "inputs": [
+	  "input_heure_fin_réunion"
+	  
+	  ],
+      "visibility": true
+    }
+   
+  ],
+  "inputs": [
+  {
+      "id": "input_date_convocation",
+      "type": "date",
+      "description": "",
+      "name": "Date de convocation",
+      "label": "Date de convocation",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "date_convocation"
+         
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_denomination_social",
+      "type": "text",
+      "description": "",
+      "name": "denomination social",
+      "label": "Dénomination Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_siege_social",
+      "type": "text",
+      "description": "",
+      "name": "siege social",
+      "label": "Siège Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "siege_social"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_identifint_unique",
+      "type": "text",
+      "description": "",
+      "name": "Identifiant Unique",
+      "label": "Identifiant Unique",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "identifiant_unique"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_liste_associes",
+      "type": "text",
+      "description": "",
+      "name": "Liste des associés",
+      "label": "Liste des associés",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "liste_associes"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_denomination_convocation",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination Social",
+      "label": "Dénomination Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_convocation"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_convocation",
+      "type": "date",
+      "description": "",
+      "name": "Date de réunion de l'assemblé",
+      "label": "Date de réunion de l'assemblé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "date_convocation"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_heure_reunion",
+      "type": "select",
+      "description": "",
+      "name": "Date de réunion de l'assemblé",
+      "label": "Date de réunion de l'assemblé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "heure_convocation"
+         
+        ]
+      },
+      "visibility": true
+    },{
+      "id": "input_siege_social_convocation",
+      "type": "text",
+      "description": "",
+      "name": "Siège Social (adresse) :",
+      "label": "Siège Social (adresse) :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "siege_social_convocation"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nom_prenom_emetteur",
+      "type": "text",
+      "description": "",
+      "name": "Nom prénom de l’émetteur de la convocation :",
+      "label": "Nom prénom de l’émetteur de la convocation  :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "nom_prenom_emetteur_convocation "
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_qualite_emetteur",
+      "type": "select",
+      "description": "",
+      "name": "qualité de l’émetteur de la convocation :",
+      "label": "Qualité de l’émetteur de la convocation  :",
+      "placeHolder": "",
+      "help": "",
+      "options": ["Gérant","Commissaire aux comptes","Associé"],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "qualite_emetteur_convocation "
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_reunion",
+      "type": "date",
+      "description": "",
+      "name": "Date de réunion de l'assemblée",
+      "label": "Date de réunion de l'assemblé",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "date_reunion"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nom_prenom_ancien_gerant",
+      "type": "text",
+      "description": "",
+      "name": "Nom et Prénom de l’ancien gérant",
+      "label": "Nom et Prénom de l’ancien gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "nom_prenom_ancien_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nom_prenom_nouveau_gerant",
+      "type": "text",
+      "description": "",
+      "name": "Nom et Prénom du nouveau gérant",
+      "label": "Nom et Prénom du nouveau gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "nom_prenom_nouveau_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_cin_nouveau_gerant",
+      "type": "text",
+      "description": "",
+      "name": "CIN du nouveau gérant",
+      "label": "CIN du nouveau gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "cin_nouveau_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_duree_mandat",
+      "type": "text",
+      "description": "",
+      "name": "Durée du mandat",
+      "label": "Durée du mandat",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "duree_mandat"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_passport_nouveau_gerant",
+      "type": "text",
+      "description": "",
+      "name": "Numéro de Passeport",
+      "label": "Numéro de Passeport(gérant étranger): ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "passport_nouveau_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nationalite_passport_nouveau_gerant",
+      "type": "select",
+      "description": "",
+      "name": "Nationalité du passeport",
+      "label": "Nationalité du passeport (gérant étranger) : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "nationalite_passport_nouveau_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_rémunération",
+      "type": "text",
+      "description": "",
+      "name": "Rémunération mensuelle brute",
+      "label": "Rémunération mensuelle brute : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "rémunération"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_heure_fin_réunion",
+      "type": "select",
+      "description": "",
+      "name": "Heure de fin de la réunion de l'assemblée",
+      "label": "Heure de fin de la réunion de l'assemblée : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "heure_fin"
+         
+        ]
+      },
+      "visibility": true
+    }
+	
+	
+    
+  ],
+  "bookmarks": [
+    {
+      "bookmarkId": "denomination_social",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "siege_social",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "liste_associes",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "heure_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "siege_social_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_emetteur_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "qualite_emetteur_convocation",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_reunion",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_ancien_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nom_prenom_nouveau_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "cin_nouveau_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "duree_mandat",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "passport_nouveau_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "nationalite_passport_nouveau_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "rémunération",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "heure_fin",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    }
+	
+    
+  ]
+}

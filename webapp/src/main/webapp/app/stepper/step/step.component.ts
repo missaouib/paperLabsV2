@@ -11,15 +11,11 @@ import { DatePipe } from '@angular/common';
 import { HttpClient } from "typed-rest-client/HttpClient";
  */
 
-
-
-
 @Component({
   selector: 'jhi-step',
   templateUrl: './step.component.html',
   styleUrls: ['step.scss']
 })
-
 export class StepComponent implements OnInit {
   @Input() step: StepEntity;
   @Input() isFirstStep: boolean;
@@ -29,13 +25,12 @@ export class StepComponent implements OnInit {
   @Output() downloadPDFEvent = new EventEmitter<IOrder>();
   orderIsPurchased = false;
   order: IOrder;
-  
-   // fileUrl="\\model_docx_1.docx\\" ;
-  
-  
-    date = this.datePipe.transform(new Date(), 'yyyyMMddHHmm');
-    fileUrl='folder/docx_filled_'+this.date+'.docx';
-  
+
+  // fileUrl="\\model_docx_1.docx\\" ;
+
+  date = this.datePipe.transform(new Date(), 'yyyyMMddHHmm');
+  fileUrl = 'folder/docx_filled_' + this.date + '.docx';
+
   constructor(
     private sanitizer: DomSanitizer,
     private accountService: AccountService,
@@ -45,19 +40,15 @@ export class StepComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-   // const date = this.datePipe.transform(new Date(), 'yyyymmddhhmmss');
-   // this.fileUrl='docx_filled_'+date+'.docx'
-
+    // const date = this.datePipe.transform(new Date(), 'yyyymmddhhmmss');
+    // this.fileUrl='docx_filled_'+date+'.docx'
   }
 
-
-
-      
-    download(){  
-          // alert('***************************************************************')
-           // location.href = 'folder/test.txt';
-            //  location.href ='folder/docx_filled_'+this.date+'.docx';
-              /* const element = document.createElement('a');
+  download() {
+    // alert('***************************************************************')
+    // location.href = 'folder/test.txt';
+    //  location.href ='folder/docx_filled_'+this.date+'.docx';
+    /* const element = document.createElement('a');
               element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent('aa'));
               element.setAttribute('download', 'foler/test.txt');
  
@@ -67,8 +58,7 @@ export class StepComponent implements OnInit {
               element.click();
 
                  document.body.removeChild(element); */
-
-              /* const client = new HttpClient("clientTest");
+    /* const client = new HttpClient("clientTest");
               const response =  client.get("http://localhost:8080/folder/test.txt");
               const filePath = "waw.txt'";
 
@@ -89,18 +79,13 @@ export class StepComponent implements OnInit {
                       }
                   });
               }); */
-          
-
-      }
-                 
-     
+  }
 
   isAuthenticated() {
     return this.accountService.isAuthenticated();
   }
 
   hasPreview(): boolean {
-    
     if (this.legalDocument !== null && this.legalDocument !== undefined) {
       return 'CDI' !== this.legalDocument.shortName;
     } else {
