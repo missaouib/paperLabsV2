@@ -1,0 +1,767 @@
+{
+  "steps": [
+    {
+      "id": "step_information_assemblée",
+      "title": "Information sur l'assemblée",
+      "description": "",
+      "blocs": [
+        "bloc_détails_société",
+		"bloc_détails_assemblée"
+      ],
+      "visibility": true
+    },
+	{
+      "id": "step_troisieme_resolution",
+      "title": "Information sur l'assemblée",
+      "description": "",
+      "blocs": [
+        "bloc_troisieme_resolution",
+		"bloc_quatrieme_resolution"
+		
+      ],
+      "visibility": true
+    }
+  
+    
+  ],
+  "blocs": [
+    {
+      "id": "bloc_détails_société",
+      "title": "Détails sur la société :",
+      "description": "",
+      "inputs": [
+        "input_dénomination_sociale_de_la_société",
+		"input_siège_social_de_la_societé",
+		"input_capital_social_de_la_societé",
+		"input_identifiant_unique_de_la_societé"
+      
+      ],
+      "visibility": true
+    },
+   {
+      "id": "bloc_détails_assemblée",
+      "title": "Détails sur l'assemblée :",
+      "description": "",
+      "inputs": [
+        "input_date_réunion_assemblée",
+        "input_heure_début_réunion_assemblée",
+		"input_dénomination_sociale",
+		"input_capital_social_lettre",
+		"input_capital_social_chiffre",
+		"input_préside_assemblée",
+		"input_associe_1",
+		"input_associe_2",
+		"input_date_ex_comptable",
+		"input_date_ex_comptable_1",
+		"input_date_ex_comptable_2"
+       
+      ],
+      "visibility": true
+    },
+	 {
+      "id": "bloc_troisieme_resolution",
+      "title": "TROISIEME RESOLUTION :",
+      "description": "",
+      "inputs": [
+		"input_date_ex_comptable",
+		"input_montant",
+		"input_report_anterieur",
+		"input_resultat_exercice",
+		"input_reserve_legales",
+		"input_benefice_distribuable"
+       
+      ],
+      "visibility": true
+    },
+	{
+      "id": "bloc_quatrieme_resolution",
+      "title": "QUATRIEME RESOLUTION :",
+      "description": "",
+      "inputs": [
+		"input_heure_fin_réunion",
+		"input_president",
+		"input_associe_1",
+		"input_associe_2"
+      ],
+      "visibility": true
+    }
+	],
+	"inputs": [
+    {
+      "id": "input_dénomination_sociale_de_la_société",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale_de_la_société",
+      "label": "Dénomination sociale :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Dénomination_sociale"
+         
+        ]
+      },
+      "visibility": true
+    },
+	 
+	 {
+      "id": "input_capital_social_de_la_societé",
+      "type": "number",
+      "description": "",
+      "name": "input_capital_social_de_la_societé",
+      "label": "Capital social de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Capital_social_de_la_societé",
+          "Capital_social_de_la_societé_2"
+        ]
+      },
+      "visibility": true
+    },{
+      "id": "input_siège_social_de_la_societé",
+      "type": "text",
+      "description": "",
+      "name": "input_siège_social_de_la_societé",
+      "label": "Siège sociale :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Siège_sociale_de_la_societé"
+         
+        ]
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_identifiant_unique_de_la_societé",
+      "type": "number",
+      "description": "",
+      "name": "input_identifiant_unique_de_la_societé",
+      "label": "Identifiant unique de la societé: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Identifiant_unique_de_la_societé",
+          "Identifiant_unique_de_la_societé_2",
+          "Identifiant_unique_de_la_societé_3"
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_réunion_assemblée",
+      "type": "date",
+      "description": "",
+      "name": "input_date_réunion_assemblée",
+      "label": "Date de réunion de l'assemblée :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Date_de_réunion_de_lassemblée"
+         
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_heure_début_réunion_assemblée",
+      "type": "time",
+      "description": "",
+      "name": "input_heure_début_réunion_assemblée",
+      "label": "Heure de début de la réunion de l'assemblée :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Heure_début_réunion_assemblée"
+         
+        ]
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_dénomination_sociale",
+      "type": "text",
+      "description": "",
+      "name": "input_dénomination_sociale",
+      "label": "Dénomination sociale :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Dénomination_sociale"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_capital_social_lettre",
+      "type": "text",
+      "description": "",
+      "name": "input_capital_social_lettre",
+      "label": "Capital social de la societé en lettres: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Capital_social_lettre"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_capital_social_chiffre",
+      "type": "number",
+      "description": "",
+      "name": "input_capital_social_chiffre",
+      "label": "Capital social de la societé en chiffres: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Capital_social_chiffre"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_préside_assemblée",
+      "type": "text",
+      "description": "",
+      "name": "input_préside_assemblée",
+      "label": "Président de l'Assemblée: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "préside_assemblée"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_associe_1",
+      "type": "text",
+      "description": "",
+      "name": "input_associe_1",
+      "label": "Associé 1: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "associe_1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_associe_2",
+      "type": "text",
+      "description": "",
+      "name": "input_associe_2",
+      "label": "Associé 2: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "associe_2"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_ex_comptable",
+      "type": "date",
+      "description": "",
+      "name": "input_date_ex_comptable",
+      "label": "Rapport de gestion de l’exercice: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "date_ex_comptable"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_ex_comptable_1",
+      "type": "date",
+      "description": "",
+      "name": "input_date_ex_comptable_1",
+      "label": "Lecture et Approbation du rapport de gestion et des états financiers relatifs à l’exercice: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "date_ex_comptable_1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_date_ex_comptable_2",
+      "type": "date",
+      "description": "",
+      "name": "input_date_ex_comptable_2",
+      "label": "Affectation des résultats de l’exercice: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "date_ex_comptable_1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_montant",
+      "type": "number",
+      "description": "",
+      "name": "input_montant",
+      "label": "Montant: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "montant"
+         
+        ]
+      },
+      "visibility": true
+    },{
+      "id": "input_report_anterieur",
+      "type": "number",
+      "description": "",
+      "name": "input_report_anterieur",
+      "label": "Report à nouveau antérieur: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "report_anterieur"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_resultat_exercice",
+      "type": "text",
+      "description": "",
+      "name": "input_resultat_exercice",
+      "label": "Résultat de l’exercice : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "resultat_exercice"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_reserve_legales",
+      "type": "text",
+      "description": "",
+      "name": "input_reserve_legales",
+      "label": "Réserves légales : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "reserve_legales"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_benefice_distribuable",
+      "type": "number",
+      "description": "",
+      "name": "input_benefice_distribuable",
+      "label": "Bénéfices distribuables : ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "benefice_distribuable"
+         
+        ]
+      },
+      "visibility": true
+    },
+	 {
+      "id": "input_heure_fin_réunion",
+      "type": "time",
+      "description": "",
+      "name": "input_heure_fin_réunion",
+      "label": "Heure de fin de la réunion de l'assemblée :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "Heure_fin_réunion"
+          
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_president",
+      "type": "text",
+      "description": "",
+      "name": "input_president",
+      "label": "LE PRESIDENT :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "president"
+          
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_associe_1",
+      "type": "text",
+      "description": "",
+      "name": "input_associe_1",
+      "label": "Associé 1: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "associe_1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_associe_2",
+      "type": "text",
+      "description": "",
+      "name": "input_associe_2",
+      "label": "Associé 2: ",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "text": [
+          "associe_2"
+         
+        ]
+      },
+      "visibility": true
+    }
+	
+	],
+	"bookmarks": [
+    {
+      "bookmarkId": "Dénomination_sociale",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Siège_sociale_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Capital_social_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": false,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Identifiant_unique_de_la_societé",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Date_de_réunion_de_lassemblée",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Date_de_réunion_de_lassemblée",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Dénomination_sociale",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Capital_social_lettre",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Capital_social_chiffre",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "préside_assemblée",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "associe_1",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "associe_2",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "date_ex_comptable",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "montant",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "report_anterieur",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "resultat_exercice",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "reserve_legales",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "benefice_distribuable",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "Heure_fin_réunion",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    },
+	{
+      "bookmarkId": "president",
+      "value": null,
+      "fontFamily": "Times New Roman",
+      "color": null,
+      "bold": true,
+      "italic": false,
+      "capitalized": true,
+      "underline": "single",
+      "type": "USER_INPUT",
+      "fontSize": 12
+    }
+	]
+	
+	}

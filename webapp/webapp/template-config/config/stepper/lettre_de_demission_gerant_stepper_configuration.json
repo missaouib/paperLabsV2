@@ -1,0 +1,414 @@
+{
+  "steps": [
+  {
+      "id": "step0",
+      "title": "Détails Gérant",
+      "description": "",
+      "blocs": ["bloc_info_gerant"],
+      "visibility": true
+    },
+  
+  
+    {
+      "id": "step1",
+      "title": "Détails Société",
+      "description": "",
+      "blocs": ["bloc_info_societe"],
+      "visibility": true
+    },
+	{
+      "id": "step2",
+      "title": "Détails Société",
+      "description": "",
+      "blocs": ["bloc_denomination_societe"],
+      "visibility": true
+    }
+	
+  ],
+  "blocs": [
+   {
+      "id": "bloc_info_gerant",
+      "title": "",
+      "description": "",
+      "inputs": ["input_lieu_gerant",
+	   "input_date_gerant",
+	   "input_nomprenom_gerant1",
+	   "input_adresse_gerant"
+	 
+	 ],
+      "visibility": true
+    },
+    {
+      "id": "bloc_info_societe",
+      "title": "",
+      "description": "",
+      "inputs": ["input_denomination_social",
+	  "input_siege_social",
+	  "input_identifint_unique"
+	  ],
+      "visibility": true
+    },
+	 {
+      "id": "bloc_denomination_societe",
+      "title": "",
+      "description": "",
+      "inputs": ["input_denomination_social_1",
+	  "input_denomination_social_2",
+	  "input_denomination_social_3",
+	  "input_denomination_social_4",
+	  "input_nomprenom_gerant"
+	  ],
+      "visibility": true
+    }
+   
+  ],
+  "inputs": [
+     {
+      "id": "input_lieu_gerant",
+      "type": "text",
+      "description": "",
+      "name":"lieu",
+      "label": "Lieu",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "lieu_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },
+	
+	{
+      "id": "input_date_gerant",
+      "type": "date",
+      "description": "",
+      "name": "date",
+      "label": "Date :",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "date_gerant"
+         
+        ]
+      },
+      "visibility": true
+    },{
+      "id": "input_adresse_gerant",
+      "type": "text",
+      "description": "",
+      "name": "Adresse gérant",
+      "label": "Adresse gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "gerant_adresse"
+         
+        ]
+      },
+      "visibility": true
+    },
+    {
+      "id": "input_nomprenom_gerant1",
+      "type": "text",
+      "description": "",
+      "name": "Nom et Prénom du gérant",
+      "label": "Nom et Prénom du gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "gerant1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	
+	
+  
+    {
+      "id": "input_denomination_social",
+      "type": "text",
+      "description": "",
+      "name": "denomination social",
+      "label": "Dénomination Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_siege_social",
+      "type": "text",
+      "description": "",
+      "name": "siege social",
+      "label": "Siège Social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "siege_social"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_identifint_unique",
+      "type": "text",
+      "description": "",
+      "name": "Identifiant Unique",
+      "label": "Identifiant Unique",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "identifiant_unique"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_denomination_social_1",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination social",
+      "label": "Dénomination social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social_1"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_denomination_social_2",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination social",
+      "label": "Dénomination social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social_2"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_denomination_social_3",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination social",
+      "label": "Dénomination social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social_3"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_denomination_social_4",
+      "type": "text",
+      "description": "",
+      "name": "Dénomination social",
+      "label": "Dénomination social",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "denomination_social_4"
+         
+        ]
+      },
+      "visibility": true
+    },
+	{
+      "id": "input_nomprenom_gerant",
+      "type": "text",
+      "description": "",
+      "name": "Nom et Prénom du gérant",
+      "label": "Nom et Prénom du gérant",
+      "placeHolder": "",
+      "help": "",
+      "options": [],
+      "value": "",
+      "bookmarkIdPerValue": {
+        "Une entreprise": [
+          "gerant"
+         
+        ]
+      },
+      "visibility": true
+    }
+    
+  ],
+  "bookmarks": [
+    {
+      "bookmarkId": "denomination_social",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "dsiege_social",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "identifiant_unique",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },{
+      "bookmarkId": "denomination_social_1",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_social_2",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_social_3",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "denomination_social_4",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant1",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "lieu_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "date_gerant",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    },
+	{
+      "bookmarkId": "gerant_adresse",
+      "value": "",
+      "fontFamily": null,
+      "color": null,
+      "bold": false,
+      "italic": false,
+      "capitalized": false,
+      "type": "PARAGRAPH_WITH_BOOKMARKS",
+      "fontSize": 11
+    }
+	
+	
+   
+	
+    
+  ]
+}

@@ -452,6 +452,7 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
+    
     @ChangeSet(order = "09", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "06-addLettreDeDemissionLegalDocument")
     public void addLettreDeDemissionLegalDocument(MongoTemplate mongoTemplate) {     
         LegalDocument legalDocument;
@@ -467,16 +468,16 @@ public class LegalDocumentMigration {
         legalDocument.setShortName("LETTRE DE DEMISSION");
         legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
         legalDocument.setFullName("Lettre de demission");
-        legalDocument.setKeywords(" lettre de demission gérer droit de travail");
+        legalDocument.setKeywords(" lettre de demission gérance");
         legalDocument.setDescription("MODÈLE LETTRE DE DEMISSION");
         legalDocument.setTemplatePreviewPath("empty_preview");
-        legalDocument.setTemplateFilePath("lettre_de_demission_docx_model.docx");
+        legalDocument.setTemplateFilePath("lettre_de_demission_docx_model.doc");
         legalDocument.setStepperConfigFilePath("lettre_de_demission_stepper_configuration.json");
         legalDocument.setWorkflowConfigFilePath("lettre_de_demissionworkflow_configuration.json");
         legalDocument.setCategoryId("empty_category");
         legalDocument.setLawyerId("empty_lawyer");
         legalDocument.setCreatedDate(Instant.now());
-
+   
         descriptionSection = new DescriptionSection();
         descriptionSection.setTitle("Création de LETTRE DE DEMISSION:");
         descriptionSection.setContent("Procédure 100% en ligne pour créer votre LETTRE DE DEMISSION en toute simplicité.\n" +
@@ -490,7 +491,7 @@ public class LegalDocumentMigration {
         legalDocument.setDocumentsRecommendationId(new ArrayList<>());
 
         mongoTemplate.save(legalDocument);
-    }
+    } 
     
     @ChangeSet(order = "10", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "10-addAractLegalDocument")
     public void addAractLegalDocument(MongoTemplate mongoTemplate) {     
@@ -589,5 +590,261 @@ public class LegalDocumentMigration {
 
         mongoTemplate.save(legalDocument);
     }
+
+    
+    
+    
+  
      
+    @ChangeSet(order = "12", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "12-addFormulairestatusLegalDocument")
+    public void addFormulairestatusLegalDocument(MongoTemplate mongoTemplate) {     
+        LegalDocument legalDocument;
+  
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+        Map<String, String> companyAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        Map<String, String> employerAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        List<Map<String, String>> companiesAutoFillInputIdsByFieldName = new LinkedList<>();
+        List<Map<String, String>> employersAutoFillInputIdsByFieldName = new LinkedList<>();
+        
+        companiesAutoFillInputIdsByFieldName.add(companyAutoFillInputIdsByFieldName);
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dad0d7dd1a76c479c02affa933");
+        legalDocument.setShortName("FORMULAIRE STATUS");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("FORMULAIRE STATUS");
+        legalDocument.setKeywords("constitution sociétés");
+        legalDocument.setDescription("FORMULAIRE STATUS");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("formulaire_statuts_docx_model.docx");
+        legalDocument.setStepperConfigFilePath("formulaire_statuts_docx_model_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("formulaire_statuts_docx_model_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setEmployersAutoFillInputIdsByFieldName(employersAutoFillInputIdsByFieldName);
+        legalDocument.setCompaniesAutoFillInputIdsByFieldName(companiesAutoFillInputIdsByFieldName);
+        legalDocument.setCreatedDate(Instant.now());
+        descriptionSection = new DescriptionSection();
+            
+       
+      
+        descriptionSection.setTitle("FORMULAIRE STATUS:");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre FORMULAIRE STATUS en toute simplicité.\n" +
+            "Statuts générés en 10mn.");
+        descriptionSections.add(descriptionSection);
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(49.99f);
+
+        legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+
+        mongoTemplate.save(legalDocument);
+    }
+   
+    @ChangeSet(order = "13", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "13-addconvocationagoLegalDocument")
+
+    public void addconvocationagoLegalDocument(MongoTemplate mongoTemplate) {     
+        LegalDocument legalDocument;
+
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+        Map<String, String> companyAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        Map<String, String> employerAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        List<Map<String, String>> companiesAutoFillInputIdsByFieldName = new LinkedList<>();
+        List<Map<String, String>> employersAutoFillInputIdsByFieldName = new LinkedList<>();
+        
+        companiesAutoFillInputIdsByFieldName.add(companyAutoFillInputIdsByFieldName);
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dad0d7dd1a76c479c02affa937");
+        legalDocument.setShortName("Convocation ago");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("Convocation Ago nomination de gérant");
+        legalDocument.setKeywords("Convocation ago gérance");
+        legalDocument.setDescription("Convocation ago");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("convocation_AGO_nomination_de_gérant_docx_model.docx");
+        legalDocument.setStepperConfigFilePath("convocation_ago_docx_model_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("convocation_ago_docx_model_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setEmployersAutoFillInputIdsByFieldName(employersAutoFillInputIdsByFieldName);
+        legalDocument.setCompaniesAutoFillInputIdsByFieldName(companiesAutoFillInputIdsByFieldName);
+        legalDocument.setCreatedDate(Instant.now());
+        descriptionSection = new DescriptionSection();
+        
+       
+      
+        descriptionSection.setTitle("Convocation Ago:");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Convocation Ago en toute simplicité.\n" +
+            "Statuts générés en 10mn.");
+        descriptionSections.add(descriptionSection);
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(49.99f);
+
+        legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+
+        mongoTemplate.save(legalDocument);
+    }
+    
+    @ChangeSet(order = "14", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "14-addapprobationdescomptesLegalDocument")
+
+    public void addapprobationdescomptesLegalDocument(MongoTemplate mongoTemplate) {     
+        LegalDocument legalDocument;
+
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+        Map<String, String> companyAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        Map<String, String> employerAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        List<Map<String, String>> companiesAutoFillInputIdsByFieldName = new LinkedList<>();
+        List<Map<String, String>> employersAutoFillInputIdsByFieldName = new LinkedList<>();
+        
+        companiesAutoFillInputIdsByFieldName.add(companyAutoFillInputIdsByFieldName);
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dad0d7dd1a76c479c02affa939");
+        legalDocument.setShortName("Approbation des comptes");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("Approbation des comptes");
+        legalDocument.setKeywords("Approbation des comptes   PV d’approbation de comptes");
+        legalDocument.setDescription("Approbation des comptes");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("PV_AGO_SARL_APPROBATION_DES_COMPTES.doc");
+        legalDocument.setStepperConfigFilePath("approbation_des_comptes_docx_model_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("approbation_des_comptes_docx_model_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setEmployersAutoFillInputIdsByFieldName(employersAutoFillInputIdsByFieldName);
+        legalDocument.setCompaniesAutoFillInputIdsByFieldName(companiesAutoFillInputIdsByFieldName);
+        legalDocument.setCreatedDate(Instant.now());
+        descriptionSection = new DescriptionSection();
+        
+       
+      
+        descriptionSection.setTitle("Approbation des comptes:");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre Approbation des Comptes en toute simplicité.\n" +
+            "Statuts générés en 10mn.");
+        descriptionSections.add(descriptionSection);
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(49.99f);
+
+        legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+
+        mongoTemplate.save(legalDocument);
+    }
+    
+    @ChangeSet(order = "15", author = AuthorsConstants.BELHASSEN_ZINELABIDINE , id = "15-addAGONominationNouveauGerantLegalDocument")
+    public void addAGONominationNouveauGerantLegalDocument(MongoTemplate mongoTemplate) {
+        LegalDocument legalDocument;
+
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+        Map<String, String> companyAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        Map<String, String> employerAutoFillInputIdsByFieldName = new LinkedHashMap<>();
+        List<Map<String, String>> companiesAutoFillInputIdsByFieldName = new LinkedList<>();
+        List<Map<String, String>> employersAutoFillInputIdsByFieldName = new LinkedList<>();
+
+        companiesAutoFillInputIdsByFieldName.add(companyAutoFillInputIdsByFieldName);
+        employersAutoFillInputIdsByFieldName.add(employerAutoFillInputIdsByFieldName);
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+        autoFillConcernedEntities.add(Employer.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dde43ffd02a3b36803e18b88");
+        legalDocument.setShortName("AGO-NNG");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("AGO : Nomination d'un Nouveau Gérant");
+        legalDocument.setKeywords("AGO nng gérance");
+        legalDocument.setDescription("AGO : NOMINATION D'UN NOUVEAU GÉRANT");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("AGO_nomination d'un  nouveau gérant .docx");
+        legalDocument.setStepperConfigFilePath("ago_nomination_nouveau_gerant_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("ago_nomination_nouveau_gerant_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setEmployersAutoFillInputIdsByFieldName(employersAutoFillInputIdsByFieldName);
+        legalDocument.setCompaniesAutoFillInputIdsByFieldName(companiesAutoFillInputIdsByFieldName);
+        legalDocument.setCreatedDate(Instant.now());
+
+        descriptionSection = new DescriptionSection();
+        descriptionSection.setTitle("Création de Procès-Verbal :AGO Nomination d'un Nouveau Gérant :");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre document en toute simplicité.");
+        descriptionSections.add(descriptionSection);
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(10.59f);
+
+        List<String> documentsRecommendationId = new ArrayList<>();
+        legalDocument.setDocumentsRecommendationId(documentsRecommendationId);
+
+        mongoTemplate.save(legalDocument);
+
+    }
+   
+    
+      
+    
+    @ChangeSet(order = "16", author = AuthorsConstants.FAHMI_BOUMAIZA , id = "16-addLettreDeDemissionGerantLegalDocument")
+    public void addLettreDeDemissionGerantLegalDocument(MongoTemplate mongoTemplate) {     
+        LegalDocument legalDocument;
+
+        List<DescriptionSection> descriptionSections = new ArrayList<>();
+        DescriptionSection descriptionSection;
+        List<String> autoFillConcernedEntities = new ArrayList<>();
+
+        autoFillConcernedEntities.add(Company.class.getSimpleName());
+
+        legalDocument = new LegalDocument();
+        legalDocument.setId("5dad0d7dd1a76c479c02affa96");
+        legalDocument.setShortName("LETTRE DE DEMISSION GERANT");
+        legalDocument.setAutoFillConcernedEntities(autoFillConcernedEntities);
+        legalDocument.setFullName("Lettre de demission GERANT");
+        legalDocument.setKeywords("lettre de demission gérance  PV de nomination du gérant");
+        legalDocument.setDescription("MODÈLE LETTRE DE DEMISSION");
+        legalDocument.setTemplatePreviewPath("empty_preview");
+        legalDocument.setTemplateFilePath("lettre_de_démission_gérant.docx");
+        legalDocument.setStepperConfigFilePath("lettre_de_demission_gerant_stepper_configuration.json");
+        legalDocument.setWorkflowConfigFilePath("lettre_de_demission_gerant_workflow_configuration.json");
+        legalDocument.setCategoryId("empty_category");
+        legalDocument.setLawyerId("empty_lawyer");
+        legalDocument.setCreatedDate(Instant.now());
+      
+        descriptionSection = new DescriptionSection();
+        descriptionSection.setTitle("Création de LETTRE DE DEMISSION GERANT:");
+        descriptionSection.setContent("Procédure 100% en ligne pour créer votre LETTRE DE DEMISSION GERANT en toute simplicité.\n" +
+            "Statuts générés en 10mn.");
+        descriptionSections.add(descriptionSection);    
+
+        legalDocument.setDescriptionSections(descriptionSections);
+
+        legalDocument.setPrice(49.99f);
+
+        legalDocument.setDocumentsRecommendationId(new ArrayList<>());
+
+        mongoTemplate.save(legalDocument);
+    } 
+    
+    
+
+ 
+         
+
 }

@@ -118,8 +118,30 @@
 }
 
 .entreprise-drop {
-    width: 700px;
+    
+    width: 70vw;
     margin-top: 10px;
+    margin-left: -500px;
+    
+}
+.entreprise-drop1{ 
+    width: 700px;
+    margin-top: 10px;}
+
+.dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.ml-2, .mx-2{
+    list-style: none;
 }
 
 @media screen and (max-width: 1550px) {

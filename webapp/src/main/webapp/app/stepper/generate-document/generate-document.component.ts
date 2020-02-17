@@ -166,8 +166,7 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
   }
 
   private submit() {
-   // alert("eeeeeeeeeeeeeeeeeeeeeee");
-  
+
     this.accountService.identity().then((account: Account) => {
       if (account !== null) {
         this.userLogin = account.login;
@@ -178,24 +177,24 @@ export class GenerateDocumentComponent implements OnInit, OnDestroy {
        
         this.saveDataAuthorization = String(this.checked);
         this.stepperApiService
-        
+
           .generateDocXFile(this.stepperData, this.legalDocumentId, this.saveDataAuthorization, this.userLogin, this.orderId)
           .subscribe(res => {
             this.stepperEventManagerService.sendOrder(res.body);
-            
-             let str =res.body.generatedLegalDocument.generatedWordFilePath;
 
-           //  str=str.slice(22);
-             str=str.slice(54);
+            let str = res.body.generatedLegalDocument.generatedWordFilePath;
+
+            //  str=str.slice(21);
+            // str=str.slice(54);
+            str = str.slice(69);
             this.download(str);
           });
       }
     });
   }
 
-  download(url){  
-     location.href =url;
-
+  download(url) {
+    location.href = url;
   }
 
   ngOnDestroy(): void {

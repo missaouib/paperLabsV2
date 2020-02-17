@@ -66,6 +66,7 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
     private String filledFileName;
     
     
+
   //private static final String FILLED_FILE_NAME_PREFIX="/var/www/html/static/folder/"; 
 
     private static final String FILLED_FILE_NAME_PREFIX="D:/Rami/paperlabs-master/webapp/target/classes/static/folder/";
@@ -177,7 +178,10 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
         for (String s:bookmarkIdListFoundInDocXFile) {
 			System.out.println("***********************s==> "+s);
 		}
-     
+
+        
+        /* ENTREPRISE:CDI  */
+
         bookmarkIdListFoundInDocXFile.add("prénom_du_representant_de_la_societé");
         bookmarkIdListFoundInDocXFile.add("prénom_employeur");
         bookmarkIdListFoundInDocXFile.add("nom_employeur");
@@ -185,6 +189,9 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
         bookmarkIdListFoundInDocXFile.add("prénom_de_lemployé");
         bookmarkIdListFoundInDocXFile.add("nom_du_representant_de_la_societé");
         
+
+        /* Droit de travail: CDI  */
+
         bookmarkIdListFoundInDocXFile.add("Salaire_mensuel_net_de_lemployé_chiffres");
         bookmarkIdListFoundInDocXFile.add("Article11_texte1");
         bookmarkIdListFoundInDocXFile.add("Dénomination_de_la_societé");
@@ -225,23 +232,110 @@ public class DocumentGenerationServiceImpl implements DocumentGenerationService 
         bookmarkIdListFoundInDocXFile.add("Article10_texte2");
         bookmarkIdListFoundInDocXFile.add("Article10_texte1");
 
-    
+        
+        /*         ENTREPRISE: NDA         */
+
         bookmarkIdListFoundInDocXFile.add("Quelle_juridiction");
         bookmarkIdListFoundInDocXFile.add("adresse_du_siège_social_d");
         bookmarkIdListFoundInDocXFile.add("quelle_activité_partie_emettrice");
         bookmarkIdListFoundInDocXFile.add("pays_émetteur_de_passeport");
 
 
+
         
 
 
+
+
+        bookmarkIdListFoundInDocXFile.add("dénomination_sociale_mt");
+        bookmarkIdListFoundInDocXFile.add("pays_d'immatriculation");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_physique_tunisienne");
+        bookmarkIdListFoundInDocXFile.add("forme_SA_SARL_SUARL");
+        bookmarkIdListFoundInDocXFile.add("nationalité");
+        bookmarkIdListFoundInDocXFile.add("forme_SA_SARL_SUARL_LLP_GMBH");
+        bookmarkIdListFoundInDocXFile.add("nom_pe_d");
+        bookmarkIdListFoundInDocXFile.add("numéro_de_passport");
+        bookmarkIdListFoundInDocXFile.add("numéro_de_passport_d");
+        bookmarkIdListFoundInDocXFile.add("identifiant_unique_d");
+        bookmarkIdListFoundInDocXFile.add("quelle_activité_partie_destinaire");
+        bookmarkIdListFoundInDocXFile.add("dénomination_sociale_mt_d");
+        bookmarkIdListFoundInDocXFile.add("nom_du_représentant_signataire_du_document");
+        bookmarkIdListFoundInDocXFile.add("prénom_pt_d");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_morale_tunisienne_d");
+        bookmarkIdListFoundInDocXFile.add("prénom_du_représentant_me_d");
+        bookmarkIdListFoundInDocXFile.add("numéro_de_la_carte_d'identité_nationale_d");
+        bookmarkIdListFoundInDocXFile.add("nationalité_d");
+        bookmarkIdListFoundInDocXFile.add("no");
+        bookmarkIdListFoundInDocXFile.add("dénomination_sociale_me_d");
+        bookmarkIdListFoundInDocXFile.add("adresse_domicilisation_pt_d");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_morale_tunisienne");
+        bookmarkIdListFoundInDocXFile.add("pays_émetteur_de_passeport_d");
+        bookmarkIdListFoundInDocXFile.add("numéro_de_la_carte_d'identité_nationale");
+        bookmarkIdListFoundInDocXFile.add("forme_SA_SARL_SUARL_LLP_GMBH_d");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_physique_tunisienne_d");
+        bookmarkIdListFoundInDocXFile.add("nom_du_représentant_signataire_du_document_d");
+        bookmarkIdListFoundInDocXFile.add("nom_pe");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_morale_étrangère");
+        bookmarkIdListFoundInDocXFile.add("pourquoi_est_ce_que_parties_contractent");
+        bookmarkIdListFoundInDocXFile.add("numéro_d'immatriculation_dans_le_pays_d'origine");
+        bookmarkIdListFoundInDocXFile.add("nom_pt");
+        bookmarkIdListFoundInDocXFile.add("adresse_du_siège_social");
+        bookmarkIdListFoundInDocXFile.add("prénom_pe_d");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_physique_étrangère");
+        bookmarkIdListFoundInDocXFile.add("adresse_domicilisation_pe");
+        bookmarkIdListFoundInDocXFile.add("numéro_d'immatriculation_dans_le_pays_d'origine_d");
+        bookmarkIdListFoundInDocXFile.add("adresse_domicilisation_pt");
+        bookmarkIdListFoundInDocXFile.add("prénom_du_représentant_me");
+        bookmarkIdListFoundInDocXFile.add("Infos_personne_morale_étrangère_d");
+        bookmarkIdListFoundInDocXFile.add("nom_du_représentant signataire_du_document_d");
+        bookmarkIdListFoundInDocXFile.add("Quelle_siège_tribunal_arbitral");
+        bookmarkIdListFoundInDocXFile.add("nom_du_représentant_signataire_du_document");
+        bookmarkIdListFoundInDocXFile.add("nom_du_représentant signataire_du_document");
+
+        /*   Corporate:Formulaire status           */
+        bookmarkIdListFoundInDocXFile.add("total_part_social");
+        bookmarkIdListFoundInDocXFile.add("prenom_representant");
+        bookmarkIdListFoundInDocXFile.add("prenom_Nom");
+        bookmarkIdListFoundInDocXFile.add("date_passport");
+        bookmarkIdListFoundInDocXFile.add("Societe");
+        bookmarkIdListFoundInDocXFile.add("villenaissance_associe1");
+        bookmarkIdListFoundInDocXFile.add("nationalite_associe1");
+        bookmarkIdListFoundInDocXFile.add("pieceidentité_associe1");
+        bookmarkIdListFoundInDocXFile.add("cin_associe1");
+        bookmarkIdListFoundInDocXFile.add("prenom_Nom_ass1");
+        bookmarkIdListFoundInDocXFile.add("prenom_Nom_ass2");
+        bookmarkIdListFoundInDocXFile.add("denomination");
+        bookmarkIdListFoundInDocXFile.add("lieu_signature");
+        bookmarkIdListFoundInDocXFile.add("total_lettres");
+        bookmarkIdListFoundInDocXFile.add("adress_associe1");
+        bookmarkIdListFoundInDocXFile.add("identifiant_unique");
+        bookmarkIdListFoundInDocXFile.add("siege_social");
+        bookmarkIdListFoundInDocXFile.add("montant_lettre");
+        bookmarkIdListFoundInDocXFile.add("date_cin");
+        bookmarkIdListFoundInDocXFile.add("num_cin_representant");
+        bookmarkIdListFoundInDocXFile.add("total_chiffre");
+        bookmarkIdListFoundInDocXFile.add("num_passport");
+        bookmarkIdListFoundInDocXFile.add("lieudelivrance");
+        bookmarkIdListFoundInDocXFile.add("nom_representant");
+        bookmarkIdListFoundInDocXFile.add("qualite_representant");
+        bookmarkIdListFoundInDocXFile.add("date_signature");
+        bookmarkIdListFoundInDocXFile.add("Dénomination_sociale");
+        bookmarkIdListFoundInDocXFile.add("datenaissance_associe1");
+        bookmarkIdListFoundInDocXFile.add("numerotation_sociale");
+        bookmarkIdListFoundInDocXFile.add("objet");
+        bookmarkIdListFoundInDocXFile.add("num_passport_representant");
+        bookmarkIdListFoundInDocXFile.add("forme");
+        bookmarkIdListFoundInDocXFile.add("adresse_siege_social");
+        bookmarkIdListFoundInDocXFile.add("part_social_lettre");
+        bookmarkIdListFoundInDocXFile.add("cin_representant");
+        bookmarkIdListFoundInDocXFile.add("montant_chiffre");
+        bookmarkIdListFoundInDocXFile.add("prenom_associe1");
 
 
 
         
         fileValidationService.checkDocXFileCustomBookmarksListIntegrity(bookmarkIdListFoundInDocXFile, allCustomBookmarks);
         insertAtBookmark();
-        saveAs(filledFileName);
         return FILLED_FILE_NAME_PREFIX+filledFileName;
     }
 
