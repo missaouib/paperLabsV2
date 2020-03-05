@@ -14,7 +14,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <junit.version>4.12</junit.version>
         <apache-poi.version>4.1.0</apache-poi.version>
-        <jackson-core.version>2.9.10</jackson-core.version>
+        <jackson-core.version>2.10.3</jackson-core.version>
     </properties>
 
     <dependencies>
